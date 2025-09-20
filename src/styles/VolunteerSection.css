@@ -1,0 +1,254 @@
+/* Volunteer Section Styles */
+.volunteer-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.volunteer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.volunteer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  text-align: center;
+}
+
+.volunteer-text-content {
+  padding-right: 20px;
+}
+
+.volunteer-header {
+  margin-bottom: 40px;
+}
+
+.volunteer-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.2;
+}
+
+.brand-highlight {
+  color: #ff6b35;
+}
+
+.volunteer-subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.volunteer-benefits {
+  margin-bottom: 40px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 107, 53, 0.1);
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.15);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.benefit-content {
+  flex: 1;
+}
+
+.benefit-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.benefit-description {
+  color: #666;
+  line-height: 1.4;
+  font-size: 0.8rem;
+}
+
+.volunteer-stats {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 107, 53, 0.1);
+  border-radius: 12px;
+  flex: 1;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff6b35;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.volunteer-cta-btn {
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  font-family: 'Inter', sans-serif;
+}
+
+.volunteer-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+}
+
+.volunteer-visual {
+  position: relative;
+}
+
+.volunteer-image-container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.volunteer-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.volunteer-image-container:hover .volunteer-image {
+  transform: scale(1.05);
+}
+
+.volunteer-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  padding: 40px 30px 30px;
+  color: white;
+}
+
+.overlay-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.overlay-content p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .volunteer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .volunteer-text-content {
+    padding-right: 0;
+    order: 1;
+  }
+  
+  .volunteer-visual {
+    order: 2;
+  }
+  
+  .volunteer-title {
+    font-size: 1.5rem;
+  }
+  
+  .volunteer-stats {
+    gap: 20px;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .volunteer-section {
+    padding: 40px 0;
+  }
+  
+  .volunteer-container {
+    padding: 0 1.25rem;
+  }
+  
+  .volunteer-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .volunteer-text-content {
+    order: 1;
+  }
+  
+  .volunteer-visual {
+    order: 2;
+  }
+  
+  .volunteer-title {
+    font-size: 1.3rem;
+  }
+  
+  .volunteer-subtitle {
+    font-size: 0.875rem;
+  }
+  
+  .volunteer-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .benefit-item {
+    padding: 15px;
+  }
+  
+  .volunteer-image {
+    height: 300px;
+  }
+}

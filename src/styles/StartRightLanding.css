@@ -1,0 +1,77 @@
+/* StartRight Landing Page Styles */
+.startright-landing {
+  min-height: 100vh;
+  background: #ffffff;
+  text-align: center;
+}
+
+.landing-section {
+  min-height: 100vh;
+  padding: 0;
+  scroll-margin-top: 80px; /* Account for fixed navbar */
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 1.5rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section spacing adjustments */
+#home {
+  padding-top: 0;
+}
+
+#about {
+  padding-top: 60px;
+}
+
+#past-conferences {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+#volunteer {
+  padding: 60px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.875rem;
+  }
+  
+  .section-container {
+    padding: 40px 1.25rem;
+  }
+}

@@ -1,0 +1,365 @@
+.merbs-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+  
+    animation: fadeDown 1s ease-in-out;
+    z-index: 1000;
+  }
+  
+  /* Brand tweaks */
+  .merbs-navbar .brand-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-left: 0;
+  }
+
+  .merbs-navbar .brand-logo {
+    height: 42px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .merbs-navbar .brand-logo:hover {
+    transform: scale(1.05);
+  }
+  
+  .merbs-navbar .brand-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333333;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+  }
+  
+  /* Nav links */
+  .merbs-navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    margin-right: 0;
+    align-items: center;
+  }
+  
+  .merbs-navbar .nav-links a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    padding: 0.7rem 0;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .merbs-navbar .nav-links a:hover {
+    color: #2d3748;
+  }
+
+  .merbs-navbar .nav-links a.active {
+    color: #ff6b35;
+    font-weight: 600;
+  }
+
+  /* Disabled links styling */
+  .merbs-navbar .nav-links a.disabled {
+    color: #999999;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  .merbs-navbar .nav-links a.disabled:hover {
+    color: #999999;
+    background-color: transparent;
+  }
+
+  .merbs-navbar .nav-links a.register-btn {
+    background: #ff6b35;
+    color: white;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+    text-transform: none;
+    letter-spacing: 0.3px;
+  }
+
+  .merbs-navbar .nav-links a.register-btn:hover {
+    background: #e55a2b;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(255, 107, 53, 0.25);
+  }
+
+  .merbs-navbar .user-info {
+    display: flex;
+    align-items: center;
+    color: #4a5568;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  
+  .merbs-navbar .menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .merbs-navbar .hamburger {
+    display: flex;
+    flex-direction: column;
+    width: 24px;
+    height: 18px;
+    justify-content: space-between;
+  }
+
+  .merbs-navbar .hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #333333;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+  }
+
+  .merbs-navbar .hamburger.open span:first-child {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .merbs-navbar .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .merbs-navbar .hamburger.open span:last-child {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  
+  @keyframes fadeDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Mobile responsiveness */
+  /* Mobile Menu Backdrop */
+  .mobile-menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998;
+  }
+
+  .mobile-menu-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (max-width: 768px) {
+    .merbs-navbar .nav-links {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      padding: 2rem;
+      
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.95);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      z-index: 999;
+    }
+  
+    .merbs-navbar .nav-links.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+  
+    .merbs-navbar .nav-links li {
+      padding: 0;
+      margin-bottom: 1.5rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    .merbs-navbar .nav-links li:last-child {
+      margin-top: auto;
+      margin-bottom: 2rem;
+    }
+
+    .merbs-navbar .nav-links a {
+      display: block;
+      padding: 1rem 2rem;
+      color: #1a202c;
+      font-size: 1.4rem;
+      font-weight: 500;
+      text-align: center;
+      border-radius: 12px;
+      background: transparent;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+    }
+
+    .merbs-navbar .nav-links a:hover {
+      background-color: rgba(255, 107, 53, 0.1);
+      color: #ff6b35;
+      transform: translateY(-2px);
+    }
+
+    .merbs-navbar .nav-links a.disabled {
+      color: #999999;
+      opacity: 0.6;
+    }
+
+    .merbs-navbar .nav-links a.disabled:hover {
+      color: #999999;
+      background-color: transparent;
+      transform: none;
+    }
+
+    /* Mobile Close Button */
+    .merbs-navbar .nav-links .mobile-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      margin: 0;
+    }
+
+    .merbs-navbar .nav-links .close-btn {
+      background: none;
+      border: none;
+      font-size: 2.5rem;
+      color: #333;
+      cursor: pointer;
+      padding: 0.5rem;
+      line-height: 1;
+      transition: all 0.3s ease;
+    }
+
+    .merbs-navbar .nav-links .close-btn:hover {
+      color: #ff6b35;
+      transform: rotate(90deg);
+    }
+
+    /* Mobile CTA Button */
+    .merbs-navbar .nav-links .mobile-cta {
+      margin-top: auto;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .merbs-navbar .nav-links .mobile-cta-btn {
+      background: #ff6b35;
+      color: white;
+      border-radius: 50px;
+      padding: 1.2rem 3rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+      width: 100%;
+      display: block;
+      letter-spacing: 1px;
+    }
+
+    .merbs-navbar .nav-links .mobile-cta-btn:hover {
+      background: #e55a2b;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 25px rgba(255, 107, 53, 0.4);
+    }
+
+    .merbs-navbar .nav-links .user-info-mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    .merbs-navbar .nav-links .logout-btn {
+      background: #ff6b35;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 0.8rem 2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .merbs-navbar .nav-links .logout-btn:hover {
+      background: #e55a2b;
+      transform: translateY(-2px);
+    }
+  
+    .merbs-navbar .menu-toggle {
+      display: block;
+      z-index: 1001;
+    }
+
+  }
+
+  /* Desktop-only elements - hide on mobile */
+  .merbs-navbar .nav-links .desktop-only {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Mobile-only elements - hide on desktop */
+  .merbs-navbar .nav-links .mobile-close,
+  .merbs-navbar .nav-links .mobile-cta {
+    display: none;
+  }
+
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    /* Show mobile-specific elements */
+    .merbs-navbar .nav-links .mobile-close,
+    .merbs-navbar .nav-links .mobile-cta {
+      display: block;
+    }
+
+    /* Hide desktop-only elements on mobile */
+    .merbs-navbar .nav-links .desktop-only {
+      display: none;
+    }
+  }

@@ -1,0 +1,240 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  
+    animation: fadeDown 1s ease-in-out;
+    z-index: 1000;
+  }
+  
+  /* 🔹 Brand tweaks */
+  .brand-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .brand-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a202c;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* 🔹 Nav links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-right: 70px; /* moved links slightly left */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #2d3748;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    position: relative;
+  }
+  
+  .nav-links a:hover {
+    color: #1a202c;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-links a.active {
+    color: #ff6b35;
+    background-color: rgba(255, 107, 53, 0.1);
+    font-weight: 600;
+  }
+
+  .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: #ff6b35;
+    border-radius: 1px;
+  }
+
+  .user-info {
+    display: none;
+    color: #666666;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+  }
+
+  .brand-text {
+    cursor: pointer;
+  }
+
+  .nav-links a.register-btn {
+    background: #ff6b35;
+    color: white;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+  }
+
+  .nav-links a.register-btn:hover {
+    background: #e55a2b;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+  }
+  
+  @keyframes fadeDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* ---------------------- */
+  /* 🔹 RESPONSIVENESS */
+  /* ---------------------- */
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    width: 24px;
+    height: 18px;
+    justify-content: space-between;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #333333;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.open span:first-child {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:last-child {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  
+  /* On mobile */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 1rem 1.5rem;
+    }
+    
+    .nav-links {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      flex-direction: column;
+      gap: 0;
+      padding: 80px 2rem 2rem;
+      
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      
+      /* Hidden by default */
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(100%);
+      transition: all 0.3s ease-in-out;
+      z-index: 999;
+    }
+  
+    /* Slide-in when active */
+    .nav-links.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  
+    .nav-links li {
+      padding: 0;
+      margin-bottom: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links li:last-child {
+      border-bottom: none;
+      margin-top: 2rem;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: 1.2rem 0;
+      color: #222222;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-align: left;
+      border-radius: 0;
+      background: transparent;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    }
+
+    .nav-links a:hover {
+      background-color: rgba(255, 107, 53, 0.1);
+      color: #ff6b35;
+    }
+
+    .nav-links a.register-btn {
+      background: #ff6b35;
+      color: white;
+      border-radius: 8px;
+      margin: 1rem 0;
+      text-align: center;
+      padding: 1rem 2rem;
+      text-shadow: none;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+    }
+
+    .nav-links a.register-btn:hover {
+      background: #e55a2b;
+      color: white;
+    }
+  
+    .menu-toggle {
+      display: block;
+      z-index: 1001;
+    }
+    
+    .brand-text {
+      font-size: 1.3rem;
+    }
+  }
+  
