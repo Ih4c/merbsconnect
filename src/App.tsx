@@ -7,7 +7,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<MerbsApp />} />
-        <Route path="/startright" element={<StartRightApp />} />
         <Route path="/startright/*" element={<StartRightApp />} />
       </Routes>
     </Router>

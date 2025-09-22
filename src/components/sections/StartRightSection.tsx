@@ -1,10 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../../styles/StartRightSection.css';
 
 const StartRightSection: React.FC = () => {
+  const navigate = useNavigate();
   const handleExploreConference = () => {
     // This will navigate to the StartRight conference app
-    window.location.href = '/startright';
+    navigate('/startright');
   };
 
   const conferenceFeatures = [
