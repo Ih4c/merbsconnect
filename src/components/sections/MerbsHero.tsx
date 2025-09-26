@@ -49,13 +49,15 @@ const MerbsHero: React.FC = () => {
           {/* Left side - Text content */}
           <div className="merbs-hero-text-content">
             <h1 className="merbs-hero-main-title">
-              Welcome to <span className="brand-highlight">MERBS Connect</span>
+              You belong to <span className="brand-highlight">MERBS Connect</span>
             </h1>
             
             <p className="merbs-hero-subtitle">
-            Building a world where no student is left behind simply because they lacked guidance, 
-            where potential is nurtured, purpose is discovered, 
-            and every young dreamer is empowered to rise.
+            A world where no student is left behind simply because they lack guidance. Here, potential is nurtured, purpose is discovered,
+            and every dreamer is empowered to rise.
+            Be guided. Be connected. Be unstoppable..
+            <br/>
+            Stay Connected to your Success, Excellence, Growth, Potential, Purpose.
             </p>
 
             <div className="merbs-hero-features">
@@ -70,6 +72,10 @@ const MerbsHero: React.FC = () => {
               <div className="feature-item">
                 <div className="feature-icon">🤝</div>
                 <span>Professional Network</span>
+              </div>
+              <div className="feature-item">
+                <div className="feature-icon">🌱</div>
+                <span>Mentorship for Growth</span>
               </div>
             </div>
 
