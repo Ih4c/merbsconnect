@@ -47,7 +47,7 @@ const ComingSoonSections: React.FC = () => {
           <div className="coming-soon-visual">
             <div className="visual-placeholder">
               <img 
-                src="/src/assets/studyabroad.jpg" 
+                src="/studyabroad.jpg" 
                 alt="Study Abroad"
               />
               <div className="visual-overlay">
@@ -67,7 +67,7 @@ const ComingSoonSections: React.FC = () => {
           <div className="coming-soon-visual">
             <div className="visual-placeholder">
               <img 
-                src="/src/assets/studentcompanion.jpg" 
+                src="/studentcompanion.jpg" 
                 alt="Student Companion"
               />
               <div className="visual-overlay">
