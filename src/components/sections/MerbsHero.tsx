@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import '../../styles/MerbsHero.css';
 
-
 const MerbsHero: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Professional images for MERBS Connect
   const slideImages = [
     '/merbs-photo.png', // MERBS group photo
-    'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80',
-    'https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+    '/merbs1.jpg',
+    '/merbs2.jpg',
+    '/merbs3.jpg'
   ];
-
 
   // Auto-slide functionality
   useEffect(() => {
@@ -49,15 +47,25 @@ const MerbsHero: React.FC = () => {
           {/* Left side - Text content */}
           <div className="merbs-hero-text-content">
             <h1 className="merbs-hero-main-title">
-              You belong to <span className="brand-highlight">MERBS Connect</span>
+              You belong at <span className="brand-highlight">MerbsConnect</span>
             </h1>
             
             <p className="merbs-hero-subtitle">
-            A world where no student is left behind simply because they lack guidance. Here, potential is nurtured, purpose is discovered,
-            and every dreamer is empowered to rise.
-            Be guided. Be connected. Be unstoppable..
-            <br/>
-            Stay Connected to your Success, Excellence, Growth, Potential, Purpose.
+              A world where no student is left behind simply because they lack guidance. 
+              Here, potential is nurtured, purpose is discovered, and every dreamer is empowered to rise.
+              Be guided. Be connected. Be unstoppable..
+              <br />
+              <p className="merbs-hero-subtitle">
+                Stay Connected to your { " " }
+                <span className="word-fader">
+                  <span>SUCCESS</span>
+                  <span>EXCELLENCE</span>
+                  <span>GROWTH</span>
+                  <span>POTENTIAL</span>
+                  <span>PURPOSE</span>
+                </span>
+              </p>
+
             </p>
 
             <div className="merbs-hero-features">
@@ -78,7 +86,6 @@ const MerbsHero: React.FC = () => {
                 <span>Mentorship for Growth</span>
               </div>
             </div>
-
 
             <div className="merbs-hero-actions">
               <button 

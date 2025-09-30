@@ -32,7 +32,7 @@ const MerbsAbout: React.FC = () => {
     <section className="merbs-about" id="about">
       <div className="merbs-about-container">
         <div className="section-header">
-          <h2 className="section-title">📖About MERBS Connect</h2>
+          <h2 className="section-title">📖About MerbsConnect</h2>
 
           {/* Modified description with slideshow */}
           <div className="section-subtitle slideshow-wrapper">
@@ -105,7 +105,7 @@ const MerbsAbout: React.FC = () => {
                 </div>
                 <div className="highlight-item">
                   <span className="highlight-icon">✓</span>
-                  <span>Inclusive Communit - ensuring every student belongs, learns,and thrives.</span>
+                  <span>Inclusive Community  - ensuring every student belongs, learns,and thrives.</span>
                 </div>
               </div>
             </div>
