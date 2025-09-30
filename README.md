@@ -1,5 +1,5 @@
 # MERBS Connect
 
-![Merbs Banner](./banner.jpg)
+![Merbs Banner](./banner1.png)
 
 **You belong to Merbs Connect.**
