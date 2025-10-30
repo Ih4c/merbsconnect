@@ -44,48 +44,24 @@ const MerbsHero: React.FC = () => {
       
       <div className="merbs-hero-container">
         <div className="merbs-hero-content-wrapper">
-          {/* Left side - Text content */}
+          {/* Centered content */}
           <div className="merbs-hero-text-content">
+            <h2 className="merbs-hero-subtitle-header">MerbsConnect Today</h2>
+            
             <h1 className="merbs-hero-main-title">
-              You belong at <span className="brand-highlight">MerbsConnect</span>
+              <strong>You belong at <span className="brand-highlight">MerbsConnect</span></strong>
             </h1>
             
             <p className="merbs-hero-subtitle">
-              A world where no student is left behind simply because they lack guidance. 
-              Here, potential is nurtured, purpose is discovered, and every dreamer is empowered to rise.
-              Be guided. Be connected. Be unstoppable..
-              <br />
-              <p className="merbs-hero-subtitle">
-                Stay Connected to your { " " }
-                <span className="word-fader">
-                  <span>SUCCESS</span>
-                  <span>EXCELLENCE</span>
-                  <span>GROWTH</span>
-                  <span>POTENTIAL</span>
-                  <span>PURPOSE</span>
-                </span>
-              </p>
-
+              Stay connected to your { " " }
+              <span className="word-fader">
+                <span>Success</span>
+                <span>Excellence</span>
+                <span>Growth</span>
+                <span>Potential</span>
+                <span>Purpose</span>
+              </span>
             </p>
-
-            <div className="merbs-hero-features">
-              <div className="feature-item">
-                <div className="feature-icon">🎓</div>
-                <span>Educational Excellence</span>
-              </div>
-              <div className="feature-item">
-                <div className="feature-icon">🌍</div>
-                <span>Global Opportunities</span>
-              </div>
-              <div className="feature-item">
-                <div className="feature-icon">🤝</div>
-                <span>Professional Network</span>
-              </div>
-              <div className="feature-item">
-                <div className="feature-icon">🌱</div>
-                <span>Mentorship for Growth</span>
-              </div>
-            </div>
 
             <div className="merbs-hero-actions">
               <button 
@@ -96,34 +72,16 @@ const MerbsHero: React.FC = () => {
               </button>
               <button 
                 className="merbs-hero-btn secondary" 
-                onClick={() => scrollToSection('startright')}
+                onClick={() => scrollToSection('programs')}
               >
-                Explore StartRight
+                Explore Programs
               </button>
-            </div>
-          </div>
-
-          {/* Right side - Synchronized sliding images */}
-          <div className="merbs-hero-image-section">
-            <div className="merbs-image-slider">
-              {slideImages.map((image, index) => (
-                <div
-                  key={index}
-                  className={`merbs-slide ${index === currentSlide ? 'active' : ''}`}
-                  style={{ backgroundImage: `url(${image})` }}
-                />
-              ))}
-            </div>
-            
-            {/* Slide indicators */}
-            <div className="merbs-slide-indicators">
-              {slideImages.map((_, index) => (
-                <button
-                  key={index}
-                  className={`merbs-indicator ${index === currentSlide ? 'active' : ''}`}
-                  onClick={() => setCurrentSlide(index)}
-                />
-              ))}
+              <button 
+                className="merbs-hero-btn tertiary" 
+                onClick={() => scrollToSection('merbshub')}
+              >
+                Explore Merbshub
+              </button>
             </div>
           </div>
         </div>

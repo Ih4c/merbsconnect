@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: calc(var(--navbar-height) + 40px) 0 60px;  /* ✅ offset hero below navbar */
+  padding: 180px 0 60px;  /* ✅ CRITICAL: 180px+ top padding to prevent navbar overlap */
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
@@ -57,31 +57,43 @@
 }
 
 .merbs-hero-content-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  display: flex;
+  justify-content: center;
   align-items: center;
   min-height: 65vh;
+  text-align: center;
 }
 
 .merbs-hero-text-content {
   animation: slideInLeft 1s ease-out;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.merbs-hero-subtitle-header {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.5px;
 }
 
 .merbs-hero-main-title {
-  font-size: 2.75rem;
+  font-size: 3.5rem;
   font-weight: 700;
-  color: #1a202c;
+  color: #2d3748;
   line-height: 1.2;
   letter-spacing: -0.01em;
   text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
-  padding-top: 80px;
-  margin-bottom: 1rem;
+  padding-top: 0;
+  margin-bottom: 1.5rem;
 }
 
 .brand-highlight {
   color: #ff6b35;
   position: relative;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
 }
 
 .brand-highlight::after {
@@ -96,60 +108,20 @@
 }
 
 .merbs-hero-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #2d3748;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-weight: 400;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-}
-
-.merbs-hero-features {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
-  flex-wrap: wrap;
-}
-
-.feature-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 107, 53, 0.1);
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-.feature-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.15);
-  border-color: rgba(255, 107, 53, 0.2);
-}
-
-.feature-icon {
-  font-size: 1.25rem;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 107, 53, 0.1);
-  border-radius: 6px;
-}
-
-.feature-item span {
-  font-weight: 500;
-  color: #1a202c;
-  font-size: 0.875rem;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
 }
 
 .merbs-hero-actions {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .merbs-hero-btn {
@@ -165,6 +137,13 @@
   align-items: center;
   justify-content: center;
   min-width: 160px;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.merbs-hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .merbs-hero-btn.primary {
@@ -179,73 +158,25 @@
 }
 
 .merbs-hero-btn.secondary {
-  background: rgba(255, 255, 255, 0.9);
-  color: #ff6b35;
-  border: 2px solid #ff6b35;
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
 }
 
 .merbs-hero-btn.secondary:hover {
-  background: #ff6b35;
-  color: white;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
 }
 
-.merbs-hero-image-section {
-  position: relative;
-  height: 500px;
-  padding-top: 70px;
-  animation: slideInRight 1s ease-out;
+.merbs-hero-btn.tertiary {
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
 }
 
-.merbs-image-slider {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.merbs-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.merbs-slide.active {
-  opacity: 1;
-}
-
-.merbs-slide-indicators {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-}
-
-.merbs-indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.merbs-indicator.active {
-  background: #ff6b35;
-  transform: scale(1.2);
+.merbs-hero-btn.tertiary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
 }
 
 @keyframes slideInLeft {
@@ -277,8 +208,9 @@
   vertical-align: baseline;
   color: #ff6b35;
   font-weight: 700;
-  height: 1em;  /* lock height for alignment */
+  height: 1em;
   line-height: 1.3em;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
 }
 
 .word-fader span {
@@ -307,140 +239,193 @@
 
 
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Tablet Responsive Design */
+@media (max-width: 1024px) {
   .merbs-hero {
-    padding: 180px 0 50px;
+    padding: 160px 0 50px;
   }
-
-  .merbs-hero-container {
-    padding: 0 1.5rem;
-  }
-
+  
   .merbs-hero-content-wrapper {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-    text-align: left;
+    text-align: center;
   }
-
+  
   .merbs-hero-text-content {
     order: 1;
   }
-
-  .merbs-hero-image-section {
-    order: 2;
+  
+  .merbs-hero-main-title {
+    font-size: 2.4rem;
   }
   
-  .merbs-hero-image-section {
-    height: 200px;
-  }
-
-  .merbs-hero-main-title {
-    font-size: 2.25rem;
-    text-align: left;
-    margin-top: 5rem;
-  }
-
   .merbs-hero-subtitle {
     font-size: 1.05rem;
-    text-align: left;
-    margin-bottom: 2rem;
   }
-
-  .merbs-hero-features {
-    justify-content: flex-start;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
+  
+  .merbs-hero-subtitle-header {
+    font-size: 1.3rem;
   }
-
-  .feature-item {
-    flex-direction: row;
-    text-align: left;
-    padding: 0.6rem 1rem;
-    min-width: auto;
-  }
-
+  
   .merbs-hero-actions {
-    justify-content: flex-start;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .merbs-hero-btn {
-    min-width: 140px;
-    padding: 0.875rem 1.5rem;
-    font-size: 0.95rem;
+    justify-content: center;
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
   .merbs-hero {
-    padding: 80px 0 40px;
+    padding: 320px 0 40px;
     min-height: auto;
   }
 
   .merbs-hero-container {
-    padding: 0 1.25rem;
+    padding: 0 1rem;
   }
 
   .merbs-hero-content-wrapper {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    align-items: stretch;
+    text-align: center;
     min-height: auto;
   }
 
   .merbs-hero-text-content {
     order: 1;
-    text-align: left;
-    width: 100%;
-  }
-
-  .merbs-hero-image-section {
-    order: 2;
-    width: 100%;
-    margin-top: 1rem;
-  }
-  
-  .merbs-hero-image-section {
-    height: 280px;
   }
 
   .merbs-hero-main-title {
-    font-size: 1.75rem;
-    line-height: 1.2;
+    font-size: 1.9rem;
+    text-align: center;
+    padding-top: 0;
     margin-bottom: 1rem;
-    font-weight: 700;
+    line-height: 1.1;
   }
 
   .merbs-hero-subtitle {
     font-size: 0.95rem;
+    text-align: center;
     margin-bottom: 1.5rem;
-    line-height: 1.5;
-    color: #4a5568;
-    max-width: 100%;
+    line-height: 1.4;
   }
 
-  .merbs-hero-features {
-    display: none;
+  .merbs-hero-subtitle-header {
+    font-size: 1.1rem;
+    padding: 0.4rem 1rem;
   }
+
+  /* Features removed as per requirements */
 
   .merbs-hero-actions {
-    flex-direction: column;
+    justify-content: center;
     gap: 1rem;
-    align-items: stretch;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    align-items: center;
   }
 
   .merbs-hero-btn {
     width: 100%;
+    max-width: 280px;
+    padding: 0.9rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Image slider removed as per requirements */
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 480px) {
+  .merbs-hero {
+    padding: 300px 0 30px;
+    min-height: auto;
+  }
+}
+
+/* iPhone and similar mobile devices - CRITICAL FIX */
+@media (max-width: 414px) {
+  .merbs-hero {
+    padding: 350px 0 30px !important;
+    min-height: auto;
+  }
+  
+  .merbs-hero-subtitle-header {
+    margin-top: 20px;
+  }
+  
+  /* DEBUG: Add visual indicator to understand spacing */
+  .merbs-hero::before {
+    content: 'DEBUG: Navbar should be above this line';
+    position: absolute;
+    top: 80px; /* navbar height */
+    left: 0;
+    right: 0;
+    background: rgba(255, 0, 0, 0.3);
+    color: red;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    z-index: 999;
+    display: block;
+  }
+
+  .merbs-hero-container {
+    padding: 0 0.8rem;
+  }
+
+  .merbs-hero-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .merbs-hero-text-content {
+    order: 1;
+    text-align: center;
+    width: 100%;
+  }
+
+  .merbs-hero-main-title {
+    font-size: 1.6rem;
+    line-height: 1.1;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    padding-top: 0;
+  }
+
+  .merbs-hero-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+    color: #2d3748;
     max-width: 100%;
+  }
+
+  .merbs-hero-subtitle-header {
+    font-size: 1rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  /* Features removed as per requirements */
+
+  .merbs-hero-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .merbs-hero-btn {
+    width: 100%;
+    max-width: 250px;
     min-width: auto;
-    padding: 1rem 1.5rem;
-    font-size: 0.95rem;
+    padding: 0.9rem 1.2rem;
+    font-size: 0.85rem;
     font-weight: 600;
     border-radius: 10px;
   }
@@ -452,22 +437,16 @@
   }
 
   .merbs-hero-btn.secondary {
-    background: rgba(255, 255, 255, 0.9);
-    color: #ff6b35;
-    border: 2px solid #ff6b35;
-    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
   }
 
-  .merbs-image-slider {
-    border-radius: 16px;
+  .merbs-hero-btn.tertiary {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
   }
 
-  .merbs-slide-indicators {
-    bottom: 15px;
-  }
-
-  .merbs-indicator {
-    width: 8px;
-    height: 8px;
-  }
+  /* Image slider removed as per requirements */
 }

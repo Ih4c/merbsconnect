@@ -3,12 +3,25 @@
   min-height: 100vh;
   background: #ffffff;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .landing-section {
   min-height: 100vh;
   padding: 0;
   scroll-margin-top: 80px; /* Account for fixed navbar */
+}
+
+/* Mobile adjustments for sections */
+@media (max-width: 768px) {
+  .landing-section {
+    min-height: auto;
+    scroll-margin-top: 70px;
+  }
+  
+  .landing-section:first-child {
+    min-height: 100vh;
+  }
 }
 
 .section-container {
@@ -62,16 +75,62 @@ html {
 }
 
 /* Responsive design */
+@media (max-width: 1024px) {
+  .section-container {
+    padding: 50px 1.25rem;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
   }
   
   .section-subtitle {
-    font-size: 0.875rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
   }
   
   .section-container {
-    padding: 40px 1.25rem;
+    padding: 30px 1rem;
+  }
+  
+  .section-header {
+    margin-bottom: 30px;
+  }
+  
+  #about {
+    padding-top: 40px;
+  }
+  
+  #past-conferences {
+    padding: 40px 0;
+  }
+  
+  #volunteer {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.8rem;
+  }
+  
+  .section-container {
+    padding: 25px 0.8rem;
+  }
+  
+  .section-header {
+    margin-bottom: 25px;
   }
 }

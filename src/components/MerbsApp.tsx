@@ -3,8 +3,9 @@ import { AuthProvider } from '../contexts/AuthContext';
 import MerbsNavbar from './MerbsNavbar';
 import MerbsHero from './sections/MerbsHero';
 import MerbsAbout from './sections/MerbsAbout';
-import StartRightSection from './sections/StartRightSection';
-import ComingSoonSections from './sections/ComingSoonSections';
+import MerbsHubSection from './sections/MerbsHubSection';
+import ProgramsSection from './sections/ProgramsSection';
+import AllYouNeedSection from './sections/AllYouNeedSection';
 import MeetTheTeam from './sections/MeetTheTeam';
 import Testimonials from './sections/Testimonials';
 import FAQ from './sections/FAQ';
@@ -24,7 +25,7 @@ function MerbsApp() {
   // Update active section based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'startright', 'study-abroad', 'student-companion', 'contact'];
+      const sections = ['home', 'about', 'programs', 'merbshub', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -54,8 +55,9 @@ function MerbsApp() {
         <main className="merbs-main-content">
           <MerbsHero />
           <MerbsAbout />
-          <StartRightSection />
-          <ComingSoonSections />
+          <MerbsHubSection />
+          <ProgramsSection />
+          <AllYouNeedSection />
           <MeetTheTeam />
           <Testimonials />
           <FAQ />

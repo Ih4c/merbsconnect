@@ -94,29 +94,20 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
           </li>
           <li>
             <a
-              href="#startright"
-              onClick={(e) => handleNavClick(e, "startright")}
-              className={activeSection === "startright" ? "active" : ""}
+              href="#merbshub"
+              onClick={(e) => handleNavClick(e, "merbshub")}
+              className={activeSection === "merbshub" ? "active" : ""}
             >
-              StartRight
+              Merbshub
             </a>
           </li>
           <li>
             <a
-              href="#study-abroad"
-              onClick={(e) => handleNavClick(e, "study-abroad")}
-              className={`${activeSection === "study-abroad" ? "active" : ""} disabled`}
+              href="#programs"
+              onClick={(e) => handleNavClick(e, "programs")}
+              className={activeSection === "programs" ? "active" : ""}
             >
-              Study Abroad
-            </a>
-          </li>
-          <li>
-            <a
-              href="#student-companion"
-              onClick={(e) => handleNavClick(e, "student-companion")}
-              className={`${activeSection === "student-companion" ? "active" : ""} disabled`}
-            >
-              Student Companion
+              Programs
             </a>
           </li>
           <li>
