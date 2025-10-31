@@ -24,6 +24,27 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      const navbar = document.querySelector('.merbs-navbar');
+      const navLinks = document.querySelector('.nav-links');
+      
+      if (menuOpen && navbar && !navbar.contains(target) && navLinks && !navLinks.contains(target)) {
+        setMenuOpen(false);
+      }
+    };
+
+    if (menuOpen) {
+      document.addEventListener('click', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [menuOpen]);
+
   const scrollToWithOffset = (el: HTMLElement) => {
     const navbar = document.querySelector(".merbs-navbar") as HTMLElement | null;
     const headerHeight =
@@ -68,11 +89,6 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
         {/* Nav Links */}
         <ul className={`nav-links ${isMobile && menuOpen ? "active" : ""}`}>
           {/* Mobile Close Button */}
-          {isMobile && (
-            <li className="mobile-close">
-              
-            </li>
-          )}
 
           <li>
             <a
@@ -155,7 +171,7 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
               </li>
             ))}
 
-          {/* Mobile CTA */}
+          {/* Mobile CTA - Simple Register Button */}
           {isMobile && (
             <li className="mobile-cta">
               {isAuthenticated ? (
@@ -168,6 +184,7 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
                   onClick={(e) => {
                     e.preventDefault();
                     setShowRegister(true);
+                    setMenuOpen(false);
                   }}
                   className="mobile-cta-btn"
                 >
@@ -190,13 +207,6 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
         )}
       </nav>
 
-      {/* Mobile Backdrop */}
-      {isMobile && (
-        <div
-          className={`mobile-menu-backdrop ${menuOpen ? "active" : ""}`}
-          onClick={() => setMenuOpen(false)}
-        />
-      )}
 
       {/* Auth Modals */}
       {showLogin && (

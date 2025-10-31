@@ -42,12 +42,15 @@ const MerbsHero: React.FC = () => {
         <div className="hero-overlay" />
       </div>
       
+      {/* Top Header - Fixed Position */}
+      <div className="merbs-hero-top-header">
+        <h2 className="merbs-hero-subtitle-header">MerbsConnect Today</h2>
+      </div>
+
+      {/* Main Content - Centered */}
       <div className="merbs-hero-container">
         <div className="merbs-hero-content-wrapper">
-          {/* Centered content */}
           <div className="merbs-hero-text-content">
-            <h2 className="merbs-hero-subtitle-header">MerbsConnect Today</h2>
-            
             <h1 className="merbs-hero-main-title">
               <strong>You belong at <span className="brand-highlight">MerbsConnect</span></strong>
             </h1>
