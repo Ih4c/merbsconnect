@@ -8,20 +8,53 @@ const About: React.FC = () => {
       <div className="page-header">
         <h1>About Start Right Conference</h1>
         <p className="page-subtitle">
-          Empowering professionals to start right in their careers and business ventures
+          The official annual launchpad for university students
         </p>
       </div>
 
       <div className="page-content">
         <section className="about-mission">
           <Card>
-            <h2>Our Mission</h2>
+            <h2>About Start Right Conference</h2>
             <p>
-              Start Right Conference is dedicated to providing transformative experiences that 
-              empower individuals to make the right decisions at the beginning of their professional 
-              journeys. We bring together industry leaders, innovative thinkers, and ambitious 
-              professionals to share knowledge, build networks, and inspire action.
+              The Start Right Conference is the official annual launchpad for first-year university students 
+              and a space for continuing students to renew their journey with clarity and focus. It equips 
+              participants with the mindset, skills, and network needed to thrive in academics, leadership, 
+              career, and life.
             </p>
+            <p>
+              Through powerful sessions led by lecturers, valedictorians, student leaders, industry experts, 
+              innovators, and professionals, students gain practical tools and inspiration to navigate 
+              university successfully and prepare for future opportunities.
+            </p>
+            <p style={{ fontWeight: 600, fontSize: '1.1rem', marginTop: '1.5rem', color: '#ff6b35' }}>
+              Don't just start university — Start Right.
+            </p>
+          </Card>
+        </section>
+
+        <section className="about-vision">
+          <Card>
+            <h2>Vision 🌍</h2>
+            <p>
+              To build a generation of students who begin every new chapter of their lives with confidence, 
+              resilience, and a clear roadmap to success — academically, professionally, and personally.
+            </p>
+          </Card>
+        </section>
+
+        <section className="about-mission-statement">
+          <Card>
+            <h2>Mission 🎯</h2>
+            <p style={{ marginBottom: '1rem' }}>
+              The Start Right Conference empowers first-year and continuing students to:
+            </p>
+            <ul style={{ lineHeight: '1.8', paddingLeft: '1.5rem' }}>
+              <li>Establish strong foundations for academic excellence and leadership.</li>
+              <li>Gain practical skills in AI, CV building, entrepreneurship, finance, and personal growth.</li>
+              <li>Connect with mentors, achievers, and professionals who share real strategies for success.</li>
+              <li>Cultivate the resilience, confidence, and networks needed to thrive beyond the classroom.</li>
+            </ul>
           </Card>
         </section>
 
@@ -29,46 +62,38 @@ const About: React.FC = () => {
           <h2>Our Values</h2>
           <div className="values-grid">
             <Card>
-              <h3>Excellence</h3>
-              <p>We strive for the highest quality in every aspect of our conference experience.</p>
+              <h3>Excellence 🎓</h3>
+              <p>We strive for the highest academic, leadership, and personal development standards.</p>
             </Card>
             <Card>
-              <h3>Innovation</h3>
-              <p>We embrace new ideas and cutting-edge approaches to professional development.</p>
+              <h3>Confidence 💪</h3>
+              <p>We empower students to begin boldly and face challenges with courage.</p>
             </Card>
             <Card>
-              <h3>Community</h3>
-              <p>We foster meaningful connections and lasting professional relationships.</p>
+              <h3>Resilience 🔥</h3>
+              <p>We inspire persistence and strength to overcome obstacles.</p>
             </Card>
             <Card>
-              <h3>Growth</h3>
-              <p>We are committed to continuous learning and personal development.</p>
+              <h3>Growth 🌱</h3>
+              <p>We create an environment where students continually develop knowledge, skills, and character.</p>
+            </Card>
+            <Card>
+              <h3>Innovation 🤖</h3>
+              <p>We embrace technology, creativity, and entrepreneurship as tools for shaping the future.</p>
+            </Card>
+            <Card>
+              <h3>Integrity 🤝</h3>
+              <p>We promote honesty, discipline, and accountability in learning and leadership.</p>
+            </Card>
+            <Card>
+              <h3>Community 🌍</h3>
+              <p>We build networks of students, mentors, and professionals who uplift and support one another.</p>
+            </Card>
+            <Card>
+              <h3>Impact 🚀</h3>
+              <p>We exist to transform lives and equip students to create meaningful societal change.</p>
             </Card>
           </div>
-        </section>
-
-        <section className="about-team">
-          <Card>
-            <h2>Our Team</h2>
-            <p>
-              Our conference is organized by a dedicated team of industry professionals with 
-              decades of combined experience in event management, professional development, 
-              and business strategy. We are passionate about creating experiences that make 
-              a real difference in people's careers.
-            </p>
-          </Card>
-        </section>
-
-        <section className="about-history">
-          <Card>
-            <h2>Our History</h2>
-            <p>
-              Founded in 2020, Start Right Conference has grown from a small gathering of 
-              entrepreneurs to one of the premier professional development events in the industry. 
-              We have helped thousands of professionals launch successful careers and build 
-              thriving businesses.
-            </p>
-          </Card>
         </section>
       </div>
     </div>

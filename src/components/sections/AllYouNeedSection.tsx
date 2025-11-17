@@ -38,8 +38,8 @@ const AllYouNeedSection: React.FC = () => {
     },
     {
       id: 'printing',
-      title: 'Printing & Design',
-      description: 'Print it. Design it. Own it.',
+      title: 'Flyer Design & Printing',
+      description: 'Bring your business, event, or campaign to life with flyers that inspire action and leave a lasting impression.',
       image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       buttonText: 'Get Started',
       onClick: () => {

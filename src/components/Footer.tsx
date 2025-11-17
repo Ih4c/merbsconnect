@@ -8,9 +8,9 @@ function Footer() {
         <div className="footer-content">
           {/* Company Info Section */}
           <div className="footer-section">
-            <h3 className="footer-title">Merbs Connect</h3>
+            <h3 className="footer-title">MerbsConnect</h3>
             <p className="footer-description">
-              A growing community of people intrested in  building 
+              A growing community of people interested in building 
               a world where no student is left behind simply because they lacked guidance, where potential is nurtured,
               purpose is discovered, and every young dreamer is empowered to rise. 
             </p>
@@ -48,9 +48,11 @@ function Footer() {
             <ul className="footer-links">
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About Us</a></li>
-              <li><a href="#startright">StartRight</a></li>
+              <li><a href="#startright">Start Right Conference</a></li>
               <li><a href="#study-abroad">Study Abroad</a></li>
-              <li><a href="#student-companion">Student Companion</a></li>
+              <li><a href="#myhub">MyHub</a></li>
+              <li><a href="#studyhub">StudyHub</a></li>
+              <li><a href="#ayn">AYN</a></li>
               <li><a href="#contact">Contact</a></li>
               <li><a href="#register">Register/Login</a></li>
             </ul>
@@ -98,7 +100,7 @@ function Footer() {
 
         {/* Copyright */}
         <div className="footer-bottom">
-          <p>© 2025 Start Right Conference. All rights reserved.</p>
+          <p>© 2025 MerbsConnect. All rights reserved.</p>
           <div className="footer-legal">
             <a href="#privacy">Privacy Policy</a>
             <a href="#terms">Terms of Service</a>

@@ -116,17 +116,6 @@ const Testimonials: React.FC = () => {
             </div>
           </div>
 
-          {/* Testimonial Navigation */}
-          <div className="testimonial-navigation">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                className={`nav-dot ${index === currentTestimonial ? 'active' : ''}`}
-                onClick={() => setCurrentTestimonial(index)}
-              />
-            ))}
-          </div>
-
           {/* Statistics */}
           <div className="testimonial-stats">
             <div className="stat-item">

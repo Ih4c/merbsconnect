@@ -29,7 +29,7 @@ const MerbsHero: React.FC = () => {
   };
 
   return (
-    <section className="merbs-hero" id="home">
+    <section className="merbs-hero overlay" id="home" >
       {/* Background Slideshow */}
       <div className="hero-background-slideshow">
         {slideImages.map((image, index) => (
@@ -39,7 +39,7 @@ const MerbsHero: React.FC = () => {
             style={{ backgroundImage: `url(${image})` }}
           />
         ))}
-        <div className="hero-overlay" />
+        <div/>
       </div>
       
       {/* Top Header - Fixed Position */}
@@ -55,16 +55,31 @@ const MerbsHero: React.FC = () => {
               <strong>You belong at <span className="brand-highlight">MerbsConnect</span></strong>
             </h1>
             
-            <p className="merbs-hero-subtitle">
-              Stay connected to your { " " }
-              <span className="word-fader">
-                <span>Success</span>
-                <span>Excellence</span>
-                <span>Growth</span>
-                <span>Potential</span>
-                <span>Purpose</span>
-              </span>
-            </p>
+            {/* Colorful Keywords List */}
+            <div className="merbs-hero-keywords">
+              <p className="keyword-line">
+                <span className="keyword-learn">Learn</span> with excellence
+              </p>
+              <p className="keyword-line">
+                <span className="keyword-grow">Grow</span> through Community
+              </p>
+              <p className="keyword-line">
+                <span className="keyword-create">Create</span> opportunities
+              </p>
+              <p className="keyword-line">
+                <span className="keyword-make">Make</span> lasting impact
+              </p>
+              <p className="keyword-line">
+                <span className="keyword-stay">Stay</span> Connected to your{" "}
+                <span className="word-fader keyword-success">
+                  <span>Success</span>
+                  <span>Excellence</span>
+                  <span>Growth</span>
+                  <span>Potential</span>
+                  <span>Purpose</span>
+                </span>
+              </p>
+            </div>
 
             <div className="merbs-hero-actions">
               <button 
@@ -83,10 +98,18 @@ const MerbsHero: React.FC = () => {
                 className="merbs-hero-btn tertiary" 
                 onClick={() => scrollToSection('merbshub')}
               >
-                Explore Merbshub
+                Explore MerbsHub
               </button>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Advertisement Space - Can be toggled on/off */}
+      <div className="hero-advertisement-space">
+        {/* Advertisement content goes here */}
+        <div className="ad-placeholder">
+          <p className="ad-label">Advertisement Space</p>
         </div>
       </div>
     </section>

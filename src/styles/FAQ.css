@@ -132,7 +132,7 @@
 }
 
 .faq-item.open .faq-answer {
-  max-height: 200px;
+  max-height: 600px;
 }
 
 .answer-content {
@@ -144,6 +144,7 @@
   line-height: 1.7;
   font-size: 1rem;
   font-weight: 500;
+  white-space: pre-line;
 }
 
 /* FAQ Sidebar */

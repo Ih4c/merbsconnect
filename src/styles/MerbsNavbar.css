@@ -29,10 +29,11 @@
 }
 
 .merbs-navbar .brand-logo {
-  height: 42px;
+  height: 150px;
   width: auto;
   cursor: pointer;
   transition: transform 0.3s ease;
+  filter: brightness(1) contrast(1.1);
 }
 
 .merbs-navbar .brand-logo:hover {
@@ -47,6 +48,26 @@
   align-items: center;
   padding: 0;
   margin-left: 5rem;
+}
+
+/* Desktop Register Button */
+.merbs-navbar .register-btn {
+  background: #ff6b35;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.merbs-navbar .register-btn:hover {
+  background: #e55a2b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
 .merbs-navbar .nav-links li {
@@ -99,6 +120,10 @@
     padding: 0 2rem;
   }
   
+  .merbs-navbar .brand-logo {
+    height: 200px;
+  }
+  
   .merbs-navbar .nav-links {
     gap: 2rem;
     margin-left: 3rem;
@@ -114,6 +139,10 @@
 @media (max-width: 768px) {
   .merbs-navbar {
     padding: 0 1.5rem;
+    height: 70px;
+  }
+  
+  .merbs-navbar .brand-logo {
     height: 70px;
   }
   
@@ -198,12 +227,12 @@
   }
 
   .merbs-navbar .nav-links a:hover {
-    color: #007AFF;
+    color: #ff6b35;
     font-weight: 500;
   }
 
   .merbs-navbar .nav-links a.active {
-    color: #007AFF;
+    color: #ff6b35;
     font-weight: 500;
   }
 
@@ -317,7 +346,7 @@
   }
   
   .merbs-navbar .brand-logo {
-    height: 36px;
+    height: 60px;
   }
   
   .merbs-navbar .nav-links {

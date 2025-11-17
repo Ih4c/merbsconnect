@@ -18,35 +18,35 @@ const MeetTheTeam: React.FC = () => {
             <div className="ceo-card">
               <div className="ceo-image">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
-                  alt="CEO"
+                  src="/Merblin.jpg" 
+                  alt="Joseph Asare (Merblin) - CEO & Founder"
                 />
                 <div className="ceo-badge">
                   <span>CEO & Founder</span>
                 </div>
               </div>
               <div className="ceo-info">
-                <h3 className="ceo-name">John Doe</h3>
+                <h3 className="ceo-name">Joseph Asare (Merblin)</h3>
                 <p className="ceo-title">Chief Executive Officer</p>
                 <p className="ceo-description">
-                  With over 15 years of experience in educational technology and student development, 
-                  John leads MERBS Connect with a vision to transform how students access global 
-                  opportunities and professional growth.
+                  A visionary educator and mentor committed to student excellence. Merblin founded 
+                  MerbsConnect to inspire, equip, and connect students for success. His vision is 
+                  simple: Impact is the Reason.
                 </p>
                 <div className="ceo-achievements">
                   <div className="achievement">
-                    <span className="achievement-number">15+</span>
+                    <span className="achievement-number">6+</span>
                     <span className="achievement-label">Years Experience</span>
                   </div>
                   <div className="achievement">
-                    <span className="achievement-number">50K+</span>
+                    <span className="achievement-number">10K+</span>
                     <span className="achievement-label">Students Impacted</span>
                   </div>
                 </div>
                 <div className="ceo-social">
-                  <a href="#" className="social-icon">💼</a>
-                  <a href="#" className="social-icon">🐦</a>
-                  <a href="#" className="social-icon">📧</a>
+                  <a href="https://www.linkedin.com/in/joseph-asare-280210242?" target="_blank" rel="noopener noreferrer" className="social-icon" title="LinkedIn">💼</a>
+                  <a href="https://www.instagram.com/iam_merblin?igsh=MWNkeW5kZWZmdnkzOA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="social-icon" title="Instagram">📷</a>
+                  <a href="mailto:merblinasare10@gmail.com" className="social-icon" title="Email">📧</a>
                 </div>
               </div>
             </div>
@@ -57,8 +57,8 @@ const MeetTheTeam: React.FC = () => {
             <div className="team-photo-card">
               <div className="team-photo">
                 <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                  alt="MERBS Connect Team"
+                  src="/team.jpg" 
+                  alt="MerbsConnect Team"
                 />
                 <div className="team-overlay">
                   <div className="overlay-content">
@@ -70,24 +70,19 @@ const MeetTheTeam: React.FC = () => {
               <div className="team-description">
                 <h3>United by Purpose</h3>
                 <p>
-                  Our diverse team of educators, technologists, and student advocates brings together 
-                  decades of combined experience in international education, conference management, 
-                  and student support services. We're committed to breaking down barriers and 
-                  creating pathways to success for every student we serve.
+                  At MerbsConnect, our strength lies in our people. We are a passionate community of 
+                  Executives, Ambassadors, Representatives, and Creative Leads united by one mission: 
+                  Impact is the Reason.
+                  We lead initiatives like the Merbs Series, Start Right Conference, StudyAbroad Plus, 
+                  and All You Need (AYN), which transform mentorship, learning, and student empowerment 
+                  on campuses and beyond.
+                  Each member contributes uniquely to our shared vision of helping students learn, 
+                  connect, and lead purposefully.
                 </p>
-                <div className="team-stats">
-                  <div className="stat">
-                    <span className="stat-number">25+</span>
-                    <span className="stat-label">Team Members</span>
-                  </div>
-                  <div className="stat">
-                    <span className="stat-number">12</span>
-                    <span className="stat-label">Countries Represented</span>
-                  </div>
-                  <div className="stat">
-                    <span className="stat-number">100+</span>
-                    <span className="stat-label">Combined Years Experience</span>
-                  </div>
+                <div className="explore-team-section">
+                  <h4>Meet the MerbsConnect Team</h4>
+                  <p>Click here to explore profiles of our Executives, Reps, and Ambassadors with photos, roles, and short bios.</p>
+                  <a href="/team-profiles" className="explore-team-btn">Explore Team Profiles</a>
                 </div>
               </div>
             </div>

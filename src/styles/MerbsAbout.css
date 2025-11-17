@@ -27,7 +27,7 @@
 
 .section-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .section-title {
@@ -219,7 +219,17 @@
   font-weight: 600;
   color: #1a202c;
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.values-intro {
+  font-size: 1rem;
+  color: #4a5568;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
 .values-grid {

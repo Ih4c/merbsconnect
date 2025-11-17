@@ -209,8 +209,35 @@
 }
 
 /* About Page Styles */
-.about-mission {
+.about-mission,
+.about-vision,
+.about-mission-statement {
   margin-bottom: 3rem;
+}
+
+/* Desktop: Wider and shorter cards for About, Vision, Mission */
+@media (min-width: 769px) {
+  .about-mission .card,
+  .about-vision .card,
+  .about-mission-statement .card {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.8rem 3rem;
+    text-align: left;
+  }
+  
+  .about-mission .card h2,
+  .about-vision .card h2,
+  .about-mission-statement .card h2 {
+    text-align: center;
+  }
+  
+  .about-mission .card p,
+  .about-vision .card p,
+  .about-mission-statement .card p,
+  .about-mission-statement .card ul {
+    max-width: 100%;
+  }
 }
 
 .about-values {
@@ -343,28 +370,84 @@
   margin-top: 3rem;
 }
 
+.testimonials .card {
+  padding: 2rem;
+  background: #f8f9fa;
+  box-shadow: none;
+  max-width: 100%;
+  overflow: visible !important;
+}
+
+.testimonials .card h2 {
+  color: #1a202c;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
 .testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
   margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: start;
 }
 
 .testimonial-grid blockquote {
-  background: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 10px;
-  border-left: 4px solid #ff6b35;
+  background: #ffffff;
+  padding: 1rem 1.3rem;
+  border-radius: 8px;
+  border-left: 3px solid #ff6b35;
   margin: 0;
   font-style: italic;
+  color: #4a5568;
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+
+.testimonial-grid blockquote::before {
+  content: '"';
+  font-size: 2.5rem;
+  color: rgba(255, 107, 53, 0.15);
+  position: absolute;
+  top: -5px;
+  left: 8px;
+  line-height: 1;
+  font-style: normal;
+}
+
+.testimonial-grid blockquote:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.15);
+}
+
+.testimonial-grid blockquote p {
+  margin: 0;
+  flex: 1;
 }
 
 .testimonial-grid cite {
   display: block;
-  margin-top: 1rem;
-  font-weight: bold;
+  margin-top: auto;
+  padding-top: 0.7rem;
+  font-weight: 600;
   color: #ff6b35;
   font-style: normal;
+  font-size: 0.75rem;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
 }
 
 /* Articles Page Styles */
@@ -515,6 +598,22 @@
   margin-top: 2rem;
 }
 
+/* Tablet - 2 column grid */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .testimonials .card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .testimonial-grid blockquote {
+    padding: 1.3rem 1.8rem;
+  }
+}
+
 @media (max-width: 768px) {
   .page-container {
     padding: 80px 1rem 2rem;
@@ -522,6 +621,25 @@
   
   .page-header h1 {
     font-size: 2rem;
+  }
+  
+  .testimonials .card {
+    padding: 1.5rem;
+  }
+  
+  .testimonials .card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .testimonial-grid blockquote {
+    padding: 1.2rem 1.5rem;
+    font-size: 0.9rem;
   }
   
   .info-grid,

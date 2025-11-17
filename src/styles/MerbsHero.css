@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 180px 0 60px;  /* ✅ CRITICAL: 180px+ top padding to prevent navbar overlap */
+  padding: 160px 0 60px;  /* ✅ Space for badge + content */
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
@@ -43,14 +43,9 @@
   opacity: 1;
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.85) 100%);
-  z-index: 1;
+.overlay {
+  border-image-source: linear-gradient(hsl(240 100% 20% / .3),hsl(0 100% 20% / .45));
+  border-image-slice:fill 1;
 }
 
 .merbs-hero-container {
@@ -76,10 +71,10 @@
   margin: 0 auto;
 }
 
-/* Top Header Positioning */
+/* Top Header Positioning - Right beneath navbar */
 .merbs-hero-top-header {
   position: absolute;
-  top: 200px; /* Just below navbar */
+  top: 75px; /* Right beneath navbar (70px + 20px spacing) */
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
@@ -88,35 +83,44 @@
 }
 
 .merbs-hero-subtitle-header {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #2d3748;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
   margin: 0;
-  padding: 0.5rem 1.5rem;
-  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+  padding: 0.4rem 1rem;
+  text-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.8),
+    0 2px 5px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(0, 0, 0, 0.5);
   letter-spacing: 0.5px;
   display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
-  border-radius: 25px;
+  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .merbs-hero-main-title {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #ffffff;
   line-height: 1.2;
   letter-spacing: -0.01em;
-  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
-  padding-top: 0;
+  text-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.9),
+    0 2px 6px rgba(0, 0, 0, 0.95),
+    0 0 25px rgba(0, 0, 0, 0.6);
+  padding-top: 50px;
   margin-bottom: 1.5rem;
 }
 
 .brand-highlight {
   color: #ff6b35;
   position: relative;
-  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+  text-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.9),
+    0 2px 6px rgba(0, 0, 0, 0.95),
+    0 0 25px rgba(0, 0, 0, 0.6);
 }
 
 .brand-highlight::after {
@@ -128,6 +132,85 @@
   height: 3px;
   background: linear-gradient(90deg, #ff6b35, #ff8f65);
   border-radius: 2px;
+}
+
+/* Colorful Keywords Section */
+.merbs-hero-keywords {
+  margin: 1.5rem 0 2.5rem;
+  text-align: center;
+}
+
+.keyword-line {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0.35rem 0;
+  line-height: 1.5;
+  text-shadow: 
+    0 3px 8px rgba(0, 0, 0, 0.9),
+    0 2px 4px rgba(0, 0, 0, 0.95),
+    0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.keyword-learn {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #ff6b6b;
+  text-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.9),
+    0 2px 5px rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.keyword-grow {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #51cf66;
+  text-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.9),
+    0 2px 5px rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.keyword-create {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #ff8c42;
+  text-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.9),
+    0 2px 5px rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.keyword-make {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #4dabf7;
+  text-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.9),
+    0 2px 5px rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.keyword-stay {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #cc5de8;
+  text-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.9),
+    0 2px 5px rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.keyword-success {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #ff6b6b;
+  margin-left: 0;
+  text-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.9),
+    0 2px 5px rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(0, 0, 0, 0.6);
 }
 
 .merbs-hero-subtitle {
@@ -233,11 +316,14 @@
   display: inline-block;
   position: relative;
   vertical-align: baseline;
-  color: #ff6b35;
+  color: #ff6b6b;
   font-weight: 700;
   height: 1em;
   line-height: 1.3em;
-  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+  text-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.9),
+    0 2px 5px rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(0, 0, 0, 0.6);
 }
 
 .word-fader span {
@@ -273,7 +359,7 @@
   }
   
   .merbs-hero-top-header {
-    top: 180px;
+    top: 90px; /* Right beneath navbar */
   }
   
   .merbs-hero-content-wrapper {
@@ -297,8 +383,21 @@
   }
   
   .merbs-hero-subtitle-header {
+    font-size: 0.95rem;
+    padding: 0.35rem 1rem;
+  }
+  
+  .keyword-line {
     font-size: 1.3rem;
-    padding: 0.4rem 1.2rem;
+  }
+  
+  .keyword-learn,
+  .keyword-grow,
+  .keyword-create,
+  .keyword-make,
+  .keyword-stay,
+  .keyword-success {
+    font-size: 1.45rem;
   }
   
   .merbs-hero-actions {
@@ -315,7 +414,7 @@
   }
 
   .merbs-hero-top-header {
-    top: calc(var(--navbar-height) + 60px); /* 70px navbar + 60px spacing = 130px */
+    top: calc(var(--navbar-height) + -1px); 
   }
 
   .merbs-hero-container {
@@ -344,7 +443,7 @@
   .merbs-hero-main-title {
     font-size: 1.9rem;
     text-align: center;
-    padding-top: 0;
+    padding-top: 35px; /* More space below badge on mobile - prevent overlap */
     margin-bottom: 1rem;
     line-height: 1.1;
   }
@@ -352,7 +451,7 @@
   .merbs-hero-subtitle {
     font-size: 0.95rem;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
     line-height: 1.4;
     width: 100%;
     margin-left: auto;
@@ -360,8 +459,31 @@
   }
 
   .merbs-hero-subtitle-header {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.85rem;
+  }
+  
+  .merbs-hero-main-title {
+    padding-top: 60px; /* Adjusted space for smaller badge on mobile */
+  }
+  
+  .merbs-hero-keywords {
+    margin: 1.5rem 0 2rem;
+  }
+  
+  .keyword-line {
     font-size: 1.1rem;
-    padding: 0.4rem 1rem;
+    margin: 0.4rem 0;
+    line-height: 1.6;
+  }
+  
+  .keyword-learn,
+  .keyword-grow,
+  .keyword-create,
+  .keyword-make,
+  .keyword-stay,
+  .keyword-success {
+    font-size: 1.25rem;
   }
 
   .merbs-hero-actions {
@@ -487,5 +609,55 @@
     background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
     color: white;
     box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+  }
+}
+
+/* Advertisement Space */
+.hero-advertisement-space {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+  max-width: 300px;
+  display: none; /* Hidden by default - can be toggled when ad is available */
+}
+
+.ad-placeholder {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 2px dashed rgba(255, 107, 53, 0.3);
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ad-label {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+/* Show ad space when .has-ad class is added to hero-advertisement-space */
+.hero-advertisement-space.has-ad {
+  display: block;
+}
+
+/* Mobile advertisement positioning */
+@media (max-width: 768px) {
+  .hero-advertisement-space {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: 100%;
+  }
+  
+  .ad-placeholder {
+    padding: 0.75rem;
+  }
+  
+  .ad-label {
+    font-size: 0.8rem;
   }
 }

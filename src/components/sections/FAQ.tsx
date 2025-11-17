@@ -7,43 +7,68 @@ const FAQ: React.FC = () => {
   const faqs = [
     {
       id: 1,
-      question: "What is MERBS Connect and how does it work?",
-      answer: "MERBS Connect is a comprehensive educational platform that empowers students and professionals through innovative conference experiences, study abroad programs, and student companion services. We provide end-to-end support for your educational and career journey, from conference attendance to international opportunities."
+      question: "What is MerbsConnect and how does it work?",
+      answer: "MerbsConnect is a global student empowerment platform that equips learners and young professionals with mentorship, academic resources, and real-world opportunities. Through conferences, Study Abroad Plus, Launch Plus, HangOut, Outreach, StudyHub, and All You Need, we bridge the gap between learning and leadership, helping every student reach their full potential."
     },
     {
       id: 2,
-      question: "How can I register for the StartRight Conference?",
-      answer: "You can register for the StartRight Conference by clicking on the 'Register Now' button in the StartRight section or by visiting our dedicated conference platform at /startright. The registration process is simple and includes options for different ticket types based on your needs."
+      question: "Who can join MerbsConnect?",
+      answer: "Any student, graduate, or young professional passionate about learning, growth, and impact can join. Whether you're in high school, university, or already on your career journey, MerbsConnect has a space designed for you."
     },
     {
       id: 3,
-      question: "What study abroad programs do you offer?",
-      answer: "Our Study Abroad program is currently in development and will launch soon. It will include partnerships with top universities worldwide, scholarship guidance, application support, and comprehensive visa assistance. Sign up for notifications to be the first to know when it becomes available."
+      question: "How can I register for the Start Right Conference?",
+      answer: "You can register by clicking the 'Register Now' button on the StartRight Conference section or visiting our events page. The process is simple and completely free. Sign up to secure your spot and receive updates about the program and schedule."
     },
     {
       id: 4,
-      question: "How does the Student Companion service work?",
-      answer: "The Student Companion service (coming soon) will provide personalized mentorship, academic resources, career guidance, and peer connections. Our experienced mentors will work with you one-on-one to help you achieve your academic and career goals."
+      question: "What is the StudyAbroad Plus program, and what does it offer?",
+      answer: "Our StudyAbroad Plus program is designed to guide students at every stage of their university journey, whether you're a freshman exploring future options or a final-year student preparing your graduate school applications. We provide insider tips, step-by-step guidance, and mentorship through every phase of the international education process. From selecting universities and applying for scholarships to preparing for interviews and understanding visa processes, StudyAbroad Plus ensures you're never alone on your journey abroad. Our goal is to help you apply smarter, stand out stronger, and confidently achieve your dream of studying abroad."
     },
     {
       id: 5,
-      question: "Are there any costs associated with MERBS Connect services?",
-      answer: "We offer both free and premium services. Basic access to our platform, resources, and some events are free. Premium services like personalized mentorship, exclusive conferences, and study abroad support have associated costs. We also offer scholarships and financial aid for qualifying students."
+      question: "What is the StudyHub?",
+      answer: "StudyHub is MerbsConnect's learning center, where students can access university-level courses such as Calculus, Algebra, Statistics, Differential Equations, and more. Each course comes with step-by-step lessons, quizzes, and progress tracking to help students master their academics."
     },
     {
       id: 6,
-      question: "Can international students use MERBS Connect?",
-      answer: "Absolutely! MERBS Connect is designed to serve students globally. We have partnerships with universities in over 25 countries and our virtual events are accessible worldwide. Our team includes international education experts who understand the unique challenges faced by international students."
+      question: "What can I find under 'All You Need (AYN)'?",
+      answer: "MerbsConnect AYN (All You Need) is your lifestyle and creativity space. You'll find the MerbsStore, Photoshoot Studio, Printing & Design services, Student Services, and Advertise Your Product — everything a student or young creator needs to grow personally and professionally."
     },
     {
       id: 7,
-      question: "How do I get started with MERBS Connect?",
-      answer: "Getting started is easy! Simply create an account using the Register/Login button in the navigation menu. Once registered, you'll have access to our platform where you can explore upcoming events, access resources, and connect with our community."
+      question: "Are there any costs associated with MerbsConnect services?",
+      answer: "MerbsConnect offers free and premium services to ensure every student can access the right kind of support regardless of their journey.\n\nFree Services: These are open to all students and focus on learning, mentorship, and community building. They include: StartRight Conference, Launch Plus, HangOut, Outreach, and uConnect.\n\nPremium Services: These programs and services provide personalized mentorship, academic guidance, and creative solutions at a professional level. They include StudyAbroad Plus and All You Need (AYN).\n\nMerbsConnect also provides discounts, scholarships, and financial aid for qualifying students to make these premium opportunities accessible to everyone."
     },
     {
       id: 8,
+      question: "Can international students use MerbsConnect?",
+      answer: "Absolutely! MerbsConnect serves students worldwide. Our virtual events, mentorship sessions, and StudyAbroad Plus program are accessible across 25+ countries, connecting students to a global network of mentors and opportunities."
+    },
+    {
+      id: 9,
+      question: "How do I get started with MerbsConnect?",
+      answer: "Simply create an account using the Register/Login button on our website. Once registered, you'll gain access to programs, mentorship, StudyHub courses, and updates about upcoming events."
+    },
+    {
+      id: 10,
       question: "What kind of support do you provide to students?",
-      answer: "We provide comprehensive support including academic guidance, career counseling, networking opportunities, conference access, mentorship programs, and resources for international education. Our team is available 24/7 through our live chat feature and email support."
+      answer: "We provide holistic support — academic mentoring, career guidance, networking opportunities, and study abroad preparation. Our team is also available 24/7 through live chat and email."
+    },
+    {
+      id: 11,
+      question: "How can I become a MerbsConnect Ambassador or Representative?",
+      answer: "Applications for ambassadors and representatives open periodically. Follow MerbsConnect on social media or subscribe to our newsletter to be notified when new opportunities are available."
+    },
+    {
+      id: 12,
+      question: "How can I collaborate or volunteer with MerbsConnect?",
+      answer: "We welcome collaborations from educators, institutions, and student leaders. To partner or volunteer, contact us through our Contact page or email: support@merbsconnect.com."
+    },
+    {
+      id: 13,
+      question: "How can I stay updated on upcoming events and opportunities?",
+      answer: "Subscribe to our newsletter or follow MerbsConnect on all social media platforms to receive weekly updates, success stories, and event reminders."
     }
   ];
 
@@ -55,9 +80,9 @@ const FAQ: React.FC = () => {
     <section className="faq-section" id="faq">
       <div className="faq-container">
         <div className="section-header">
-          <h2 className="section-title">Frequently Asked Questions</h2>
+          <h2 className="section-title">Frequently Asked Questions (FAQs)</h2>
           <p className="section-subtitle">
-            Find answers to common questions about MERBS Connect and our services
+            Find answers to common questions about MerbsConnect and how we help students stay connected to their success.
           </p>
         </div>
 
@@ -94,8 +119,8 @@ const FAQ: React.FC = () => {
             <div className="quick-links">
               <h4>Quick Links</h4>
               <ul>
-                <li><a href="#startright">StartRight Conference</a></li>
-                <li><a href="#about">About MERBS Connect</a></li>
+                <li><a href="#startright">Start Right Conference</a></li>
+                <li><a href="#about">MerbsConnect</a></li>
                 <li><a href="#contact">Contact Us</a></li>
                 <li><a href="/startright">Conference Platform</a></li>
               </ul>

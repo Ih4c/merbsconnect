@@ -3,16 +3,8 @@ import '../../styles/MerbsAbout.css';
 
 const MerbsAbout: React.FC = () => {
   const descriptionLines = [
-    "MerbsConnect is an innovative, student-focused mentorship platform empowering learners across all disciplines.",
-    "We provide students with the tools, guidance, and opportunities to excel academically, grow personally, and succeed professionally.",
-    "Through our structured programs and initiatives, students gain access to:",
-    "📘 Educational resources that strengthen academic performance.",
-    "🌱 Mentorship and personal development that nurture leadership.",
-    "🌍 Study abroad and global opportunities that expand horizons.",
-    "🎤 Conferences, Outreach, and workshops that inspire growth and networking.",
-    "At MerbsConnect, we bridge the gap between academic learning and real-world application.",
-    "Our community brings together students, mentors, and professionals from diverse fields to collaborate, learn, and rise together.",
-    "MerbsConnect is more than a platform — it’s a thriving Community where students explore new opportunities, unlock potential, and build valuable connections that last a lifetime."
+    "MerbsConnect is an all-in-one platform to empower students and young professionals through mentorship, education, and creativity.",
+    "Everything begins here, from the Start Right Conference to Lifestyle and Beyond."
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -53,8 +45,7 @@ const MerbsAbout: React.FC = () => {
               </div>
               <h3 className="card-title">Our Mission</h3>
               <p className="card-description">
-                To empower students and professionals through educational platforms, mentorship, conferences, outreach programs, and global opportunities,
-                fostering academic excellence and career advancement in an increasingly connected world.
+                To inspire, equip, and connect students with the knowledge, tools, and networks they need to thrive - academically, professionally, and personally.
                 <br />
                 We achieve this by focusing on:
               </p>
@@ -85,8 +76,12 @@ const MerbsAbout: React.FC = () => {
               </div>
               <h3 className="card-title">Our Vision</h3>
               <p className="card-description">
-                To be the leading global platform that connects education, mentorship,
-                and opportunities — creating a world where every student can access transformative experiences and achieve career success.
+                To be the leading global platform that connects education, mentorship, and opportunity - creating a world where every student begins their journey with clarity, confidence, and purpose.
+                <br />
+                We envision a generation of academically excellent, emotionally intelligent, and globally competitive students.
+                Through innovation, technology, and mentorship, we aim to nurture leaders who will create meaningful impact in their communities and beyond.
+                <br />
+                At MerbsConnect, every learner's success story reflects our vision: to guide, grow, and give back.
                 <br />
                 We envision a future built on:
               </p>
@@ -114,6 +109,7 @@ const MerbsAbout: React.FC = () => {
           {/* Values Section */}
           <div className="values-section">
             <h3 className="values-title">Our Core Values</h3>
+            <p className="values-intro">These values define who we are, what we stand for, and how we empower students to stay connected to their success.</p>
             <div className="values-grid">
               <div className="value-item">
                 <div className="value-icon">🎓</div>

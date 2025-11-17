@@ -58,7 +58,7 @@ const MerbsContact: React.FC = () => {
         <div className="section-header">
           <h2 className="section-title">Get In Touch</h2>
           <p className="section-subtitle">
-            Ready to start your journey with MERBS Connect? We're here to help you every step of the way.
+            Ready to start your journey with MerbsConnect? We're here to help you every step of the way.
           </p>
         </div>
 
@@ -121,9 +121,11 @@ const MerbsContact: React.FC = () => {
                   >
                     <option value="">Select a subject</option>
                     <option value="general">General Inquiry</option>
-                    <option value="startright">StartRight Conference</option>
+                    <option value="startright">Start Right Conference</option>
                     <option value="study-abroad">Study Abroad Program</option>
-                    <option value="student-companion">Student Companion</option>
+                    <option value="studyhub">StudyHub</option>
+                    <option value="myhub">MyHub</option>
+                    <option value="ayn">AYN (All You Need)</option>
                     <option value="partnership">Partnership Opportunities</option>
                     <option value="support">Technical Support</option>
                   </select>

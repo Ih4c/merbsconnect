@@ -93,10 +93,11 @@
 }
 
 .ceo-image img {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 20%;
   border: 4px solid rgba(255, 107, 53, 0.1);
   margin: 0 auto;
   display: block;
@@ -104,7 +105,7 @@
 
 .ceo-badge {
   position: absolute;
-  top: -10px;
+  bottom: -10px;
   right: 50%;
   transform: translateX(50%);
   background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
@@ -506,4 +507,43 @@
   .value-card p {
     font-size: 0.9rem;
   }
+}
+
+/* Explore Team Section */
+.explore-team-section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 107, 53, 0.1);
+}
+
+.explore-team-section h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.75rem;
+}
+
+.explore-team-section p {
+  color: #2d3748;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.explore-team-btn {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  transition: all 0.3s ease;
+}
+
+.explore-team-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
 }

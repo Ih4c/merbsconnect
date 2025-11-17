@@ -97,7 +97,7 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick, onLearnMoreClick }) => {
             </div>
 
             <p className="hero-subtitle">
-              Join industry leaders, innovators, and professionals for an transformative experience that will shape your career and expand your network.
+              Experience powerful sessions led by lecturers, valedictorians, student leaders, industry experts, innovators, and professionals, equipping you to thrive in academics, career, and life.
             </p>
 
             <div className="hero-actions">
@@ -114,17 +114,6 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick, onLearnMoreClick }) => {
                   key={index}
                   className={`slide ${index === currentSlide ? 'active' : ''}`}
                   style={{ backgroundImage: `url(${image})` }}
-                />
-              ))}
-            </div>
-            
-            {/* Slide indicators */}
-            <div className="slide-indicators">
-              {slideImages.map((_, index) => (
-                <button
-                  key={index}
-                  className={`indicator ${index === currentSlide ? 'active' : ''}`}
-                  onClick={() => setCurrentSlide(index)}
                 />
               ))}
             </div>
