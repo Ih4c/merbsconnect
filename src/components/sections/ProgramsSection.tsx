@@ -14,7 +14,7 @@ const ProgramsSection: React.FC = () => {
       id: 'startright',
       title: 'Start Right Conference',
       description: 'Kickstart your academic journey with our inspiring start right conference.',
-      image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/start.jpg',
       isActive: true,
       buttonText: 'Explore Platform',
       onButtonClick: handleStartRightExplore
@@ -23,7 +23,7 @@ const ProgramsSection: React.FC = () => {
       id: 'studyabroad',
       title: 'Study Abroad Plus',
       description: 'Explore international education opportunities and broaden your horizons.',
-      image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/studyabroad.jpg',
       isActive: false,
       buttonText: 'Explore Platform',
       onButtonClick: () => {}
@@ -70,7 +70,7 @@ const ProgramsSection: React.FC = () => {
     <section className="programs-section" id="programs">
       <div className="programs-container">
         <div className="section-header">
-          <h2 className="section-title">MerbsConnect Programs(MCP)</h2>
+          <h2 className="section-title">MerbsConnect <span className="programs-highlight">Programs</span> (MCP)</h2>
         </div>
 
         <div className="programs-grid">

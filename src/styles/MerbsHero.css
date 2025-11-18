@@ -71,36 +71,6 @@
   margin: 0 auto;
 }
 
-/* Top Header Positioning - Right beneath navbar */
-.merbs-hero-top-header {
-  position: absolute;
-  top: 75px; 
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  width: 100%;
-  text-align: center;
-}
-
-.merbs-hero-subtitle-header {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin: 0;
-  padding: 0.4rem 1rem;
-  text-shadow: 
-    0 3px 10px rgba(0, 0, 0, 0.8),
-    0 2px 5px rgba(0, 0, 0, 0.9),
-    0 0 20px rgba(0, 0, 0, 0.5);
-  letter-spacing: 0.5px;
-  display: inline-block;
-  background: linear-gradient(135deg, rgba(235, 12, 23, 0.9) 0%, rgba(235, 12, 23, 0.9) 100%);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  border: 1px solid rgba(235, 12, 23, 0.4);
-  box-shadow: 0 4px 15px rgba(235, 12, 23, 0.4);
-}
-
 .merbs-hero-main-title {
   font-size: 2.8rem;
   font-weight: 700;
@@ -367,10 +337,6 @@
     padding: 160px 0 50px;
   }
   
-  .merbs-hero-top-header {
-    top: 90px; /* Right beneath navbar */
-  }
-  
   .merbs-hero-content-wrapper {
     display: flex;
     flex-direction: column;
@@ -389,11 +355,6 @@
   
   .merbs-hero-subtitle {
     font-size: 1.05rem;
-  }
-  
-  .merbs-hero-subtitle-header {
-    font-size: 0.95rem;
-    padding: 0.35rem 1rem;
   }
   
   .keyword-line {
@@ -421,13 +382,9 @@
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
   .merbs-hero {
-    padding-top: calc(var(--navbar-height) + 80px); /* 70px navbar + 80px spacing = 150px */
+    padding-top: calc(var(--navbar-height) + 20px); /* 70px navbar + 20px spacing = 90px */
     padding-bottom: 40px;
     min-height: calc(100vh - var(--navbar-height));
-  }
-
-  .merbs-hero-top-header {
-    top: calc(var(--navbar-height) + 5px); /* Badge positioned right under navbar with 5px spacing */
   }
 
   .merbs-hero-container {
@@ -456,7 +413,7 @@
   .merbs-hero-main-title {
     font-size: 1.9rem;
     text-align: center;
-    padding-top: 65px; /* Proper spacing between badge and title (badge height ~40px + 25px spacing) */
+    padding-top: 0; /* No extra padding needed without badge */
     margin-bottom: 1rem;
     line-height: 1.1;
   }
@@ -469,11 +426,6 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .merbs-hero-subtitle-header {
-    font-size: 0.85rem;
-    padding: 0.3rem 0.85rem;
   }
   
   .merbs-hero-keywords {
@@ -521,32 +473,18 @@
 /* Extra Small Mobile Devices */
 @media (max-width: 480px) {
   .merbs-hero {
-    padding-top: calc(var(--navbar-height) + 90px); /* 70px navbar + 90px spacing = 160px */
+    padding-top: calc(var(--navbar-height) + 20px); /* 70px navbar + 20px spacing = 90px */
     padding-bottom: 30px;
     min-height: calc(100vh - var(--navbar-height));
-  }
-
-  .merbs-hero-top-header {
-    top: calc(var(--navbar-height) + 8px); /* Badge positioned 8px below navbar */
   }
 }
 
 /* iPhone and similar mobile devices - CRITICAL FIX */
 @media (max-width: 414px) {
   .merbs-hero {
-    padding-top: calc(var(--navbar-height) + 100px) !important; /* 70px navbar + 100px spacing = 170px */
+    padding-top: calc(var(--navbar-height) + 20px) !important; /* 70px navbar + 20px spacing = 90px */
     padding-bottom: 30px !important;
     min-height: calc(100vh - var(--navbar-height));
-  }
-  
-  .merbs-hero-top-header {
-    top: calc(var(--navbar-height) + 8px); /* Badge positioned 8px below navbar for better visibility */
-  }
-  
-  .merbs-hero-subtitle-header {
-    margin: 0;
-    font-size: 0.95rem;
-    padding: 0.4rem 1rem;
   }
 
   .merbs-hero-container {
@@ -577,7 +515,7 @@
     line-height: 1.1;
     margin-bottom: 0.8rem;
     font-weight: 700;
-    padding-top: 75px; /* Proper spacing: badge (~45px) + 30px spacing */
+    padding-top: 0; /* No extra padding needed without badge */
   }
 
   .merbs-hero-subtitle {

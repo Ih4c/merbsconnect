@@ -41,11 +41,6 @@ const MerbsHero: React.FC = () => {
         ))}
         <div/>
       </div>
-      
-      {/* Top Header - Fixed Position */}
-      <div className="merbs-hero-top-header">
-        <h2 className="merbs-hero-subtitle-header">Merbs Series</h2>
-      </div>
 
       {/* Main Content - Centered */}
       <div className="merbs-hero-container">

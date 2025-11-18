@@ -8,9 +8,11 @@ import StartRightLanding from './pages/StartRightLanding';
 import Gallery from './pages/Gallery';
 import Articles from './pages/Articles';
 import Videos from './pages/Videos';
+import ConferenceRegistrationForm from './forms/ConferenceRegistrationForm';
 
 function StartRightApp() {
   const [activeSection, setActiveSection] = useState('home');
+  const [showConferenceForm, setShowConferenceForm] = useState(false);
 
   const handleNavigate = (section: string) => {
     // Handle same-page sections with smooth scrolling
@@ -29,14 +31,12 @@ function StartRightApp() {
   };
 
   const handleRegisterClick = () => {
-    // Trigger registration form opening
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-      const registerBtn = navbar.querySelector('.register-btn') as HTMLElement;
-      if (registerBtn) {
-        registerBtn.click();
-      }
-    }
+    // Open conference registration form
+    setShowConferenceForm(true);
+  };
+
+  const handleCloseConferenceForm = () => {
+    setShowConferenceForm(false);
   };
 
   // Listen for hash changes to handle direct navigation
@@ -90,6 +90,11 @@ function StartRightApp() {
         {renderContent()}
         <StartRightFooter onNavigate={handleNavigate} />
         <ScrollToTop />
+        
+        {/* Conference Registration Form Modal */}
+        {showConferenceForm && (
+          <ConferenceRegistrationForm onClose={handleCloseConferenceForm} />
+        )}
       </div>
     </AuthProvider>
   );

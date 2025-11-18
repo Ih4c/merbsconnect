@@ -23,6 +23,10 @@
   letter-spacing: -0.01em;
 }
 
+.programs-highlight {
+  color: #eb0c17;
+}
+
 .programs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
