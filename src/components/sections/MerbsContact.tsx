@@ -123,8 +123,8 @@ const MerbsContact: React.FC = () => {
                     <option value="general">General Inquiry</option>
                     <option value="startright">Start Right Conference</option>
                     <option value="study-abroad">Study Abroad Program</option>
-                    <option value="studyhub">StudyHub</option>
-                    <option value="myhub">MyHub</option>
+                    <option value="studyhub">Merbs Series</option>
+                    <option value="myhub">Sponsorship</option>
                     <option value="ayn">AYN (All You Need)</option>
                     <option value="partnership">Partnership Opportunities</option>
                     <option value="support">Technical Support</option>

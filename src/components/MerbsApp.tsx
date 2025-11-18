@@ -25,7 +25,7 @@ function MerbsApp() {
   // Update active section based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'programs', 'merbshub', 'contact'];
+      const sections = ['home', 'about', 'merbshub', 'programs', 'allyouneed', 'meet-the-team', 'testimonials', 'faq', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {

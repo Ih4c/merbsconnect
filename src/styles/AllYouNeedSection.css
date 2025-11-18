@@ -24,7 +24,7 @@
 }
 
 .ayn-highlight {
-  color: #ff6b35;
+  color: #eb0c17;
 }
 
 .section-subtitle {
@@ -36,7 +36,7 @@
 }
 
 .highlight-text {
-  color: #ff6b35;
+  color: #eb0c17;
   font-weight: 600;
 }
 
@@ -112,7 +112,7 @@
 .card-button {
   width: 100%;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+  background: linear-gradient(135deg, #eb0c17 0%, #eb0c17 100%);
   color: white;
   border: none;
   border-radius: 10px;
@@ -127,7 +127,7 @@
 
 .card-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 8px 25px rgba(235, 12, 23, 0.3);
 }
 
 .explore-platform-section {
@@ -137,7 +137,7 @@
 
 .explore-platform-button {
   padding: 1.2rem 3rem;
-  background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+  background: linear-gradient(135deg, #eb0c17 0%, #eb0c17 100%);
   color: white;
   border: none;
   border-radius: 12px;
@@ -147,12 +147,12 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 8px 32px rgba(255, 107, 53, 0.2);
+  box-shadow: 0 8px 32px rgba(235, 12, 23, 0.2);
 }
 
 .explore-platform-button:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(255, 107, 53, 0.4);
+  box-shadow: 0 16px 48px rgba(235, 12, 23, 0.4);
 }
 
 /* Responsive Design */

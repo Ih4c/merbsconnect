@@ -18,7 +18,7 @@ const AllYouNeedSection: React.FC = () => {
       id: 'photoshoot',
       title: 'Photoshoot Studio',
       description: 'Book studio sessions for professional photos, ID shots, or creative projects.',
-      image: 'https://images.unsplash.com/photo-1554048612-b6a482b224b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       buttonText: 'Book Now',
       onClick: () => {
         // TODO: Link to booking system when ready
@@ -60,11 +60,6 @@ const AllYouNeedSection: React.FC = () => {
     }
   ];
 
-  const handleExplorePlatform = () => {
-    // TODO: Link to main AYN platform when created
-    console.log('Navigate to AYN Platform');
-  };
-
   return (
     <section className="allyouneed-section" id="allyouneed">
       <div className="allyouneed-container">
@@ -100,15 +95,6 @@ const AllYouNeedSection: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="explore-platform-section">
-          <button 
-            className="explore-platform-button"
-            onClick={handleExplorePlatform}
-          >
-            Explore Platform
-          </button>
         </div>
       </div>
     </section>

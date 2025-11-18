@@ -67,11 +67,11 @@
   }
   
   .nav-links a:hover {
-    color: #ff6b35;
+    color: #eb0c17;
   }
 
   .nav-links a.active {
-    color: #ff6b35;
+    color: #eb0c17;
     font-weight: 600;
   }
 
@@ -84,7 +84,7 @@
 
 
   .nav-links a.register-btn {
-    background: #ff6b35;
+    background: #eb0c17;
     color: white;
     font-weight: 600;
     padding: 0.7rem 1.5rem;
@@ -229,17 +229,17 @@
     }
 
     .nav-links a:hover {
-      color: #ff6b35;
+      color: #eb0c17;
       font-weight: 500;
     }
     
     .nav-links a.active {
-      color: #ff6b35;
+      color: #eb0c17;
       font-weight: 500;
     }
 
     .nav-links a.register-btn {
-      background: #ff6b35;
+      background: #eb0c17;
       color: white;
       border: none;
       border-radius: 8px;

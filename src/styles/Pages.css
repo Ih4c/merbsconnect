@@ -58,7 +58,7 @@
 }
 
 .main-conference h2 {
-  color: #ff6b35;
+  color: #eb0c17;
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -131,11 +131,11 @@
   background: #f8f9fa;
   padding: 1.5rem;
   border-radius: 8px;
-  border-left: 4px solid #ff6b35;
+  border-left: 4px solid #eb0c17;
 }
 
 .day-schedule h4 {
-  color: #ff6b35;
+  color: #eb0c17;
   font-size: 1.3rem;
   margin-bottom: 1rem;
 }
@@ -198,7 +198,7 @@
 .tier .price {
   font-size: 2rem;
   font-weight: 700;
-  color: #ff6b35;
+  color: #eb0c17;
   margin-bottom: 1rem;
 }
 
@@ -270,7 +270,7 @@
 
 .stats-grid .card h3 {
   font-size: 2.5rem;
-  color: #ff6b35;
+  color: #eb0c17;
   margin-bottom: 0.5rem;
 }
 
@@ -308,7 +308,7 @@
 }
 
 .event-year {
-  background: #ff6b35;
+  background: #eb0c17;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
@@ -361,7 +361,7 @@
 
 .event-highlights li:before {
   content: "•";
-  color: #ff6b35;
+  color: #eb0c17;
   margin-right: 0.5rem;
   font-weight: bold;
 }
@@ -401,7 +401,7 @@
   background: #ffffff;
   padding: 1rem 1.3rem;
   border-radius: 8px;
-  border-left: 3px solid #ff6b35;
+  border-left: 3px solid #eb0c17;
   margin: 0;
   font-style: italic;
   color: #4a5568;
@@ -420,7 +420,7 @@
 .testimonial-grid blockquote::before {
   content: '"';
   font-size: 2.5rem;
-  color: rgba(255, 107, 53, 0.15);
+  color: rgba(235, 12, 23, 0.15);
   position: absolute;
   top: -5px;
   left: 8px;
@@ -430,7 +430,7 @@
 
 .testimonial-grid blockquote:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.15);
+  box-shadow: 0 4px 12px rgba(235, 12, 23, 0.15);
 }
 
 .testimonial-grid blockquote p {
@@ -443,7 +443,7 @@
   margin-top: auto;
   padding-top: 0.7rem;
   font-weight: 600;
-  color: #ff6b35;
+  color: #eb0c17;
   font-style: normal;
   font-size: 0.75rem;
   border-top: 1px solid #e9ecef;
@@ -463,9 +463,9 @@
 
 .filter-btn {
   padding: 0.5rem 1rem;
-  border: 2px solid #ff6b35;
+  border: 2px solid #eb0c17;
   background: transparent;
-  color: #ff6b35;
+  color: #eb0c17;
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -474,7 +474,7 @@
 
 .filter-btn:hover,
 .filter-btn.active {
-  background: #ff6b35;
+  background: #eb0c17;
   color: white;
 }
 
@@ -495,7 +495,7 @@
 
 .article-category {
   display: inline-block;
-  background: #ff6b35;
+  background: #eb0c17;
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 15px;
@@ -534,7 +534,7 @@
 }
 
 .read-more-btn {
-  background: #ff6b35;
+  background: #eb0c17;
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -546,7 +546,7 @@
 }
 
 .read-more-btn:hover {
-  background: #e55a2b;
+  background: #eb0c17;
 }
 
 .newsletter-signup {
@@ -569,11 +569,11 @@
 
 .newsletter-input:focus {
   outline: none;
-  border-color: #ff6b35;
+  border-color: #eb0c17;
 }
 
 .newsletter-btn {
-  background: #ff6b35;
+  background: #eb0c17;
   color: white;
   border: none;
   padding: 0.75rem 2rem;
@@ -584,7 +584,7 @@
 }
 
 .newsletter-btn:hover {
-  background: #e55a2b;
+  background: #eb0c17;
 }
 
 .featured-topics {
@@ -687,7 +687,7 @@
 
 /* View Details Button */
 .view-details-btn {
-  background: #ff6b35;
+  background: #eb0c17;
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -700,7 +700,7 @@
 }
 
 .view-details-btn:hover {
-  background: #e55a2b;
+  background: #eb0c17;
   transform: translateY(-2px);
 }
 
@@ -769,7 +769,7 @@
 }
 
 .event-year-large {
-  background: #ff6b35;
+  background: #eb0c17;
   color: white;
   padding: 1rem 2rem;
   border-radius: 50px;
@@ -795,7 +795,7 @@
 }
 
 .stat-item h4 {
-  color: #ff6b35;
+  color: #eb0c17;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
 }
@@ -830,7 +830,7 @@
   padding: 0.75rem 1rem;
   margin-bottom: 0.5rem;
   border-radius: 6px;
-  border-left: 4px solid #ff6b35;
+  border-left: 4px solid #eb0c17;
 }
 
 .conference-description p {

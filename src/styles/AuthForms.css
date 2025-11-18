@@ -101,8 +101,8 @@
 
 .form-group input:focus {
   outline: none;
-  border-color: #ff6b35 !important;
-  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+  border-color: #eb0c17 !important;
+  box-shadow: 0 0 0 3px rgba(235, 12, 23, 0.1);
   color: #333333 !important;
 }
 
@@ -151,7 +151,7 @@
 
 .auth-submit-btn {
   width: 100%;
-  background: #ff6b35;
+  background: #eb0c17;
   color: white;
   border: none;
   padding: 1rem;
@@ -164,7 +164,7 @@
 }
 
 .auth-submit-btn:hover:not(:disabled) {
-  background: #e55a2b;
+  background: #eb0c17;
   transform: translateY(-1px);
 }
 
@@ -188,14 +188,14 @@
 .link-btn {
   background: none;
   border: none;
-  color: #ff6b35 !important;
+  color: #eb0c17 !important;
   cursor: pointer;
   text-decoration: underline;
   font-weight: 500;
 }
 
 .link-btn:hover {
-  color: #e55a2b !important;
+  color: #eb0c17 !important;
 }
 
 @media (max-width: 768px) {

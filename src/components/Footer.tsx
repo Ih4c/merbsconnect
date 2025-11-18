@@ -2,6 +2,21 @@ import "../styles/Footer.css";
 import Card from "./ui/Card";
 
 function Footer() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navbar = document.querySelector('.merbs-navbar') as HTMLElement | null;
+      const headerHeight = navbar?.getBoundingClientRect().height || 70;
+      const y = element.getBoundingClientRect().top + window.pageYOffset - headerHeight - 8;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    scrollToSection(sectionId);
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -46,15 +61,15 @@ function Footer() {
           <div className="footer-section">
             <h4 className="footer-subtitle">Quick Links</h4>
             <ul className="footer-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#startright">Start Right Conference</a></li>
-              <li><a href="#study-abroad">Study Abroad</a></li>
-              <li><a href="#myhub">MyHub</a></li>
-              <li><a href="#studyhub">StudyHub</a></li>
-              <li><a href="#ayn">AYN</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#register">Register/Login</a></li>
+              <li><a href="#home" onClick={(e) => handleLinkClick(e, 'home')}>Home</a></li>
+              <li><a href="#about" onClick={(e) => handleLinkClick(e, 'about')}>About</a></li>
+              <li><a href="#merbshub" onClick={(e) => handleLinkClick(e, 'merbshub')}>Merbs Series</a></li>
+              <li><a href="#programs" onClick={(e) => handleLinkClick(e, 'programs')}>Programs</a></li>
+              <li><a href="#allyouneed" onClick={(e) => handleLinkClick(e, 'allyouneed')}>AYN</a></li>
+              <li><a href="#meet-the-team" onClick={(e) => handleLinkClick(e, 'meet-the-team')}>Team</a></li>
+              <li><a href="#testimonials" onClick={(e) => handleLinkClick(e, 'testimonials')}>Testimonials</a></li>
+              <li><a href="#faq" onClick={(e) => handleLinkClick(e, 'faq')}>FAQ</a></li>
+              <li><a href="#contact" onClick={(e) => handleLinkClick(e, 'contact')}>Contact</a></li>
             </ul>
           </div>
 

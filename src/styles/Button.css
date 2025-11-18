@@ -14,7 +14,7 @@
   
   /* Variants */
   .btn.primary {
-    background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+    background: linear-gradient(135deg, #eb0c17 0%, #eb0c17 100%);
     color: white;
   }
   
@@ -25,8 +25,8 @@
   
   .btn.outline {
     background: transparent;
-    border: 2px solid #ff6b35;
-    color: #ff6b35;
+    border: 2px solid #eb0c17;
+    color: #eb0c17;
   }
   
   .btn.glass {

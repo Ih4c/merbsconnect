@@ -52,7 +52,7 @@
 
 /* Desktop Register Button */
 .merbs-navbar .register-btn {
-  background: #ff6b35;
+  background: #eb0c17;
   color: white;
   border: none;
   border-radius: 8px;
@@ -65,9 +65,9 @@
 }
 
 .merbs-navbar .register-btn:hover {
-  background: #e55a2b;
+  background: #eb0c17;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 4px 15px rgba(235, 12, 23, 0.4);
 }
 
 .merbs-navbar .nav-links li {
@@ -86,7 +86,7 @@
 }
 
 .merbs-navbar .nav-links a.active {
-  color: #ff6b35;
+  color: #eb0c17;
   font-weight: 600;
 }
 
@@ -227,12 +227,12 @@
   }
 
   .merbs-navbar .nav-links a:hover {
-    color: #ff6b35;
+    color: #eb0c17;
     font-weight: 500;
   }
 
   .merbs-navbar .nav-links a.active {
-    color: #ff6b35;
+    color: #eb0c17;
     font-weight: 500;
   }
 
@@ -257,7 +257,7 @@
   }
 
   .mobile-cta-btn {
-    background: #ff6b35;
+    background: #eb0c17;
     color: white;
     border: none;
     border-radius: 8px;
@@ -271,7 +271,7 @@
   }
 
   .mobile-cta-btn:hover {
-    background: #e55a2b;
+    background: #eb0c17;
     transform: translateY(-1px);
   }
 

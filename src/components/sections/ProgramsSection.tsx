@@ -70,7 +70,7 @@ const ProgramsSection: React.FC = () => {
     <section className="programs-section" id="programs">
       <div className="programs-container">
         <div className="section-header">
-          <h2 className="section-title">Our Programs</h2>
+          <h2 className="section-title">MerbsConnect Programs(MCP)</h2>
         </div>
 
         <div className="programs-grid">

@@ -2,90 +2,87 @@ import React from 'react';
 import '../../styles/MerbsHubSection.css';
 
 const MerbsHubSection: React.FC = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const hubCards = [
+  const levelCards = [
     {
-      id: 'studyhub',
-      title: 'Study Hub',
-      subtitle: 'Learn with Purpose.',
-      buttonText: 'Academics',
+      id: 'freshman',
+      level: 'Freshman',
+      levelNumber: '(Level 100)',
+      buttonText: 'Courses and more',
       buttonColor: 'blue',
-      image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       onClick: () => {
-        // This will be directed to student companion section when you show me where
-        console.log('Navigate to Study Hub/Student Companion');
+        console.log('Navigate to Freshman courses');
       }
     },
     {
-      id: 'programs',
-      title: 'Programs',
-      subtitle: 'Connect with Mentors.',
-      buttonText: 'Conference',
+      id: 'sophomore',
+      level: 'Sophomore',
+      levelNumber: '(Level 200)',
+      buttonText: 'Courses and more',
       buttonColor: 'red',
-      image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      onClick: () => scrollToSection('programs')
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      onClick: () => {
+        console.log('Navigate to Sophomore courses');
+      }
     },
     {
-      id: 'allyouneed',
-      title: 'All You Need',
-      subtitle: 'Shop, Book, Create.',
-      buttonText: 'Lifestyle',
+      id: 'junior',
+      level: 'Junior',
+      levelNumber: '(Level 300)',
+      buttonText: 'Courses and more',
       buttonColor: 'green',
-      image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      onClick: () => scrollToSection('allyouneed')
+      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      onClick: () => {
+        console.log('Navigate to Junior courses');
+      }
+    },
+    {
+      id: 'senior',
+      level: 'Senior',
+      levelNumber: '(Level 400)',
+      buttonText: 'Courses and more',
+      buttonColor: 'orange',
+      image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      onClick: () => {
+        console.log('Navigate to Senior courses');
+      }
     }
   ];
 
   return (
     <section className="merbshub-section" id="merbshub">
       <div className="merbshub-container">
-        {/* Hub Cards */}
-        <div className="hub-cards-grid">
-          {hubCards.map((card) => (
-            <div key={card.id} className={`hub-card ${card.buttonColor}`}>
-              <div className="card-image-section">
-                <img src={card.image} alt={card.title} />
-                <div className="card-overlay">
-                  <h3 className="card-title">{card.title}</h3>
-                </div>
+        {/* Section Header */}
+        <div className="series-header">
+          <h2 className="series-title">
+            Merbs <span className="series-highlight">Series</span>: Your Guide to Success
+          </h2>
+          <p className="series-description">
+            Expert-crafted courses, flashcards, quizzes, summaries, problem sets, and revision tools tailored for every level — from your first day on campus to your final exam.
+          </p>
+        </div>
+
+        {/* Level Cards Grid */}
+        <div className="level-cards-grid">
+          {levelCards.map((card) => (
+            <div key={card.id} className={`level-card ${card.buttonColor}`}>
+              <div className="level-card-image">
+                <img src={card.image} alt={card.level} />
               </div>
               
-              <div className="card-content-section">
-                <h4 className="card-subtitle">{card.subtitle}</h4>
+              <div className="level-card-content">
+                <h3 className="level-title">
+                  {card.level} <span className="level-number">{card.levelNumber}</span>
+                </h3>
                 <button 
-                  className={`hub-card-button ${card.buttonColor}`}
+                  className={`level-card-button ${card.buttonColor}`}
                   onClick={card.onClick}
                 >
-                  {card.buttonText} →
+                  {card.buttonText}
                 </button>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Story Section */}
-        <div className="merbs-story-section">
-          <h2 className="story-title">
-            <span className="story-highlight">The Merbs Connect Story</span>
-          </h2>
-          <p className="story-description">
-            From Learning to Leading - See how we empower students globally.
-          </p>
-          <button 
-            className="watch-now-button"
-            onClick={() => {
-              // TODO: Connect to video when provided by user
-              console.log('Watch Now clicked - Video to be added later');
-            }}
-          >
-            Watch Now
-          </button>
         </div>
       </div>
     </section>

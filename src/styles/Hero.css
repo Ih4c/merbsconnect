@@ -82,7 +82,7 @@
 }
 
 .year-highlight {
-  color: #ff6b35;
+  color: #eb0c17;
   display: block;
   font-size: 2rem;
   margin-top: 0.5rem;
@@ -113,14 +113,14 @@
 
 .countdown-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(255, 107, 53, 0.2);
+  box-shadow: 0 12px 40px rgba(235, 12, 23, 0.2);
 }
 
 .countdown-number {
   display: block;
   font-size: 2rem;
   font-weight: 700;
-  color: #ff6b35;
+  color: #eb0c17;
   line-height: 1;
   margin-bottom: 0.5rem;
   font-family: 'Inter', sans-serif;
@@ -165,18 +165,18 @@
   align-items: center;
   justify-content: center;
   min-width: 140px;
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 4px 15px rgba(235, 12, 23, 0.3);
 }
 
 .hero-btn.primary {
-  background: #ff6b35;
+  background: #eb0c17;
   color: white;
 }
 
 .hero-btn.primary:hover {
-  background: #e55a2b;
+  background: #eb0c17;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+  box-shadow: 0 6px 20px rgba(235, 12, 23, 0.4);
 }
 
 .hero-btn.secondary {

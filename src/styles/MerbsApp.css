@@ -115,28 +115,28 @@ section {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+  background: linear-gradient(135deg, #eb0c17 0%, #eb0c17 100%);
   color: white;
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 4px 15px rgba(235, 12, 23, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+  box-shadow: 0 8px 25px rgba(235, 12, 23, 0.4);
 }
 
 .btn-secondary {
   background: rgba(255, 255, 255, 0.9);
-  color: #ff6b35;
-  border: 2px solid #ff6b35;
+  color: #eb0c17;
+  border: 2px solid #eb0c17;
   backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
-  background: #ff6b35;
+  background: #eb0c17;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 8px 25px rgba(235, 12, 23, 0.3);
 }
 
 /* Common card styles */
@@ -145,7 +145,7 @@ section {
   backdrop-filter: blur(20px);
   border-radius: 16px;
   padding: 1.5rem;
-  border: 1px solid rgba(255, 107, 53, 0.1);
+  border: 1px solid rgba(235, 12, 23, 0.1);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   margin-bottom: 1rem;
@@ -153,8 +153,8 @@ section {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(255, 107, 53, 0.15);
-  border-color: rgba(255, 107, 53, 0.2);
+  box-shadow: 0 20px 40px rgba(235, 12, 23, 0.15);
+  border-color: rgba(235, 12, 23, 0.2);
 }
 
 /* Common container styles */
@@ -263,7 +263,7 @@ section {
 
 /* Color utilities */
 .text-primary {
-  color: #ff6b35;
+  color: #eb0c17;
 }
 
 .text-secondary {
@@ -370,13 +370,13 @@ button:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid #ff6b35;
+  outline: 2px solid #eb0c17;
   outline-offset: 2px;
 }
 
 /* Selection styles */
 ::selection {
-  background: rgba(255, 107, 53, 0.2);
+  background: rgba(235, 12, 23, 0.2);
   color: #1a202c;
 }
 
@@ -390,10 +390,10 @@ select:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff6b35;
+  background: #eb0c17;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #e55a2b;
+  background: #eb0c17;
 }

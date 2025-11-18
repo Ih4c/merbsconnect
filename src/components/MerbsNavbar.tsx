@@ -114,7 +114,7 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
               onClick={(e) => handleNavClick(e, "merbshub")}
               className={activeSection === "merbshub" ? "active" : ""}
             >
-              Merbshub
+              Merbs Series
             </a>
           </li>
           <li>
@@ -146,7 +146,7 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
                   style={{
                     marginLeft: "10px",
                     padding: "5px 10px",
-                    background: "#ff6b35",
+                    background: "#eb0c17",
                     color: "white",
                     border: "none",
                     borderRadius: "4px",

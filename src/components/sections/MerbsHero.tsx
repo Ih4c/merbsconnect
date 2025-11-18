@@ -44,7 +44,7 @@ const MerbsHero: React.FC = () => {
       
       {/* Top Header - Fixed Position */}
       <div className="merbs-hero-top-header">
-        <h2 className="merbs-hero-subtitle-header">MerbsConnect Today</h2>
+        <h2 className="merbs-hero-subtitle-header">Merbs Series</h2>
       </div>
 
       {/* Main Content - Centered */}
@@ -69,15 +69,9 @@ const MerbsHero: React.FC = () => {
               <p className="keyword-line">
                 <span className="keyword-make">Make</span> lasting impact
               </p>
-              <p className="keyword-line">
+              <p className="keyword-line success-line">
                 <span className="keyword-stay">Stay</span> Connected to your{" "}
-                <span className="word-fader keyword-success">
-                  <span>Success</span>
-                  <span>Excellence</span>
-                  <span>Growth</span>
-                  <span>Potential</span>
-                  <span>Purpose</span>
-                </span>
+                <span className="keyword-success">Success</span>
               </p>
             </div>
 
@@ -98,7 +92,22 @@ const MerbsHero: React.FC = () => {
                 className="merbs-hero-btn tertiary" 
                 onClick={() => scrollToSection('merbshub')}
               >
-                Explore MerbsHub
+                Explore Merbs Series
+              </button>
+            </div>
+            
+            <div className="merbs-hero-actions-secondary">
+              <button 
+                className="merbs-hero-btn catalog-btn" 
+                onClick={() => scrollToSection('programs')}
+              >
+                View MerbsConnect Catalog
+              </button>
+              <button 
+                className="merbs-hero-btn ayn-btn" 
+                onClick={() => scrollToSection('allyouneed')}
+              >
+                Explore AYN
               </button>
             </div>
           </div>

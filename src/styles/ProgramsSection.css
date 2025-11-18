@@ -86,7 +86,7 @@
 }
 
 .coming-soon-badge {
-  background: #ff6b35;
+  background: #eb0c17;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -127,7 +127,7 @@
 .card-button {
   width: 100%;
   padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+  background: linear-gradient(135deg, #eb0c17 0%, #eb0c17 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -142,7 +142,7 @@
 
 .card-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 8px 25px rgba(235, 12, 23, 0.3);
 }
 
 .card-button.disabled {

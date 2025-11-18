@@ -1,38 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import '../../styles/MerbsAbout.css';
 
 const MerbsAbout: React.FC = () => {
-  const descriptionLines = [
-    "MerbsConnect is an all-in-one platform to empower students and young professionals through mentorship, education, and creativity.",
-    "Everything begins here, from the Start Right Conference to Lifestyle and Beyond."
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const linesPerSlide = 3;
-  const interval = 5000; // 4 seconds per slide
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + linesPerSlide) % descriptionLines.length);
-    }, interval);
-    return () => clearInterval(timer);
-  }, [descriptionLines.length]);
-
-  const currentSet = descriptionLines.slice(currentIndex, currentIndex + linesPerSlide);
-
   return (
     <section className="merbs-about" id="about">
       <div className="merbs-about-container">
         <div className="section-header">
-          <h2 className="section-title">📖About MerbsConnect</h2>
+          <h2 className="section-title">About MerbsConnect</h2>
 
-          {/* Modified description with slideshow */}
-          <div className="section-subtitle slideshow-wrapper">
-            <div key={currentIndex} className="slideshow-slide">
-              {currentSet.map((line, idx) => (
-                <p key={idx}>{line}</p>
-              ))}
-            </div>
+          {/* Static description - both statements visible */}
+          <div className="section-subtitle">
+            <p>MerbsConnect is an all-in-one platform to empower students and young professionals through mentorship, education, and creativity.</p>
+            <p>Everything begins here, from the Start Right Conference to Lifestyle and Beyond.</p>
           </div>
         </div>
 
@@ -148,15 +127,15 @@ const MerbsAbout: React.FC = () => {
           <div className="stats-section">
             <div className="stats-grid">
               <div className="stat-item">
-                <div className="stat-number">10K+</div>
+                <div className="stat-number">2K+</div>
                 <div className="stat-label">Students Empowered</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">50+</div>
+                <div className="stat-number">1</div>
                 <div className="stat-label">Partner Universities</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">25+</div>
+                <div className="stat-number">5+</div>
                 <div className="stat-label">Countries Reached</div>
               </div>
               <div className="stat-item">

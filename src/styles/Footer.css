@@ -59,9 +59,9 @@
   }
   
   .social-link:hover {
-    color: #ff6b35;
-    background-color: rgba(255, 107, 53, 0.1);
-    border-color: #ff6b35;
+    color: #eb0c17;
+    background-color: rgba(235, 12, 23, 0.1);
+    border-color: #eb0c17;
     transform: translateY(-2px);
   }
   
@@ -90,7 +90,7 @@
   }
   
   .footer-links a:hover {
-    color: #ff6b35;
+    color: #eb0c17;
   }
   
   .contact-info p {
@@ -120,7 +120,7 @@
   
   .newsletter-btn {
     padding: 0.7rem 1.2rem;
-    background: #ff6b35;
+    background: #eb0c17;
     color: white;
     border: none;
     border-radius: 6px;
@@ -130,7 +130,7 @@
   }
   
   .newsletter-btn:hover {
-    background: #e55a2b;
+    background: #eb0c17;
   }
   
   .footer-cards {
@@ -162,7 +162,7 @@
   }
   
   .footer-legal a:hover {
-    color: #ff6b35;
+    color: #eb0c17;
   }
   
   @keyframes fadeUp {
