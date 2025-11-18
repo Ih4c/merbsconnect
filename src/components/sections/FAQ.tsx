@@ -119,7 +119,7 @@ const FAQ: React.FC = () => {
             <div className="quick-links">
               <h4>Quick Links</h4>
               <ul>
-                <li><a href="#startright">Start Right Conference</a></li>
+                <li><a href="/startright">Start Right Conference</a></li>
                 <li><a href="#about">MerbsConnect</a></li>
                 <li><a href="#contact">Contact Us</a></li>
                 <li><a href="/startright">Conference Platform</a></li>
