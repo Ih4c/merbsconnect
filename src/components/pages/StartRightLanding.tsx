@@ -8,9 +8,10 @@ import '../../styles/StartRightLanding.css';
 
 interface StartRightLandingProps {
   onRegisterClick: () => void;
+  onNavigate: (section: string) => void;
 }
 
-const StartRightLanding: React.FC<StartRightLandingProps> = ({ onRegisterClick }) => {
+const StartRightLanding: React.FC<StartRightLandingProps> = ({ onRegisterClick, onNavigate }) => {
   const [selectedConference, setSelectedConference] = useState<any>(null);
 
   const handleConferenceClick = (conference: any) => {
@@ -28,7 +29,7 @@ const StartRightLanding: React.FC<StartRightLandingProps> = ({ onRegisterClick }
     <div className="startright-landing">
       {/* Hero Section */}
       <section id="home" className="landing-section">
-        <Hero 
+        <Hero
           onRegisterClick={onRegisterClick}
           onLearnMoreClick={handleLearnMoreClick}
         />
@@ -41,15 +42,7 @@ const StartRightLanding: React.FC<StartRightLandingProps> = ({ onRegisterClick }
 
       {/* Past Conferences Section */}
       <section id="past-conferences" className="landing-section">
-        <div className="section-container">
-          <div className="section-header">
-            <h2 className="section-title">Past Conferences</h2>
-            <p className="section-subtitle">
-              Explore our journey of empowering students through impactful conferences
-            </p>
-          </div>
-          <PastConferences onConferenceClick={handleConferenceClick} />
-        </div>
+        <PastConferences onConferenceClick={handleConferenceClick} />
       </section>
 
       {/* Volunteer Section */}
@@ -59,9 +52,10 @@ const StartRightLanding: React.FC<StartRightLandingProps> = ({ onRegisterClick }
 
       {/* Conference Modal */}
       {selectedConference && (
-        <ConferenceModal 
+        <ConferenceModal
           conference={selectedConference}
           onClose={() => setSelectedConference(null)}
+          onNavigate={onNavigate}
         />
       )}
     </div>

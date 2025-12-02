@@ -8,7 +8,7 @@ const FAQ: React.FC = () => {
     {
       id: 1,
       question: "What is MerbsConnect and how does it work?",
-      answer: "MerbsConnect is a global student empowerment platform that equips learners and young professionals with mentorship, academic resources, and real-world opportunities. Through conferences, Study Abroad Plus, Launch Plus, HangOut, Outreach, StudyHub, and All You Need, we bridge the gap between learning and leadership, helping every student reach their full potential."
+      answer: "MerbsConnect is a global student empowerment platform that equips learners and young professionals with mentorship, academic resources, and real-world opportunities. Through conferences, Study Abroad Plus, Launch Plus, HangOut, Outreach, Merbs Series, and All You Need, we bridge the gap between learning and leadership, helping every student reach their full potential."
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ const FAQ: React.FC = () => {
     {
       id: 3,
       question: "How can I register for the Start Right Conference?",
-      answer: "You can register by clicking the 'Register Now' button on the StartRight Conference section or visiting our events page. The process is simple and completely free. Sign up to secure your spot and receive updates about the program and schedule."
+      answer: "You can register by clicking the 'Register Now' button on the Start Right Conference section or visiting our events page. The process is simple and completely free. Sign up to secure your spot and receive updates about the program and schedule."
     },
     {
       id: 4,
@@ -27,8 +27,8 @@ const FAQ: React.FC = () => {
     },
     {
       id: 5,
-      question: "What is the StudyHub?",
-      answer: "StudyHub is MerbsConnect's learning center, where students can access university-level courses such as Calculus, Algebra, Statistics, Differential Equations, and more. Each course comes with step-by-step lessons, quizzes, and progress tracking to help students master their academics."
+      question: "What is the Merbs Series?",
+      answer: "Merbs Series is MerbsConnect's learning center, where students can access university-level courses such as Calculus, Algebra, Statistics, Differential Equations, and more. Each course comes with step-by-step lessons, quizzes, and progress tracking to help students master their academics."
     },
     {
       id: 6,
@@ -38,7 +38,7 @@ const FAQ: React.FC = () => {
     {
       id: 7,
       question: "Are there any costs associated with MerbsConnect services?",
-      answer: "MerbsConnect offers free and premium services to ensure every student can access the right kind of support regardless of their journey.\n\nFree Services: These are open to all students and focus on learning, mentorship, and community building. They include: StartRight Conference, Launch Plus, HangOut, Outreach, and uConnect.\n\nPremium Services: These programs and services provide personalized mentorship, academic guidance, and creative solutions at a professional level. They include StudyAbroad Plus and All You Need (AYN).\n\nMerbsConnect also provides discounts, scholarships, and financial aid for qualifying students to make these premium opportunities accessible to everyone."
+      answer: "MerbsConnect offers free and premium services to ensure every student can access the right kind of support regardless of their journey.\n\nFree Services: These are open to all students and focus on learning, mentorship, and community building. They include: StartRight Conference, Launch Plus, HangOut, Outreach, and uConnect.\n\nPremium Services: These programs and services provide personalized mentorship, academic guidance, and creative solutions at a professional level. They include StudyAbroad Plus, Merbs Series and All You Need (AYN).\n\nMerbsConnect also provides discounts, scholarships, and financial aid for qualifying students to make these premium opportunities accessible to everyone."
     },
     {
       id: 8,
@@ -48,7 +48,7 @@ const FAQ: React.FC = () => {
     {
       id: 9,
       question: "How do I get started with MerbsConnect?",
-      answer: "Simply create an account using the Register/Login button on our website. Once registered, you'll gain access to programs, mentorship, StudyHub courses, and updates about upcoming events."
+      answer: "Simply create an account using the Register/Login button on our website. Once registered, you'll gain access to programs, mentorship, Merbs Series courses, and updates about upcoming events."
     },
     {
       id: 10,
@@ -90,7 +90,7 @@ const FAQ: React.FC = () => {
           <div className="faq-list">
             {faqs.map((faq) => (
               <div key={faq.id} className={`faq-item ${openFAQ === faq.id ? 'open' : ''}`}>
-                <button 
+                <button
                   className="faq-question"
                   onClick={() => toggleFAQ(faq.id)}
                 >

@@ -32,8 +32,8 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick, onLearnMoreClick }) => {
 
   // Countdown timer - placeholder date (you'll provide the actual date later)
   useEffect(() => {
-    const targetDate = new Date('2026-06-15T09:00:00').getTime();
-    
+    const targetDate = new Date('2026-01-15T09:00:00').getTime();
+
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const distance = targetDate - now;
@@ -63,10 +63,10 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick, onLearnMoreClick }) => {
           />
         ))}
       </div>
-      
+
       {/* Overlay */}
       <div className="hero-overlay" />
-      
+
       <div className="hero-container">
         <div className="hero-content-wrapper">
           {/* Left side - Text content */}
@@ -74,7 +74,7 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick, onLearnMoreClick }) => {
             <h1 className="hero-main-title">
               Start Right Conference <span className="year-highlight">2026</span>
             </h1>
-            
+
             {/* Countdown Timer */}
             <div className="countdown-container">
               <div className="countdown-item">
@@ -96,25 +96,25 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick, onLearnMoreClick }) => {
             </div>
 
             <p className="hero-subtitle">
-              Experience powerful sessions led by lecturers, valedictorians, student leaders, industry experts, innovators, and professionals, equipping you to thrive in academics, career, and life.
+              Experience life-changing sessions led by top lecturers, valedictorians, student leaders, industry experts, innovators, and professionals, equipping you with the mindset, tools, and confidence to thrive in academics, career, and life.
             </p>
+
+            {/* Why You Should Attend Section */}
+            <div className="why-attend-section">
+              <h3 className="why-attend-title">Why You Should Attend</h3>
+              <p className="why-attend-intro">Learn from:</p>
+              <ul className="why-attend-list">
+                <li>LinkedIn & Personal Branding experts</li>
+                <li>AI & Education panelists</li>
+                <li>Growth and opportunity coaches</li>
+                <li>Student life & academic excellence mentors</li>
+                <li>Study abroad consultants and scholarship advisors</li>
+              </ul>
+            </div>
 
             <div className="hero-actions">
               <button className="hero-btn primary" onClick={onRegisterClick}>Register Now</button>
               <button className="hero-btn secondary" onClick={onLearnMoreClick}>Learn More</button>
-            </div>
-          </div>
-
-          {/* Right side - Synchronized sliding images */}
-          <div className="hero-image-section">
-            <div className="image-slider">
-              {slideImages.map((image, index) => (
-                <div
-                  key={index}
-                  className={`slide ${index === currentSlide ? 'active' : ''}`}
-                  style={{ backgroundImage: `url(${image})` }}
-                />
-              ))}
             </div>
           </div>
         </div>

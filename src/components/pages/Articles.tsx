@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Card from '../ui/Card';
 import '../../styles/Pages.css';
 
 const Articles: React.FC = () => {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const articles = [
     {
       title: "10 Essential Skills for New Entrepreneurs",
@@ -69,8 +74,8 @@ const Articles: React.FC = () => {
         <section className="articles-filter">
           <div className="filter-buttons">
             {categories.map((category, index) => (
-              <button 
-                key={index} 
+              <button
+                key={index}
                 className={`filter-btn ${index === 0 ? 'active' : ''}`}
               >
                 {category}
@@ -104,8 +109,8 @@ const Articles: React.FC = () => {
             <h2>Stay Updated</h2>
             <p>Get the latest articles and insights delivered to your inbox.</p>
             <div className="newsletter-form">
-              <input 
-                type="email" 
+              <input
+                type="email"
                 placeholder="Enter your email address"
                 className="newsletter-input"
               />

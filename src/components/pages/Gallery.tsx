@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../styles/Gallery.css';
 
 interface GalleryItem {
@@ -13,6 +13,11 @@ interface GalleryItem {
 const Gallery: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const categories = ['all', 'conferences', 'workshops', 'networking', 'awards'];
 
@@ -67,8 +72,8 @@ const Gallery: React.FC = () => {
     }
   ];
 
-  const filteredItems = selectedCategory === 'all' 
-    ? galleryItems 
+  const filteredItems = selectedCategory === 'all'
+    ? galleryItems
     : galleryItems.filter(item => item.category === selectedCategory);
 
   const handleImageClick = (item: GalleryItem) => {
@@ -106,14 +111,14 @@ const Gallery: React.FC = () => {
         {/* Gallery Grid */}
         <div className="gallery-grid">
           {filteredItems.map(item => (
-            <div 
-              key={item.id} 
+            <div
+              key={item.id}
               className="gallery-item"
               onClick={() => handleImageClick(item)}
             >
               <div className="gallery-image-container">
-                <img 
-                  src={item.image} 
+                <img
+                  src={item.image}
                   alt={item.title}
                   className="gallery-image"
                 />
@@ -151,8 +156,8 @@ const Gallery: React.FC = () => {
         <div className="image-modal-overlay" onClick={closeModal}>
           <div className="image-modal" onClick={e => e.stopPropagation()}>
             <button className="modal-close" onClick={closeModal}>×</button>
-            <img 
-              src={selectedImage.image} 
+            <img
+              src={selectedImage.image}
               alt={selectedImage.title}
               className="modal-image"
             />

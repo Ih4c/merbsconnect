@@ -35,15 +35,15 @@ const StartRightSection: React.FC = () => {
   const upcomingEvents = [
     {
       title: 'StartRight Conference 2026',
-      date: 'June 15-17, 2026',
-      location: 'Lagos, Nigeria',
+      date: 'January 2026',
+      location: 'Accra, Ghana',
       status: 'Registration Open',
       highlight: true
     },
     {
       title: 'Tech Innovation Summit',
       date: 'September 2026',
-      location: 'Abuja, Nigeria',
+      location: 'TBA',
       status: 'Coming Soon',
       highlight: false
     },
@@ -72,7 +72,7 @@ const StartRightSection: React.FC = () => {
             <div className="hero-content">
               <h3 className="hero-title">Join the Premier Professional Development Conference</h3>
               <p className="hero-description">
-                StartRight Conference brings together industry leaders, innovators, and ambitious 
+                StartRight Conference brings together industry leaders, innovators, and ambitious
                 professionals for an unparalleled experience of learning, networking, and growth.
               </p>
               <div className="hero-actions">
@@ -85,8 +85,8 @@ const StartRightSection: React.FC = () => {
               </div>
             </div>
             <div className="hero-image">
-              <img 
-                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+              <img
+                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="StartRight Conference"
               />
             </div>

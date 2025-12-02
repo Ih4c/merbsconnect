@@ -45,7 +45,12 @@ function Navbar({ activeSection, onNavigate }: NavbarProps) {
       <nav className="navbar glassy">
         {/* Brand */}
         <div className="brand-container">
-          <h1 className="brand-text" onClick={() => handleNavClick('home')}>Start Right</h1>
+          <img
+            src="/startright-logo.png"
+            alt="Start Right Conference"
+            className="brand-logo"
+            onClick={() => handleNavClick('home')}
+          />
         </div>
 
         {/* User info for authenticated users */}
@@ -56,8 +61,8 @@ function Navbar({ activeSection, onNavigate }: NavbarProps) {
         )}
 
         {/* Hamburger menu button */}
-        <div 
-          className="menu-toggle" 
+        <div
+          className="menu-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <div className={`hamburger ${menuOpen ? 'open' : ''}`}>
@@ -70,8 +75,8 @@ function Navbar({ activeSection, onNavigate }: NavbarProps) {
         {/* Nav links */}
         <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
           <li>
-            <a 
-              href="#home" 
+            <a
+              href="#home"
               onClick={() => handleNavClick('home')}
               className={activeSection === 'home' ? 'active' : ''}
             >
@@ -79,8 +84,8 @@ function Navbar({ activeSection, onNavigate }: NavbarProps) {
             </a>
           </li>
           <li>
-            <a 
-              href="#about" 
+            <a
+              href="#about"
               onClick={() => handleNavClick('about')}
               className={activeSection === 'about' ? 'active' : ''}
             >
@@ -88,8 +93,8 @@ function Navbar({ activeSection, onNavigate }: NavbarProps) {
             </a>
           </li>
           <li>
-            <a 
-              href="#gallery" 
+            <a
+              href="#gallery"
               onClick={() => handleNavClick('gallery')}
               className={activeSection === 'gallery' ? 'active' : ''}
             >
@@ -97,8 +102,8 @@ function Navbar({ activeSection, onNavigate }: NavbarProps) {
             </a>
           </li>
           <li>
-            <a 
-              href="#articles" 
+            <a
+              href="#articles"
               onClick={() => handleNavClick('articles')}
               className={activeSection === 'articles' ? 'active' : ''}
             >
@@ -106,8 +111,8 @@ function Navbar({ activeSection, onNavigate }: NavbarProps) {
             </a>
           </li>
           <li>
-            <a 
-              href="#videos" 
+            <a
+              href="#videos"
               onClick={() => handleNavClick('videos')}
               className={activeSection === 'videos' ? 'active' : ''}
             >
@@ -115,8 +120,8 @@ function Navbar({ activeSection, onNavigate }: NavbarProps) {
             </a>
           </li>
           <li>
-            <a 
-              href="#volunteer" 
+            <a
+              href="#volunteer"
               onClick={() => handleNavClick('volunteer')}
               className={activeSection === 'volunteer' ? 'active' : ''}
             >
@@ -124,8 +129,8 @@ function Navbar({ activeSection, onNavigate }: NavbarProps) {
             </a>
           </li>
           <li>
-            <a 
-              href="#register" 
+            <a
+              href="#register"
               onClick={handleAuthClick}
               className="register-btn"
             >
@@ -137,14 +142,14 @@ function Navbar({ activeSection, onNavigate }: NavbarProps) {
 
       {/* Auth Modals */}
       {showLogin && (
-        <LoginForm 
-          onClose={() => setShowLogin(false)} 
+        <LoginForm
+          onClose={() => setShowLogin(false)}
           onSwitchToRegister={switchToRegister}
         />
       )}
       {showRegister && (
-        <RegistrationForm 
-          onClose={() => setShowRegister(false)} 
+        <RegistrationForm
+          onClose={() => setShowRegister(false)}
           onSwitchToLogin={switchToLogin}
         />
       )}

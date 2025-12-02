@@ -8,177 +8,278 @@ interface PastConferencesProps {
 
 const PastConferences: React.FC<PastConferencesProps> = ({ onConferenceClick }) => {
 
-  const pastEvents = [
-    {
-      id: '2024',
-      title: 'StartRight 2024: Digital Transformation',
-      date: 'March 15-17, 2024',
-      venue: 'Lagos Convention Center, Nigeria',
-      attendees: 2500,
-      description: 'A transformative conference focusing on digital innovation and business transformation in the modern era.',
-      flyer: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      highlights: ['AI in Business', 'Remote Work Strategies', 'Digital Marketing Trends', 'Blockchain Technology', 'Cybersecurity'],
-      speakers: [
-        {
-          name: 'Dr. Amina Hassan',
-          image: 'https://images.unsplash.com/photo-1494790108755-2616c0763c5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80',
-          title: 'Tech Innovation Expert',
-          message: 'Digital transformation is not just about technology, it\'s about reimagining how we create value for our communities.'
-        },
-        {
-          name: 'Prof. Chidi Okafor',
-          image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          title: 'Business Strategy Consultant',
-          message: 'The future belongs to those who can adapt quickly and embrace change as an opportunity for growth.'
-        },
-        {
-          name: 'Sarah Adebayo',
-          image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          title: 'Digital Marketing Strategist',
-          message: 'Success in the digital age requires understanding your audience and delivering authentic value consistently.'
-        }
-      ]
-    },
-    {
-      id: '2023',
-      title: 'StartRight 2023: Innovation & Growth',
-      date: 'November 10-12, 2023',
-      venue: 'Abuja International Conference Center',
-      attendees: 2100,
-      description: 'Exploring innovative approaches to sustainable business growth and entrepreneurship in Africa.',
-      flyer: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80',
-      highlights: ['Startup Funding', 'Leadership Development', 'Tech Entrepreneurship', 'Sustainable Business'],
-      speakers: [
-        {
-          name: 'Kemi Adeosun',
-          image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80',
-          title: 'Venture Capitalist',
-          message: 'Innovation thrives when we create ecosystems that support bold ideas and passionate entrepreneurs.'
-        },
-        {
-          name: 'Olumide Soyombo',
-          image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80',
-          title: 'Serial Entrepreneur',
-          message: 'The key to sustainable growth is building businesses that solve real problems for real people.'
-        }
-      ]
-    },
-    {
-      id: '2022',
-      title: 'StartRight 2022: Resilience & Recovery',
-      date: 'September 8-10, 2022',
-      venue: 'Port Harcourt Cultural Center',
-      attendees: 1800,
-      description: 'Building resilient businesses and communities in the post-pandemic world.',
-      flyer: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      highlights: ['Crisis Management', 'Business Pivoting', 'Mental Health in Business', 'Remote Leadership'],
-      speakers: [
-        {
-          name: 'Dr. Funmi Iyanda',
-          image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1971&q=80',
-          title: 'Resilience Coach',
-          message: 'True resilience comes from understanding that every challenge is an opportunity to grow stronger.'
-        }
-      ]
-    }
-  ];
+  const conferenceEvent = {
+    year: '2025',
+    title: 'Start Right Conference 2025',
+    theme: 'Setting Yourself Up for Success',
+    date: 'Saturday, 15th February 2025',
+    venue: 'SMS Auditorium',
+    attendees: 600,
+    flyer: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop', // Conference audience image
+    description: `Start Right Conference 2025 was a transformational experience designed to help students begin their academic and professional journey with clarity, confidence, and purpose.
 
-  const handleViewDetails = (event: any) => {
+The atmosphere was charged with excellence as lecturers, valedictorians, student leaders, innovators, career experts, and entrepreneurs delivered high-impact sessions on success, preparation, mindset, and strategy.
+Every moment echoed one message:
+
+"You don't just start school — you Start Right."
+
+Participants left equipped with direction, actionable plans, and renewed confidence to take bold steps toward their goals.`,
+    keyTopics: [
+      'Role of Artificial Intelligence (AI) in Academia',
+      'Roadmaps to Academic Excellence',
+      'Leadership, Spiritual Life & Academic Balance',
+      'Personal Growth & Building Strong Relationships',
+      'Scholarships, Internships & Career Opportunities',
+      'Digital Entrepreneurship & Future of Work',
+      'Branding, CV Writing & Professional Development'
+    ],
+    highlights: [
+      'Expert-led success strategies',
+      'Practical skill-building sessions',
+      'Real student stories and actionable roadmaps',
+      'Deep dive into AI, ethics, and modern learning',
+      'Networking with top-performing students and professionals'
+    ],
+    speakers: [
+      {
+        name: 'Dr. Irene Kafui Vorsah Amponsah',
+        title: 'Senior Lecturer | Researcher | STEM Ambassador',
+        image: '/speakers/irene.jpg',
+        message: 'Success is not just about what you achieve, but the lives you impact along the way!'
+      },
+      {
+        name: 'Hilda Abena Wilson',
+        title: 'Valedictorian, UCC CANS\'24',
+        image: '/speakers/hilda.jpg',
+        message: 'Your foundation determines your success.'
+      },
+      {
+        name: 'Mr. Bright Oppong (The CV Master)',
+        title: 'Career Coach | Resume Expert',
+        image: '/speakers/bright.jpg',
+        message: 'Your CV is your first impression—make it unforgettable.'
+      },
+      {
+        name: 'Dr. Charles Hackman Kwamena Essel',
+        title: 'Educator | STEM & Innovation Advocate',
+        image: '/speakers/charles.jpg',
+        message: 'Innovation opens doors—prepare yourself to walk through them.'
+      },
+      {
+        name: 'Mr. Samuel Kwabena Adotei',
+        title: 'Educator | Former SRC President',
+        image: '/speakers/samuel.jpg',
+        message: 'Lead yourself well before you lead others.'
+      },
+      {
+        name: 'Cyrus The King',
+        title: 'CEO, Cyrus The King Group',
+        image: '/speakers/cyrus.jpg',
+        message: 'The future belongs to those who master the tools of their time—today, that tool is AI.'
+      }
+    ],
+    panelDiscussion: {
+      theme: 'Exploring the Role of Artificial Intelligence (AI) in Academia',
+      description: 'One of the most anticipated sessions of SRC 2025 brought together all featured speakers to unpack how Artificial Intelligence is shaping academic life, research, ethics, and future opportunities for students.',
+      focusAreas: [
+        'How AI is transforming academic work',
+        'Should students use AI in school?',
+        'Ethical & responsible use of AI',
+        'Challenges: plagiarism, integrity, and academic honesty',
+        'Leveraging AI for research, innovation & skill-building'
+      ],
+      closingInsight: 'AI is not the enemy of education — it is a tool that must be used wisely, ethically, and intentionally. Students must be prepared to adapt, innovate, and lead.'
+    }
+  };
+
+  const handleViewDetails = () => {
     if (onConferenceClick) {
-      onConferenceClick(event);
+      onConferenceClick(conferenceEvent);
     }
   };
 
   return (
-    <>
-      <div className="page-container">
-        <div className="page-header">
-          <h1>Past Conferences</h1>
-          <p className="page-subtitle">
-            A look back at our successful events and the impact we've made
+    <div className="page-container">
+      <div className="page-content">
+        <section className="conference-stats">
+          <h1 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '1rem', color: '#1a202c' }}>Past Conferences</h1>
+          <p style={{ textAlign: 'center', fontSize: '1.1rem', marginBottom: '3rem', color: '#2d3748' }}>
+            Our conference history reflects our mission — empowering students to rise.
           </p>
-        </div>
 
-        <div className="page-content">
-          <section className="conference-stats">
-            <div className="stats-grid">
-              <Card>
-                <h3>10,000+</h3>
-                <p>Total Attendees</p>
-              </Card>
-              <Card>
-                <h3>165+</h3>
-                <p>Expert Speakers</p>
-              </Card>
-              <Card>
-                <h3>4</h3>
-                <p>Successful Years</p>
-              </Card>
-              <Card>
-                <h3>95%</h3>
-                <p>Satisfaction Rate</p>
-              </Card>
-            </div>
-          </section>
+          <div className="stats-grid">
+            <Card>
+              <h3 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#eb0c17', marginBottom: '0.5rem' }}>1000+</h3>
+              <h4 style={{ fontSize: '1.2rem', fontWeight: '600', color: '#1a202c', marginBottom: '0.5rem' }}>Attendees</h4>
+              <p style={{ color: '#4a5568' }}>Students, leaders, and dreamers united in one space.</p>
+            </Card>
 
-          <section className="past-events">
-            <h2>Previous Events</h2>
-            <div className="events-timeline">
-              {pastEvents.map((event, index) => (
-                <Card key={index} className="event-card">
-                  <div className="event-year">{event.id}</div>
-                  <h3>{event.title}</h3>
-                  <div className="event-stats">
-                    <span><strong>{event.attendees}+</strong> Attendees</span>
-                    <span><strong>{event.speakers.length}</strong> Speakers</span>
-                  </div>
-                  <div className="event-highlights">
-                    <h4>Key Topics:</h4>
-                    <ul>
-                      {event.highlights.map((highlight, idx) => (
-                        <li key={idx}>{highlight}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="event-meta">
-                    <span className="event-date">{event.date}</span>
-                    <span className="event-venue">{event.venue}</span>
-                  </div>
-                  <button 
-                    className="view-details-btn"
-                    onClick={() => handleViewDetails(event)}
-                  >
-                    View Full Details
-                  </button>
-                </Card>
-              ))}
-            </div>
-          </section>
+            <Card>
+              <h3 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#eb0c17', marginBottom: '0.5rem' }}>10+</h3>
+              <h4 style={{ fontSize: '1.2rem', fontWeight: '600', color: '#1a202c', marginBottom: '0.5rem' }}>Student Leaders Featured</h4>
+              <p style={{ color: '#4a5568' }}>Amplifying youth voices and achievements.</p>
+            </Card>
 
-        <section className="testimonials">
-          <Card>
-            <h2>What Attendees Said</h2>
-            <div className="testimonial-grid">
-              <blockquote>
-                "Start Right Conference changed my perspective on entrepreneurship. The networking opportunities were incredible!"
-                <cite>- Sarah Johnson, Tech Entrepreneur</cite>
-              </blockquote>
-              <blockquote>
-                "The speakers were world-class and the content was immediately actionable. Highly recommend!"
-                <cite>- Michael Chen, Marketing Director</cite>
-              </blockquote>
-              <blockquote>
-                "Best professional development investment I've made. The connections I made are still valuable today."
-                <cite>- Emily Rodriguez, Business Consultant</cite>
-              </blockquote>
-            </div>
-          </Card>
+            <Card>
+              <h3 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#eb0c17', marginBottom: '0.5rem' }}>1</h3>
+              <h4 style={{ fontSize: '1.2rem', fontWeight: '600', color: '#1a202c', marginBottom: '0.5rem' }}>Valedictorians</h4>
+              <p style={{ color: '#4a5568' }}>Real stories of academic excellence.</p>
+            </Card>
+
+            <Card>
+              <h3 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#eb0c17', marginBottom: '0.5rem' }}>5+</h3>
+              <h4 style={{ fontSize: '1.2rem', fontWeight: '600', color: '#1a202c', marginBottom: '0.5rem' }}>Expert Speakers</h4>
+              <p style={{ color: '#4a5568' }}>Professionals shaping student success.</p>
+            </Card>
+
+            <Card>
+              <h3 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#eb0c17', marginBottom: '0.5rem' }}>2</h3>
+              <h4 style={{ fontSize: '1.2rem', fontWeight: '600', color: '#1a202c', marginBottom: '0.5rem' }}>Transformative Editions</h4>
+              <p style={{ color: '#4a5568' }}>A movement that continues to grow.</p>
+            </Card>
+
+            <Card>
+              <h3 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#eb0c17', marginBottom: '0.5rem' }}>95%</h3>
+              <h4 style={{ fontSize: '1.2rem', fontWeight: '600', color: '#1a202c', marginBottom: '0.5rem' }}>Satisfaction Rate</h4>
+              <p style={{ color: '#4a5568' }}>Trusted. Impactful. Life-changing.</p>
+            </Card>
+          </div>
         </section>
-        </div>
 
+        {/* Previous Events Section */}
+        <section style={{ marginTop: '5rem', marginBottom: '3rem' }}>
+          <h2 style={{
+            textAlign: 'center',
+            fontSize: '2rem',
+            fontWeight: '700',
+            marginBottom: '3rem',
+            color: '#1a202c'
+          }}>
+            Previous Programs
+          </h2>
+
+          <div style={{ maxWidth: '380px', margin: '0 auto' }}>
+            <div style={{
+              background: 'white',
+              borderRadius: '20px',
+              padding: '2.5rem 2rem',
+              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.12)',
+              border: '2px solid #fee2e2',
+              textAlign: 'center'
+            }}>
+              {/* Year Badge */}
+              <div style={{
+                display: 'inline-block',
+                background: '#eb0c17',
+                color: 'white',
+                padding: '0.6rem 2rem',
+                borderRadius: '50px',
+                fontWeight: '700',
+                fontSize: '1.1rem',
+                marginBottom: '1.5rem',
+                letterSpacing: '0.5px'
+              }}>
+                {conferenceEvent.year}
+              </div>
+
+              {/* Title */}
+              <h3 style={{
+                fontSize: '1.35rem',
+                fontWeight: '700',
+                color: '#1a202c',
+                marginBottom: '1.5rem',
+                lineHeight: '1.4'
+              }}>
+                {conferenceEvent.title}: {conferenceEvent.theme}
+              </h3>
+
+              {/* Attendees & Speakers Count */}
+              <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                gap: '2rem',
+                marginBottom: '1.5rem',
+                fontSize: '0.95rem',
+                fontWeight: '600',
+                color: '#2d3748'
+              }}>
+                <span>{conferenceEvent.attendees}+ Attendees</span>
+                <span>{conferenceEvent.speakers?.length || 0} Speakers</span>
+              </div>
+
+              {/* Key Topics Section */}
+              <div style={{
+                marginBottom: '1.5rem',
+                textAlign: 'center'
+              }}>
+                <h4 style={{
+                  fontSize: '0.95rem',
+                  fontWeight: '600',
+                  color: '#1a202c',
+                  marginBottom: '1rem'
+                }}>
+                  Key Topics:
+                </h4>
+                <ul style={{
+                  margin: 0,
+                  padding: 0,
+                  listStyle: 'none',
+                  lineHeight: '2',
+                  color: '#c53030',
+                  fontSize: '0.9rem'
+                }}>
+                  {conferenceEvent.keyTopics.slice(0, 5).map((topic, index) => (
+                    <li key={index}>• {topic}</li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Date & Venue */}
+              <p style={{
+                fontSize: '0.9rem',
+                color: '#4a5568',
+                marginBottom: '1.75rem',
+                fontWeight: '500',
+                lineHeight: '1.6'
+              }}>
+                {conferenceEvent.date}<br />{conferenceEvent.venue}
+              </p>
+
+              {/* View Full Details Button */}
+              <button
+                onClick={handleViewDetails}
+                style={{
+                  width: '100%',
+                  padding: '1rem 2rem',
+                  background: '#eb0c17',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '50px',
+                  fontSize: '0.95rem',
+                  fontWeight: '700',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 4px 15px rgba(235, 12, 23, 0.3)',
+                  letterSpacing: '0.3px'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.boxShadow = '0 8px 25px rgba(235, 12, 23, 0.45)';
+                  e.currentTarget.style.background = '#d10b15';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(235, 12, 23, 0.3)';
+                  e.currentTarget.style.background = '#eb0c17';
+                }}
+              >
+                View Full Details
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
-
-    </>
+    </div>
   );
 };
 

@@ -8,11 +8,17 @@ import StartRightLanding from './pages/StartRightLanding';
 import Gallery from './pages/Gallery';
 import Articles from './pages/Articles';
 import Videos from './pages/Videos';
+import SpeakersProfile from './pages/SpeakersProfile';
 import ConferenceRegistrationForm from './forms/ConferenceRegistrationForm';
 
 function StartRightApp() {
   const [activeSection, setActiveSection] = useState('home');
   const [showConferenceForm, setShowConferenceForm] = useState(false);
+
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleNavigate = (section: string) => {
     // Handle same-page sections with smooth scrolling
@@ -24,9 +30,12 @@ function StartRightApp() {
           element.scrollIntoView({ behavior: 'smooth' });
         }
       }, 100);
+      window.history.pushState(null, '', `#${section}`);
     } else {
       // Handle separate pages
       setActiveSection(section);
+      window.scrollTo(0, 0);
+      window.history.pushState(null, '', `#${section}`);
     }
   };
 
@@ -61,8 +70,9 @@ function StartRightApp() {
     switch (activeSection) {
       case 'home':
         return (
-          <StartRightLanding 
+          <StartRightLanding
             onRegisterClick={handleRegisterClick}
+            onNavigate={handleNavigate}
           />
         );
       case 'gallery':
@@ -71,10 +81,13 @@ function StartRightApp() {
         return <Articles />;
       case 'videos':
         return <Videos />;
+      case 'speakers-profile':
+        return <SpeakersProfile />;
       default:
         return (
-          <StartRightLanding 
+          <StartRightLanding
             onRegisterClick={handleRegisterClick}
+            onNavigate={handleNavigate}
           />
         );
     }
@@ -83,14 +96,14 @@ function StartRightApp() {
   return (
     <AuthProvider>
       <div className="app">
-        <Navbar 
-          activeSection={activeSection} 
+        <Navbar
+          activeSection={activeSection}
           onNavigate={handleNavigate}
         />
         {renderContent()}
         <StartRightFooter onNavigate={handleNavigate} />
         <ScrollToTop />
-        
+
         {/* Conference Registration Form Modal */}
         {showConferenceForm && (
           <ConferenceRegistrationForm onClose={handleCloseConferenceForm} />

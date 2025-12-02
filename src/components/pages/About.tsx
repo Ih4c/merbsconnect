@@ -5,29 +5,22 @@ import '../../styles/Pages.css';
 const About: React.FC = () => {
   return (
     <div className="page-container">
-      <div className="page-header">
-        <h1>About Start Right Conference</h1>
-        <p className="page-subtitle">
-          The official annual launchpad for university students
-        </p>
-      </div>
-
       <div className="page-content">
         <section className="about-mission">
           <Card>
             <h2>About Start Right Conference</h2>
             <p>
-              The Start Right Conference is the official annual launchpad for first-year university students 
-              and a space for continuing students to renew their journey with clarity and focus. It equips 
-              participants with the mindset, skills, and network needed to thrive in academics, leadership, 
+              The Start Right Conference is the official annual launchpad for first-year university students
+              and a space for continuing students to renew their journey with clarity and focus. It equips
+              participants with the mindset, skills, and network needed to thrive in academics, leadership,
               career, and life.
             </p>
             <p>
-              Through powerful sessions led by lecturers, valedictorians, student leaders, industry experts, 
-              innovators, and professionals, students gain practical tools and inspiration to navigate 
+              Through powerful sessions led by lecturers, valedictorians, student leaders, industry experts,
+              innovators, and professionals, students gain practical tools and inspiration to navigate
               university successfully and prepare for future opportunities.
             </p>
-            <p style={{ fontWeight: 600, fontSize: '1.1rem', marginTop: '1.5rem', color: '#ff6b35' }}>
+            <p style={{ fontWeight: 600, fontSize: '1.1rem', marginTop: '1.5rem', color: '#eb0c17' }}>
               Don't just start university — Start Right.
             </p>
           </Card>
@@ -37,7 +30,7 @@ const About: React.FC = () => {
           <Card>
             <h2>Vision 🌍</h2>
             <p>
-              To build a generation of students who begin every new chapter of their lives with confidence, 
+              To build a generation of students who begin every new chapter of their lives with confidence,
               resilience, and a clear roadmap to success — academically, professionally, and personally.
             </p>
           </Card>

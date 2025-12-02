@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../styles/Videos.css';
 
 interface Video {
@@ -16,6 +16,11 @@ interface Video {
 const Videos: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const categories = ['all', 'conferences', 'testimonials', 'workshops', 'highlights'];
 
@@ -88,8 +93,8 @@ const Videos: React.FC = () => {
     }
   ];
 
-  const filteredVideos = selectedCategory === 'all' 
-    ? videos 
+  const filteredVideos = selectedCategory === 'all'
+    ? videos
     : videos.filter(video => video.category === selectedCategory);
 
   const handleVideoClick = (video: Video) => {
@@ -127,14 +132,14 @@ const Videos: React.FC = () => {
         {/* Videos Grid */}
         <div className="videos-grid">
           {filteredVideos.map(video => (
-            <div 
-              key={video.id} 
+            <div
+              key={video.id}
               className="video-card"
               onClick={() => handleVideoClick(video)}
             >
               <div className="video-thumbnail">
-                <img 
-                  src={video.thumbnail} 
+                <img
+                  src={video.thumbnail}
                   alt={video.title}
                   className="thumbnail-image"
                 />
