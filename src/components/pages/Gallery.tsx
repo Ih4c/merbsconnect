@@ -19,24 +19,32 @@ const Gallery: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Google Drive links for photo albums
+  const src2025Link = 'https://drive.google.com/drive/folders/15P_uGGHGH-0LX9y__HdrPlskb0HePRtD';
+  const hangout2025Link = 'https://drive.google.com/drive/folders/1is1okAHgJ3vTRtr7bRAxwa_kERSMDnZF?usp=sharing';
+
+  const handleViewFullAlbum = (link: string) => {
+    window.open(link, '_blank');
+  };
+
   const categories = ['all', 'conferences', 'workshops', 'networking', 'awards'];
 
   const galleryItems: GalleryItem[] = [
     {
       id: '1',
-      title: 'StartRight Conference 2024',
-      image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      title: 'Start Right Conference 2025',
+      image: '/SRC25.jpg',
       category: 'conferences',
-      event: 'StartRight Conference 2024',
-      date: 'March 2024'
+      event: 'Start Right Conference 2025',
+      date: 'February 2025 | '
     },
     {
       id: '2',
-      title: 'Student Networking Session',
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80',
+      title: 'MerbsConnect Hangout 2025',
+      image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'networking',
-      event: 'Networking Mixer',
-      date: 'February 2024'
+      event: 'Impact is The Reason ✅MerbsConnect Hangout 2025',
+      date: '2025'
     },
     {
       id: '3',
@@ -83,6 +91,9 @@ const Gallery: React.FC = () => {
   const closeModal = () => {
     setSelectedImage(null);
   };
+
+  const isSRC2025 = selectedImage?.id === '1';
+  const isHangout2025 = selectedImage?.id === '2';
 
   return (
     <div className="gallery-page">
@@ -165,6 +176,14 @@ const Gallery: React.FC = () => {
               <h3>{selectedImage.title}</h3>
               <p>{selectedImage.event}</p>
               <span>{selectedImage.date}</span>
+              {(isSRC2025 || isHangout2025) && (
+                <button 
+                  className="view-album-btn" 
+                  onClick={() => handleViewFullAlbum(isSRC2025 ? src2025Link : hangout2025Link)}
+                >
+                  View Full Album →
+                </button>
+              )}
             </div>
           </div>
         </div>

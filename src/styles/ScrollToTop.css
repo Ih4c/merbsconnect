@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 4px 20px rgba(235, 12, 23, 0.3);
   transition: all 0.3s ease;
   opacity: 0;
   visibility: hidden;
@@ -27,9 +27,13 @@
 }
 
 .scroll-to-top:hover {
-  background: #e55a2b;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(255, 107, 53, 0.4);
+  background: #eb0c17;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(235, 12, 23, 0.4);
+}
+
+.scroll-to-top:active {
+  transform: translateY(0) scale(0.95);
 }
 
 .scroll-to-top svg {

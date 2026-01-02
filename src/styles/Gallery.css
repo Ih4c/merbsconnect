@@ -262,6 +262,30 @@
   font-size: 0.9rem;
 }
 
+.view-album-btn {
+  background: none;
+  color: #eb0c17;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.view-album-btn:hover {
+  color: #eb0c17;
+  transform: none;
+  box-shadow: none;
+  text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .gallery-page {

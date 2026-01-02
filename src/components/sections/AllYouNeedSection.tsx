@@ -1,28 +1,47 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../styles/AllYouNeedSection.css';
 
 const AllYouNeedSection: React.FC = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // MerbsStore slideshow images
+  const merbsStoreImages = [
+    '/merbs-t-shirt.jpg',
+    '/merbs-t-shirt-1.jpg'
+  ];
+
+  // Auto-rotate images every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % merbsStoreImages.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const services = [
     {
       id: 'merbsstore',
       title: 'MerbsStore',
       description: 'Get your Merbs Series books, branded T-shirts, stationery, and more.',
-      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: merbsStoreImages[currentImageIndex],
       buttonText: 'Explore Store',
       onClick: () => {
         // TODO: Link to MerbsStore platform when ready
         console.log('Navigate to MerbsStore');
-      }
+      },
+      isSlideshow: true,
+      slideshowImages: merbsStoreImages
     },
     {
-      id: 'photoshoot',
-      title: 'Photoshoot Studio',
-      description: 'Book studio sessions for professional photos, ID shots, or creative projects.',
+      id: 'merbscreatives',
+      title: 'Merbs Creatives',
+      description: 'Professional photoshoots, flyer designs, and printing solutions. Perfect for events, businesses, and creative projects.',
       image: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      buttonText: 'Book Now',
+      buttonText: 'Create Now',
       onClick: () => {
-        // TODO: Link to booking system when ready
-        console.log('Navigate to Photoshoot booking');
+        // TODO: Link to creative services when ready
+        console.log('Navigate to Merbs Creatives');
       }
     },
     {
@@ -36,18 +55,7 @@ const AllYouNeedSection: React.FC = () => {
         console.log('Navigate to Student Services');
       }
     },
-    {
-      id: 'printing',
-      title: 'Flyer Design & Printing',
-      description: 'Bring your business, event, or campaign to life with flyers that inspire action and leave a lasting impression.',
-      image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      buttonText: 'Get Started',
-      onClick: () => {
-        // TODO: Link to printing services when ready
-        console.log('Navigate to Printing & Design');
-      }
-    },
-    {
+    /*{
       id: 'advertise',
       title: 'Advertise Your Product',
       description: 'Promote your business or product through our platform and reach more customers.',
@@ -57,7 +65,7 @@ const AllYouNeedSection: React.FC = () => {
         // TODO: Link to advertising platform when ready
         console.log('Navigate to Advertising platform');
       }
-    }
+    }*/
   ];
 
   return (
@@ -76,7 +84,30 @@ const AllYouNeedSection: React.FC = () => {
           {services.map((service) => (
             <div key={service.id} className="service-card">
               <div className="card-image">
-                <img src={service.image} alt={service.title} />
+                {service.isSlideshow ? (
+                  <div className="slideshow-container">
+                    <div className="slideshow-images">
+                      {service.slideshowImages.map((img, index) => (
+                        <img
+                          key={index}
+                          src={img}
+                          alt={`${service.title} ${index + 1}`}
+                          className={`slideshow-image ${index === currentImageIndex ? 'active' : ''}`}
+                        />
+                      ))}
+                    </div>
+                    <div className="slideshow-dots">
+                      {service.slideshowImages.map((_, index) => (
+                        <span
+                          key={index}
+                          className={`dot ${index === currentImageIndex ? 'active' : ''}`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <img src={service.image} alt={service.title} />
+                )}
               </div>
               
               <div className="card-content">

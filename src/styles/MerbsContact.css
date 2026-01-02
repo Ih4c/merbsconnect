@@ -32,7 +32,7 @@
   animation: fadeInUp 0.8s ease-out;
 }
 
-.contact-section h2 {
+.merbs-contact .section-title {
   font-size: 3rem;
   font-weight: 800;
   color: white;
@@ -42,9 +42,9 @@
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.section-subtitle {
+.merbs-contact .section-subtitle {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffffff;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -153,11 +153,12 @@
   flex-direction: column;
 }
 
-.form-group label {
+.merbs-contact .form-group label {
   font-size: 0.9rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffffff !important;
   margin-bottom: 0.5rem;
+  opacity: 1 !important;
 }
 
 .form-group input,

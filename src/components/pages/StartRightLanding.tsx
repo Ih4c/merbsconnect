@@ -4,6 +4,7 @@ import About from './About';
 import PastConferences from './PastConferences';
 import VolunteerSection from '../sections/VolunteerSection';
 import ConferenceModal from '../ui/ConferenceModal';
+import BackToMerbs from '../ui/BackToMerbs';
 import '../../styles/StartRightLanding.css';
 
 interface StartRightLandingProps {
@@ -58,6 +59,8 @@ const StartRightLanding: React.FC<StartRightLandingProps> = ({ onRegisterClick, 
           onNavigate={onNavigate}
         />
       )}
+
+      <BackToMerbs />
     </div>
   );
 };

@@ -1,0 +1,117 @@
+.back-to-merbs {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #eb0c17;
+    color: white;
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(238, 4, 16, 0.918);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+}
+
+.back-to-merbs:hover {
+    background: #eb0c17;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(238, 3, 15, 0.904);
+    padding: 0 30px;
+}
+
+.back-to-merbs:active {
+    background: #eb0c17;
+    transform: translateY(0) scale(0.95);
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.back-to-merbs:hover .icon-container {
+    transform: translateX(-5px);
+}
+
+.btn-text {
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.4s ease;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.back-to-merbs:hover .btn-text {
+    max-width: 250px;
+    opacity: 1;
+}
+
+/* Creative Glow & Pulse */
+.back-to-merbs::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: all 0.6s;
+}
+
+.back-to-merbs:hover::before {
+    left: 100%;
+}
+
+.back-to-merbs::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 27px;
+    border: 2px solid #eb0c17;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.back-to-merbs:hover::after {
+    animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .back-to-merbs {
+        bottom: 20px;
+        left: 20px;
+        height: 45px;
+        padding: 0 15px;
+    }
+}

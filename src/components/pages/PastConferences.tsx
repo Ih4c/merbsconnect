@@ -15,7 +15,7 @@ const PastConferences: React.FC<PastConferencesProps> = ({ onConferenceClick }) 
     date: 'Saturday, 15th February 2025',
     venue: 'SMS Auditorium',
     attendees: 600,
-    flyer: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop', // Conference audience image
+    flyer: '/SRC25.jpg', // Conference audience image
     description: `Start Right Conference 2025 was a transformational experience designed to help students begin their academic and professional journey with clarity, confidence, and purpose.
 
 The atmosphere was charged with excellence as lecturers, valedictorians, student leaders, innovators, career experts, and entrepreneurs delivered high-impact sessions on success, preparation, mindset, and strategy.

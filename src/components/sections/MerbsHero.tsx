@@ -96,7 +96,7 @@ const MerbsHero: React.FC = () => {
                 className="merbs-hero-btn catalog-btn" 
                 onClick={() => scrollToSection('programs')}
               >
-                View MerbsConnect Catalog
+                View MerbsConnect Today
               </button>
               <button 
                 className="merbs-hero-btn ayn-btn" 

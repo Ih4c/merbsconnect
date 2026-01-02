@@ -28,6 +28,8 @@ const ProgramsSection: React.FC = () => {
       buttonText: 'Explore Platform',
       onButtonClick: () => {}
     },
+    // Commented out coming soon programs - only showing Study Abroad
+    /*
     {
       id: 'launchplus',
       title: 'LaunchPlus',
@@ -64,6 +66,7 @@ const ProgramsSection: React.FC = () => {
       buttonText: 'Explore More',
       onButtonClick: () => {}
     }
+    */
   ];
 
   return (

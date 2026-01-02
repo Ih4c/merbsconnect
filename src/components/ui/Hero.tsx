@@ -17,7 +17,7 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick, onLearnMoreClick }) => {
 
   // Placeholder images for sliding - you can replace these with actual conference images
   const slideImages = [
-    'https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    '/startright.jpg',
     '/start.jpg'
   ];
 

@@ -207,73 +207,102 @@ const TeamProfiles: React.FC = () => {
       role: "Bsc. Computer Science",
       image: "/vivian-nidah.jpg",
       bio: "Level 400"
+    },
+    {
+      id:26,
+      name:"John Ansah Adams",
+      role:"BSc Mathematics and Statistics",
+      image:"/john_ansah.jpeg",
+      bio:"Level 200"
+    },
+    {
+      id: 27,
+      name: "Hamza Musah",
+      role: "BSc Mathematics",
+      image: "/hamza_musa.jpeg",
+      bio: "Level 200"
+    },
+    {
+      id: 28,
+      name: "Lawrencia Odomankomah",
+      role: "BSC Mathematics with Economics",
+      image: "/lawrencia_odomankomah.jpeg",
+      bio: "Level 200"
+    },
+    {
+      id: 29,
+      name: "Benedicta Takyi",
+      role: "B.E.D Mathematics",
+      image: "/benedicta_takyi.jpeg",
+      bio: "Level 200"
     }
   ];
 
   const typingTeamMembers: TeamMember[] = [
     {
-      id: 26,
+      id: 30,
       name: "Benjamin Kwesi Adu",
       role: "Typing Manager",
       image: "/benjamin-adu.jpg",
       bio: "A detail-oriented and efficient manager responsible for producing clean, accurate, and high-quality typed academic content. Benjamin supports the smooth development of the Merbs Series materials."
     },
     {
-      id: 27,
+      id: 31,
       name: "Joseph Asare Merblin",
       role: "Solution Expert",
       image: "/Merblin.jpg",
       bio: "A visionary educator and problem-solver committed to academic excellence. Merblin develops high-quality solutions and explanations that empower students to learn deeply and achieve outstanding results."
     },
     {
-      id: 28,
+      id: 32,
       name: "Francis Jeja Tignaln-nachor",
       role: "Solution Expert",
       image: "/francis-jeja.jpg",
       bio: "A dedicated academic contributor with strong analytical skills. Francis supports the development and verification of solution guides that help students understand complex concepts with confidence."
     },
     {
-      id: 29,
+      id: 33,
       name: "Veronica Arthur",
       role: "Typing Team Member",
       image: "/veronica-arthur.jpg",
       bio: "A committed and reliable team member who supports the smooth preparation of academic content. Veronica brings clarity, consistency, and professionalism to the Merbs Series."
     },
     {
-      id: 30,
+      id: 34,
       name: "Georgina Blay",
       role: "Typing Team Member",
       image: "/georgina-blay.jpg",
       bio: "A focused and hardworking contributor who ensures accuracy and structure in the typing workflow. Georgina helps transform raw academic material into polished, student-ready content."
     },
     {
-      id: 31,
+      id: 35,
       name: "John Ansah Adams",
       role: "Typing Team Member",
       image: "/john-adams.jpg",
       bio: "A disciplined and result-driven typist who supports the creation of high-quality Merbs Series books. John is committed to efficiency and excellence in every assignment."
     },
     {
-      id: 32,
+      id: 36,
       name: "Henry Annor",
       role: "Typing Team Member",
       image: "/henry-annor.jpg",
       bio: "An organized and passionate typist who supports content preparation with accuracy and care. Henry brings consistency and quality to the Merbs Series typing department."
     },
     {
-      id: 33,
+      id: 37,
       name: "Luke Yaw Teye",
       role: "Typing Team Member",
       image: "/luke-teye.jpg",
       bio: "A motivated and meticulous team member who contributes to the smooth development of Merbs Series materials. Luke ensures that students receive clear and well-structured notes."
     },
     {
-      id: 34,
+      id: 38,
       name: "Julius Gazo Tamakloe",
       role: "Typing Team Member",
       image: "/julius-tamakloe.jpg",
       bio: "A dependable and skilled typist dedicated to delivering precise and well-organized academic content. Julius strengthens the quality and speed of the Merbs Series production."
-    }
+    },
+    
   ];
 
   return (

@@ -11,7 +11,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     radial-gradient(circle at 30% 40%, rgba(235, 12, 23, 0.08) 0%, transparent 50%),
     radial-gradient(circle at 70% 80%, rgba(235, 12, 23, 0.05) 0%, transparent 50%);
   pointer-events: none;
@@ -34,19 +34,20 @@
 .section-title {
   font-size: 3rem;
   font-weight: 800;
-  color: #1a202c;
+  color: #000000;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
+  text-shadow: none;
 }
 
 .testimonials-section .section-subtitle {
   font-size: 1.25rem;
-  color: #1a202c;
+  color: #000000;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
   font-weight: 600;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  text-shadow: none;
 }
 
 .testimonials-content {
@@ -345,6 +346,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -357,7 +359,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
-  
+
   .mini-testimonial-card {
     padding: 2rem;
   }
@@ -367,7 +369,7 @@
   .testimonials {
     padding: 60px 0;
   }
-  
+
   .testimonials-container {
     padding: 0 1.5rem;
   }
@@ -376,7 +378,7 @@
     font-size: 2.2rem;
     margin-bottom: 0.8rem;
   }
-  
+
   .testimonials-section .section-subtitle {
     font-size: 1.1rem;
   }
@@ -391,7 +393,7 @@
     text-align: center;
     gap: 1.5rem;
   }
-  
+
   .student-image img {
     width: 80px;
     height: 80px;
@@ -428,7 +430,7 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .mini-testimonial-card {
     padding: 2rem;
   }
@@ -438,15 +440,15 @@
   .testimonials {
     padding: 50px 0;
   }
-  
+
   .testimonials-container {
     padding: 0 1rem;
   }
-  
+
   .section-title {
     font-size: 1.8rem;
   }
-  
+
   .testimonials-section .section-subtitle {
     font-size: 1rem;
   }
@@ -455,12 +457,12 @@
     padding: 2rem 1.5rem;
     border-radius: 16px;
   }
-  
+
   .student-image img {
     width: 70px;
     height: 70px;
   }
-  
+
   .testimonial-text {
     font-size: 1rem;
   }
@@ -470,7 +472,7 @@
     gap: 1.5rem;
     padding: 2rem 1.5rem;
   }
-  
+
   .stat-number {
     font-size: 2rem;
   }
@@ -479,7 +481,7 @@
     padding: 1.75rem;
     border-radius: 16px;
   }
-  
+
   .mini-header img {
     width: 50px;
     height: 50px;
@@ -488,7 +490,7 @@
   .mini-header {
     gap: 0.75rem;
   }
-  
+
   .mini-testimonial {
     font-size: 0.9rem;
   }

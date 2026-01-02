@@ -46,7 +46,7 @@ function Navbar({ activeSection, onNavigate }: NavbarProps) {
         {/* Brand */}
         <div className="brand-container">
           <img
-            src="/startright-logo.png"
+            src="/SRC.png"
             alt="Start Right Conference"
             className="brand-logo"
             onClick={() => handleNavClick('home')}
