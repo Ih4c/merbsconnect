@@ -17,20 +17,20 @@ const MeetTheTeam: React.FC = () => {
           <div className="ceo-section">
             <div className="ceo-card">
               <div className="ceo-image">
-                <img 
-                  src="/Merblin.jpg" 
+                <img
+                  src="/Merblin.jpg"
                   alt="Joseph Asare (Merblin) - CEO & Founder"
                 />
                 <div className="ceo-badge">
-                  <span>CEO & Founder</span>
+                  <span>CVO & Founder</span>
                 </div>
               </div>
               <div className="ceo-info">
                 <h3 className="ceo-name">Joseph Asare (Merblin)</h3>
-                <p className="ceo-title">Chief Executive Officer</p>
+                <p className="ceo-title">Chief Visionary Officer</p>
                 <p className="ceo-description">
-                  A visionary educator and mentor committed to student excellence. Merblin founded 
-                  MerbsConnect to inspire, equip, and connect students for success. His vision is 
+                  A visionary educator and mentor committed to student excellence. Merblin founded
+                  MerbsConnect to inspire, equip, and connect students for success. His vision is
                   simple: Impact is the Reason.
                 </p>
                 <div className="ceo-achievements">
@@ -56,8 +56,8 @@ const MeetTheTeam: React.FC = () => {
           <div className="team-photo-section">
             <div className="team-photo-card">
               <div className="team-photo">
-                <img 
-                  src="/team.jpg" 
+                <img
+                  src="/team.jpg"
                   alt="MerbsConnect Team"
                 />
                 <div className="team-overlay">
@@ -70,13 +70,13 @@ const MeetTheTeam: React.FC = () => {
               <div className="team-description">
                 <h3>United by Purpose</h3>
                 <p>
-                  At MerbsConnect, our strength lies in our people. We are a passionate community of 
-                  Executives, Ambassadors, Representatives, and Creative Leads united by one mission: 
+                  At MerbsConnect, our strength lies in our people. We are a passionate community of
+                  Executives, Ambassadors, Representatives, and Creative Leads united by one mission:
                   Impact is the Reason.
-                  We lead initiatives like the Merbs Series, Start Right Conference, StudyAbroad Plus, 
-                  and All You Need (AYN), which transform mentorship, learning, and student empowerment 
+                  We lead initiatives like the Merbs Series, Start Right Conference, StudyAbroad Plus,
+                  and All You Need (AYN), which transform mentorship, learning, and student empowerment
                   on campuses and beyond.
-                  Each member contributes uniquely to our shared vision of helping students learn, 
+                  Each member contributes uniquely to our shared vision of helping students learn,
                   connect, and lead purposefully.
                 </p>
                 <div className="explore-team-section">

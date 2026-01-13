@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import LoginForm from "./auth/LoginForm";
 import RegistrationForm from "./auth/RegistrationForm";
@@ -14,7 +15,11 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
+  const [programsDropdownOpen, setProgramsDropdownOpen] = useState(false);
+  const [aynDropdownOpen, setAynDropdownOpen] = useState(false);
+  const [seriesDropdownOpen, setSeriesDropdownOpen] = useState(false);
   const { isAuthenticated, logout } = useAuth();
+  const navigate = useNavigate();
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -30,19 +35,21 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
       const target = event.target as HTMLElement;
       const navbar = document.querySelector('.merbs-navbar');
       const navLinks = document.querySelector('.nav-links');
-      
+
       if (menuOpen && navbar && !navbar.contains(target) && navLinks && !navLinks.contains(target)) {
         setMenuOpen(false);
       }
+
+      // Close dropdowns when clicking outside
+      if (!target.closest('.dropdown-container')) {
+        setProgramsDropdownOpen(false);
+        setAynDropdownOpen(false);
+        setSeriesDropdownOpen(false);
+      }
     };
 
-    if (menuOpen) {
-      document.addEventListener('click', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
   }, [menuOpen]);
 
   const scrollToWithOffset = (el: HTMLElement) => {
@@ -63,9 +70,27 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
     e.preventDefault();
     onNavigate(section);
     setMenuOpen(false);
+    setProgramsDropdownOpen(false);
+    setAynDropdownOpen(false);
 
     const element = document.getElementById(section);
     if (element) scrollToWithOffset(element);
+  };
+
+  const toggleProgramsDropdown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setProgramsDropdownOpen(!programsDropdownOpen);
+    setAynDropdownOpen(false);
+    setSeriesDropdownOpen(false);
+  };
+
+  const toggleAynDropdown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setAynDropdownOpen(!aynDropdownOpen);
+    setProgramsDropdownOpen(false);
+    setSeriesDropdownOpen(false);
   };
 
   const switchToRegister = () => {
@@ -78,6 +103,89 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
     setShowLogin(true);
   };
 
+  // Programs dropdown items
+  const programItems = [
+    {
+      id: 'startright',
+      label: 'Start Right Conference',
+      description: 'Annual student empowerment conference',
+      action: () => navigate('/startright'),
+      isActive: true
+    },
+    {
+      id: 'studyabroad',
+      label: 'Study Abroad Plus',
+      description: 'International education opportunities',
+      action: () => { },
+      isActive: false
+    }
+  ];
+
+  // AYN dropdown items
+  const aynItems = [
+    {
+      id: 'merbsstore',
+      label: 'MerbsStore',
+      description: 'Branded merchandise & books',
+      icon: '🛍️',
+      action: () => { }
+    },
+    {
+      id: 'merbscreatives',
+      label: 'Merbs Creatives',
+      description: 'Design & photography services',
+      icon: '🎨',
+      action: () => { }
+    },
+    {
+      id: 'studentservices',
+      label: 'Student Services',
+      description: 'Academic help & support',
+      icon: '📚',
+      action: () => { }
+    }
+  ];
+
+  // Merbs Series dropdown items
+  const seriesItems = [
+    {
+      id: 'freshman',
+      label: 'Freshman (Level 100)',
+      description: 'First year courses & resources',
+      icon: '🎓',
+      color: '#3b82f6'
+    },
+    {
+      id: 'sophomore',
+      label: 'Sophomore (Level 200)',
+      description: 'Second year materials',
+      icon: '📖',
+      color: '#eb0c17'
+    },
+    {
+      id: 'junior',
+      label: 'Junior (Level 300)',
+      description: 'Third year advanced content',
+      icon: '🚀',
+      color: '#22c55e'
+    },
+    {
+      id: 'senior',
+      label: 'Senior (Level 400)',
+      description: 'Final year prep & resources',
+      icon: '🏆',
+      color: '#f97316'
+    }
+  ];
+
+  const toggleSeriesDropdown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setSeriesDropdownOpen(!seriesDropdownOpen);
+    setProgramsDropdownOpen(false);
+    setAynDropdownOpen(false);
+  };
+
   return (
     <>
       <nav className="merbs-navbar">
@@ -88,8 +196,6 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
 
         {/* Nav Links */}
         <ul className={`nav-links ${isMobile && menuOpen ? "active" : ""}`}>
-          {/* Mobile Close Button */}
-
           <li>
             <a
               href="#home"
@@ -108,24 +214,148 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
               About
             </a>
           </li>
-          <li>
+
+          {/* Merbs Series Dropdown */}
+          <li className="dropdown-container">
             <a
               href="#merbshub"
-              onClick={(e) => handleNavClick(e, "merbshub")}
-              className={activeSection === "merbshub" ? "active" : ""}
+              onClick={toggleSeriesDropdown}
+              className={`dropdown-trigger ${activeSection === "merbshub" ? "active" : ""} ${seriesDropdownOpen ? "open" : ""}`}
             >
               Merbs Series
+              <span className="dropdown-arrow">▾</span>
             </a>
+
+            <div className={`dropdown-menu series-dropdown ${seriesDropdownOpen ? "active" : ""}`}>
+              <div className="dropdown-header">
+                <span className="dropdown-title">Academic Levels</span>
+                <a
+                  href="#merbshub"
+                  className="view-all-link"
+                  onClick={(e) => handleNavClick(e, "merbshub")}
+                >
+                  View All →
+                </a>
+              </div>
+              <div className="dropdown-items">
+                {seriesItems.map((item) => (
+                  <div
+                    key={item.id}
+                    className="dropdown-item series-item"
+                    onClick={() => {
+                      // Scroll to merbshub section
+                      const element = document.getElementById('merbshub');
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                      setMenuOpen(false);
+                      setSeriesDropdownOpen(false);
+                    }}
+                  >
+                    <span className="item-icon" style={{ background: `${item.color}20`, color: item.color }}>{item.icon}</span>
+                    <div className="item-content">
+                      <span className="item-label">{item.label}</span>
+                      <span className="item-description">{item.description}</span>
+                    </div>
+                    <span className="item-arrow">→</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </li>
-          <li>
+
+          {/* Programs Dropdown */}
+          <li className="dropdown-container">
             <a
               href="#programs"
-              onClick={(e) => handleNavClick(e, "programs")}
-              className={activeSection === "programs" ? "active" : ""}
+              onClick={toggleProgramsDropdown}
+              className={`dropdown-trigger ${activeSection === "programs" ? "active" : ""} ${programsDropdownOpen ? "open" : ""}`}
             >
               Programs
+              <span className="dropdown-arrow">▾</span>
             </a>
+
+            <div className={`dropdown-menu ${programsDropdownOpen ? "active" : ""}`}>
+              <div className="dropdown-header">
+                <span className="dropdown-title">Our Programs</span>
+                <a
+                  href="#programs"
+                  className="view-all-link"
+                  onClick={(e) => handleNavClick(e, "programs")}
+                >
+                  View All →
+                </a>
+              </div>
+              <div className="dropdown-items">
+                {programItems.map((item) => (
+                  <div
+                    key={item.id}
+                    className={`dropdown-item ${!item.isActive ? 'coming-soon' : ''}`}
+                    onClick={() => {
+                      if (item.isActive) {
+                        item.action();
+                        setMenuOpen(false);
+                        setProgramsDropdownOpen(false);
+                      }
+                    }}
+                  >
+                    <div className="item-content">
+                      <span className="item-label">{item.label}</span>
+                      <span className="item-description">{item.description}</span>
+                    </div>
+                    {!item.isActive && <span className="coming-soon-badge">Soon</span>}
+                    {item.isActive && <span className="item-arrow">→</span>}
+                  </div>
+                ))}
+              </div>
+            </div>
           </li>
+
+          {/* AYN Dropdown */}
+          <li className="dropdown-container">
+            <a
+              href="#allyouneed"
+              onClick={toggleAynDropdown}
+              className={`dropdown-trigger ${activeSection === "allyouneed" ? "active" : ""} ${aynDropdownOpen ? "open" : ""}`}
+            >
+              AYN
+              <span className="dropdown-arrow">▾</span>
+            </a>
+
+            <div className={`dropdown-menu ayn-dropdown ${aynDropdownOpen ? "active" : ""}`}>
+              <div className="dropdown-header">
+                <span className="dropdown-title">All You Need</span>
+                <a
+                  href="#allyouneed"
+                  className="view-all-link"
+                  onClick={(e) => handleNavClick(e, "allyouneed")}
+                >
+                  View All →
+                </a>
+              </div>
+              <div className="dropdown-items">
+                {aynItems.map((item) => (
+                  <div
+                    key={item.id}
+                    className="dropdown-item"
+                    onClick={() => {
+                      item.action();
+                      setMenuOpen(false);
+                      setAynDropdownOpen(false);
+                    }}
+                  >
+                    <span className="item-icon">{item.icon}</span>
+                    <div className="item-content">
+                      <span className="item-label">{item.label}</span>
+                      <span className="item-description">{item.description}</span>
+                    </div>
+                    <span className="item-arrow">→</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </li>
+
           <li>
             <a
               href="#contact"
@@ -171,7 +401,7 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
               </li>
             ))}
 
-          {/* Mobile CTA - Simple Register Button */}
+          {/* Mobile CTA */}
           {isMobile && (
             <li className="mobile-cta">
               {isAuthenticated ? (
@@ -195,7 +425,7 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
           )}
         </ul>
 
-        {/* Hamburger only shows on small screens */}
+        {/* Hamburger */}
         {isMobile && (
           <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
             <div className={`hamburger ${menuOpen ? "open" : ""}`}>
@@ -205,22 +435,25 @@ function MerbsNavbar({ activeSection, onNavigate }: MerbsNavbarProps) {
             </div>
           </div>
         )}
-      </nav>
-
+      </nav >
 
       {/* Auth Modals */}
-      {showLogin && (
-        <LoginForm
-          onClose={() => setShowLogin(false)}
-          onSwitchToRegister={switchToRegister}
-        />
-      )}
-      {showRegister && (
-        <RegistrationForm
-          onClose={() => setShowRegister(false)}
-          onSwitchToLogin={switchToLogin}
-        />
-      )}
+      {
+        showLogin && (
+          <LoginForm
+            onClose={() => setShowLogin(false)}
+            onSwitchToRegister={switchToRegister}
+          />
+        )
+      }
+      {
+        showRegister && (
+          <RegistrationForm
+            onClose={() => setShowRegister(false)}
+            onSwitchToLogin={switchToLogin}
+          />
+        )
+      }
     </>
   );
 }

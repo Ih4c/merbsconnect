@@ -1,88 +1,95 @@
 import React from 'react';
+import { ScrollAnimate } from '../../utils/useScrollAnimation';
 import '../../styles/MerbsAbout.css';
 
 const MerbsAbout: React.FC = () => {
   return (
     <section className="merbs-about" id="about">
       <div className="merbs-about-container">
-        <div className="section-header">
-          <h2 className="section-title">About MerbsConnect</h2>
+        <ScrollAnimate animation="fadeUp">
+          <div className="section-header">
+            <h2 className="section-title">About MerbsConnect</h2>
 
-          {/* Static description - both statements visible */}
-          <div className="section-subtitle">
-            <p>MerbsConnect is an all-in-one platform to empower students and young professionals through mentorship, education, and creativity.</p>
-            <p>Everything begins here, from the Start Right Conference to Lifestyle and Beyond.</p>
+            {/* Static description - both statements visible */}
+            <div className="section-subtitle">
+              <p>MerbsConnect is an all-in-one platform to empower students and young professionals through mentorship, education, and creativity.</p>
+              <p>Everything begins here, from the Start Right Conference to Lifestyle and Beyond.</p>
+            </div>
           </div>
-        </div>
+        </ScrollAnimate>
 
         <div className="about-content">
           {/* Mission Section */}
           <div className="mission-vision-grid">
-            <div className="mission-card">
-              <div className="card-icon">
-                <div className="icon-wrapper">🎯</div>
+            <ScrollAnimate animation="slideLeft" delay={100}>
+              <div className="mission-card">
+                <div className="card-icon">
+                  <div className="icon-wrapper">🎯</div>
+                </div>
+                <h3 className="card-title">Our Mission</h3>
+                <p className="card-description">
+                  To inspire, equip, and connect students with the knowledge, tools, and networks they need to thrive - academically, professionally, and personally.
+                  <br />
+                  We achieve this by focusing on:
+                </p>
+                <div className="card-highlights">
+                  <div className="highlight-item">
+                    <span className="highlight-icon">✓</span>
+                    <span>Educational Excellence - resources and tools that strengthen learning.</span>
+                  </div>
+                  <div className="highlight-item">
+                    <span className="highlight-icon">✓</span>
+                    <span>Professional Development - mentorship, skills, and career readiness.</span>
+                  </div>
+                  <div className="highlight-item">
+                    <span className="highlight-icon">✓</span>
+                    <span>Conference & Outreach - mentorship, skills and career readiness.</span>
+                  </div>
+                  <div className="highlight-item">
+                    <span className="highlight-icon">✓</span>
+                    <span>Global Networking - building strong connections that open doors.</span>
+                  </div>
+                </div>
               </div>
-              <h3 className="card-title">Our Mission</h3>
-              <p className="card-description">
-                To inspire, equip, and connect students with the knowledge, tools, and networks they need to thrive - academically, professionally, and personally.
-                <br />
-                We achieve this by focusing on:
-              </p>
-              <div className="card-highlights">
-                <div className="highlight-item">
-                  <span className="highlight-icon">✓</span>
-                  <span>Educational Excellence - resources and tools that strengthen learning.</span>
-                </div>
-                <div className="highlight-item">
-                  <span className="highlight-icon">✓</span>
-                  <span>Professional Development - mentorship, skills, and career readiness.</span>
-                </div>
-                <div className="highlight-item">
-                  <span className="highlight-icon">✓</span>
-                  <span>Conference & Outreach - mentorship, skills and career readiness.</span>
-                </div>
-                <div className="highlight-item">
-                  <span className="highlight-icon">✓</span>
-                  <span>Global Networking - building strong connections that open doors.</span>
-                </div>
-              </div>
-            </div>
+            </ScrollAnimate>
 
             {/* Vision Section */}
-            <div className="vision-card">
-              <div className="card-icon">
-                <div className="icon-wrapper">🌟</div>
+            <ScrollAnimate animation="slideRight" delay={200}>
+              <div className="vision-card">
+                <div className="card-icon">
+                  <div className="icon-wrapper">🌟</div>
+                </div>
+                <h3 className="card-title">Our Vision</h3>
+                <p className="card-description">
+                  To be the leading global platform that connects education, mentorship, and opportunity - creating a world where every student begins their journey with clarity, confidence, and purpose.
+                  <br />
+                  We envision a generation of academically excellent, emotionally intelligent, and globally competitive students.
+                  Through innovation, technology, and mentorship, we aim to nurture leaders who will create meaningful impact in their communities and beyond.
+                  <br />
+                  At MerbsConnect, every learner's success story reflects our vision: to guide, grow, and give back.
+                  <br />
+                  We envision a future built on:
+                </p>
+                <div className="card-highlights">
+                  <div className="highlight-item">
+                    <span className="highlight-icon">✓</span>
+                    <span>Global Leadership - empowering students to lead with impact.</span>
+                  </div>
+                  <div className="highlight-item">
+                    <span className="highlight-icon">✓</span>
+                    <span>Seamless Integration - bridging academics, mentorship, and real-world opportunities.</span>
+                  </div>
+                  <div className="highlight-item">
+                    <span className="highlight-icon">✓</span>
+                    <span>Transformative Impact - shaping lives and communities through education.</span>
+                  </div>
+                  <div className="highlight-item">
+                    <span className="highlight-icon">✓</span>
+                    <span>Inclusive Community  - ensuring every student belongs, learns,and thrives.</span>
+                  </div>
+                </div>
               </div>
-              <h3 className="card-title">Our Vision</h3>
-              <p className="card-description">
-                To be the leading global platform that connects education, mentorship, and opportunity - creating a world where every student begins their journey with clarity, confidence, and purpose.
-                <br />
-                We envision a generation of academically excellent, emotionally intelligent, and globally competitive students.
-                Through innovation, technology, and mentorship, we aim to nurture leaders who will create meaningful impact in their communities and beyond.
-                <br />
-                At MerbsConnect, every learner's success story reflects our vision: to guide, grow, and give back.
-                <br />
-                We envision a future built on:
-              </p>
-              <div className="card-highlights">
-                <div className="highlight-item">
-                  <span className="highlight-icon">✓</span>
-                  <span>Global Leadership - empowering students to lead with impact.</span>
-                </div>
-                <div className="highlight-item">
-                  <span className="highlight-icon">✓</span>
-                  <span>Seamless Integration - bridging academics, mentorship, and real-world opportunities.</span>
-                </div>
-                <div className="highlight-item">
-                  <span className="highlight-icon">✓</span>
-                  <span>Transformative Impact - shaping lives and communities through education.</span>
-                </div>
-                <div className="highlight-item">
-                  <span className="highlight-icon">✓</span>
-                  <span>Inclusive Community  - ensuring every student belongs, learns,and thrives.</span>
-                </div>
-              </div>
-            </div>
+            </ScrollAnimate>
           </div>
 
           {/* Values Section */}

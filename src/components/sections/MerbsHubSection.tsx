@@ -1,4 +1,5 @@
 import React from 'react';
+import { ScrollAnimate } from '../../utils/useScrollAnimation';
 import '../../styles/MerbsHubSection.css';
 
 const MerbsHubSection: React.FC = () => {
@@ -64,24 +65,26 @@ const MerbsHubSection: React.FC = () => {
 
         {/* Level Cards Grid */}
         <div className="level-cards-grid">
-          {levelCards.map((card) => (
-            <div key={card.id} className={`level-card ${card.buttonColor}`}>
-              <div className="level-card-image">
-                <img src={card.image} alt={card.level} />
+          {levelCards.map((card, index) => (
+            <ScrollAnimate key={card.id} animation="bounce" delay={index * 100}>
+              <div className={`level-card ${card.buttonColor}`}>
+                <div className="level-card-image">
+                  <img src={card.image} alt={card.level} />
+                </div>
+
+                <div className="level-card-content">
+                  <h3 className="level-title">
+                    {card.level} <span className="level-number">{card.levelNumber}</span>
+                  </h3>
+                  <button
+                    className={`level-card-button ${card.buttonColor}`}
+                    onClick={card.onClick}
+                  >
+                    {card.buttonText}
+                  </button>
+                </div>
               </div>
-              
-              <div className="level-card-content">
-                <h3 className="level-title">
-                  {card.level} <span className="level-number">{card.levelNumber}</span>
-                </h3>
-                <button 
-                  className={`level-card-button ${card.buttonColor}`}
-                  onClick={card.onClick}
-                >
-                  {card.buttonText}
-                </button>
-              </div>
-            </div>
+            </ScrollAnimate>
           ))}
         </div>
       </div>

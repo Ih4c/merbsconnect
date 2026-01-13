@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { sanitizeName, sanitizeEmail, sanitizePhone, sanitizeInput, validateEmail, validateRequired } from '../../utils/inputSanitizer';
+import '../../styles/AuthForms.css';
 import '../../styles/ConferenceRegistrationForm.css';
 
 interface ConferenceRegistrationFormProps {
@@ -50,7 +51,7 @@ const ConferenceRegistrationForm: React.FC<ConferenceRegistrationFormProps> = ({
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    
+
     // Sanitize input based on field type
     let sanitizedValue = value;
     switch (name) {
@@ -174,7 +175,7 @@ const ConferenceRegistrationForm: React.FC<ConferenceRegistrationFormProps> = ({
 
       // Simulate API call for now
       console.log('Registration data ready for backend:', registrationData);
-      
+
       // Simulate network delay
       await new Promise(resolve => setTimeout(resolve, 1500));
 

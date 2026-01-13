@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../ui/Card';
+import { ScrollAnimate } from '../../utils/useScrollAnimation';
 import '../../styles/Pages.css';
 
 interface PastConferencesProps {
@@ -15,7 +16,7 @@ const PastConferences: React.FC<PastConferencesProps> = ({ onConferenceClick }) 
     date: 'Saturday, 15th February 2025',
     venue: 'SMS Auditorium',
     attendees: 600,
-    flyer: '/SRC25.jpg', // Conference audience image
+    flyer: '/SRC25.jpg',
     description: `Start Right Conference 2025 was a transformational experience designed to help students begin their academic and professional journey with clarity, confidence, and purpose.
 
 The atmosphere was charged with excellence as lecturers, valedictorians, student leaders, innovators, career experts, and entrepreneurs delivered high-impact sessions on success, preparation, mindset, and strategy.
@@ -92,6 +93,15 @@ Participants left equipped with direction, actionable plans, and renewed confide
     }
   };
 
+  const stats = [
+    { number: '1000+', title: 'Attendees', desc: 'Students, leaders, and dreamers united in one space.' },
+    { number: '10+', title: 'Student Leaders Featured', desc: 'Amplifying youth voices and achievements.' },
+    { number: '2', title: 'Valedictorians', desc: 'Real stories of academic excellence.' },
+    { number: '5+', title: 'Expert Speakers', desc: 'Professionals shaping student success.' },
+    { number: '2', title: 'Transformative Editions', desc: 'A movement that continues to grow.' },
+    { number: '95%', title: 'Satisfaction Rate', desc: 'Trusted. Impactful. Life-changing.' }
+  ];
+
   const handleViewDetails = () => {
     if (onConferenceClick) {
       onConferenceClick(conferenceEvent);
@@ -102,182 +112,162 @@ Participants left equipped with direction, actionable plans, and renewed confide
     <div className="page-container">
       <div className="page-content">
         <section className="conference-stats">
-          <h1 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '1rem', color: '#1a202c' }}>Past Conferences</h1>
-          <p style={{ textAlign: 'center', fontSize: '1.1rem', marginBottom: '3rem', color: '#2d3748' }}>
-            Our conference history reflects our mission — empowering students to rise.
-          </p>
+          <ScrollAnimate animation="fadeUp">
+            <h1 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '1rem', color: '#1a202c' }}>Past Conferences</h1>
+            <p style={{ textAlign: 'center', fontSize: '1.1rem', marginBottom: '3rem', color: '#2d3748' }}>
+              Our conference history reflects our mission — empowering students to rise.
+            </p>
+          </ScrollAnimate>
 
           <div className="stats-grid">
-            <Card>
-              <h3 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#eb0c17', marginBottom: '0.5rem' }}>1000+</h3>
-              <h4 style={{ fontSize: '1.2rem', fontWeight: '600', color: '#1a202c', marginBottom: '0.5rem' }}>Attendees</h4>
-              <p style={{ color: '#4a5568' }}>Students, leaders, and dreamers united in one space.</p>
-            </Card>
-
-            <Card>
-              <h3 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#eb0c17', marginBottom: '0.5rem' }}>10+</h3>
-              <h4 style={{ fontSize: '1.2rem', fontWeight: '600', color: '#1a202c', marginBottom: '0.5rem' }}>Student Leaders Featured</h4>
-              <p style={{ color: '#4a5568' }}>Amplifying youth voices and achievements.</p>
-            </Card>
-
-            <Card>
-              <h3 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#eb0c17', marginBottom: '0.5rem' }}>1</h3>
-              <h4 style={{ fontSize: '1.2rem', fontWeight: '600', color: '#1a202c', marginBottom: '0.5rem' }}>Valedictorians</h4>
-              <p style={{ color: '#4a5568' }}>Real stories of academic excellence.</p>
-            </Card>
-
-            <Card>
-              <h3 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#eb0c17', marginBottom: '0.5rem' }}>5+</h3>
-              <h4 style={{ fontSize: '1.2rem', fontWeight: '600', color: '#1a202c', marginBottom: '0.5rem' }}>Expert Speakers</h4>
-              <p style={{ color: '#4a5568' }}>Professionals shaping student success.</p>
-            </Card>
-
-            <Card>
-              <h3 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#eb0c17', marginBottom: '0.5rem' }}>2</h3>
-              <h4 style={{ fontSize: '1.2rem', fontWeight: '600', color: '#1a202c', marginBottom: '0.5rem' }}>Transformative Editions</h4>
-              <p style={{ color: '#4a5568' }}>A movement that continues to grow.</p>
-            </Card>
-
-            <Card>
-              <h3 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#eb0c17', marginBottom: '0.5rem' }}>95%</h3>
-              <h4 style={{ fontSize: '1.2rem', fontWeight: '600', color: '#1a202c', marginBottom: '0.5rem' }}>Satisfaction Rate</h4>
-              <p style={{ color: '#4a5568' }}>Trusted. Impactful. Life-changing.</p>
-            </Card>
+            {stats.map((stat, index) => (
+              <ScrollAnimate key={index} animation="scaleUp" delay={index * 100}>
+                <Card>
+                  <h3 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#eb0c17', marginBottom: '0.5rem' }}>{stat.number}</h3>
+                  <h4 style={{ fontSize: '1.2rem', fontWeight: '600', color: '#1a202c', marginBottom: '0.5rem' }}>{stat.title}</h4>
+                  <p style={{ color: '#4a5568' }}>{stat.desc}</p>
+                </Card>
+              </ScrollAnimate>
+            ))}
           </div>
         </section>
 
         {/* Previous Events Section */}
-        <section style={{ marginTop: '5rem', marginBottom: '3rem' }}>
-          <h2 style={{
-            textAlign: 'center',
-            fontSize: '2rem',
-            fontWeight: '700',
-            marginBottom: '3rem',
-            color: '#1a202c'
-          }}>
-            Previous Programs
-          </h2>
-
-          <div style={{ maxWidth: '380px', margin: '0 auto' }}>
-            <div style={{
-              background: 'white',
-              borderRadius: '20px',
-              padding: '2.5rem 2rem',
-              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.12)',
-              border: '2px solid #fee2e2',
-              textAlign: 'center'
+        <ScrollAnimate animation="fadeUp" delay={200}>
+          <section style={{ marginTop: '5rem', marginBottom: '3rem' }}>
+            <h2 style={{
+              textAlign: 'center',
+              fontSize: '2rem',
+              fontWeight: '700',
+              marginBottom: '3rem',
+              color: '#1a202c'
             }}>
-              {/* Year Badge */}
-              <div style={{
-                display: 'inline-block',
-                background: '#eb0c17',
-                color: 'white',
-                padding: '0.6rem 2rem',
-                borderRadius: '50px',
-                fontWeight: '700',
-                fontSize: '1.1rem',
-                marginBottom: '1.5rem',
-                letterSpacing: '0.5px'
-              }}>
-                {conferenceEvent.year}
-              </div>
+              Previous Programs
+            </h2>
 
-              {/* Title */}
-              <h3 style={{
-                fontSize: '1.35rem',
-                fontWeight: '700',
-                color: '#1a202c',
-                marginBottom: '1.5rem',
-                lineHeight: '1.4'
-              }}>
-                {conferenceEvent.title}: {conferenceEvent.theme}
-              </h3>
-
-              {/* Attendees & Speakers Count */}
-              <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                gap: '2rem',
-                marginBottom: '1.5rem',
-                fontSize: '0.95rem',
-                fontWeight: '600',
-                color: '#2d3748'
-              }}>
-                <span>{conferenceEvent.attendees}+ Attendees</span>
-                <span>{conferenceEvent.speakers?.length || 0} Speakers</span>
-              </div>
-
-              {/* Key Topics Section */}
-              <div style={{
-                marginBottom: '1.5rem',
-                textAlign: 'center'
-              }}>
-                <h4 style={{
-                  fontSize: '0.95rem',
-                  fontWeight: '600',
-                  color: '#1a202c',
-                  marginBottom: '1rem'
+            <div style={{ maxWidth: '380px', margin: '0 auto' }}>
+              <ScrollAnimate animation="scaleUp" delay={100}>
+                <div style={{
+                  background: 'white',
+                  borderRadius: '20px',
+                  padding: '2.5rem 2rem',
+                  boxShadow: '0 10px 30px rgba(0, 0, 0, 0.12)',
+                  border: '2px solid #fee2e2',
+                  textAlign: 'center'
                 }}>
-                  Key Topics:
-                </h4>
-                <ul style={{
-                  margin: 0,
-                  padding: 0,
-                  listStyle: 'none',
-                  lineHeight: '2',
-                  color: '#c53030',
-                  fontSize: '0.9rem'
-                }}>
-                  {conferenceEvent.keyTopics.slice(0, 5).map((topic, index) => (
-                    <li key={index}>• {topic}</li>
-                  ))}
-                </ul>
-              </div>
+                  {/* Year Badge */}
+                  <div style={{
+                    display: 'inline-block',
+                    background: '#eb0c17',
+                    color: 'white',
+                    padding: '0.6rem 2rem',
+                    borderRadius: '50px',
+                    fontWeight: '700',
+                    fontSize: '1.1rem',
+                    marginBottom: '1.5rem',
+                    letterSpacing: '0.5px'
+                  }}>
+                    {conferenceEvent.year}
+                  </div>
 
-              {/* Date & Venue */}
-              <p style={{
-                fontSize: '0.9rem',
-                color: '#4a5568',
-                marginBottom: '1.75rem',
-                fontWeight: '500',
-                lineHeight: '1.6'
-              }}>
-                {conferenceEvent.date}<br />{conferenceEvent.venue}
-              </p>
+                  {/* Title */}
+                  <h3 style={{
+                    fontSize: '1.35rem',
+                    fontWeight: '700',
+                    color: '#1a202c',
+                    marginBottom: '1.5rem',
+                    lineHeight: '1.4'
+                  }}>
+                    {conferenceEvent.title}: {conferenceEvent.theme}
+                  </h3>
 
-              {/* View Full Details Button */}
-              <button
-                onClick={handleViewDetails}
-                style={{
-                  width: '100%',
-                  padding: '1rem 2rem',
-                  background: '#eb0c17',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '50px',
-                  fontSize: '0.95rem',
-                  fontWeight: '700',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                  boxShadow: '0 4px 15px rgba(235, 12, 23, 0.3)',
-                  letterSpacing: '0.3px'
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0 8px 25px rgba(235, 12, 23, 0.45)';
-                  e.currentTarget.style.background = '#d10b15';
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(235, 12, 23, 0.3)';
-                  e.currentTarget.style.background = '#eb0c17';
-                }}
-              >
-                View Full Details
-              </button>
+                  {/* Attendees & Speakers Count */}
+                  <div style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    gap: '2rem',
+                    marginBottom: '1.5rem',
+                    fontSize: '0.95rem',
+                    fontWeight: '600',
+                    color: '#2d3748'
+                  }}>
+                    <span>{conferenceEvent.attendees}+ Attendees</span>
+                    <span>{conferenceEvent.speakers?.length || 0} Speakers</span>
+                  </div>
+
+                  {/* Key Topics Section */}
+                  <div style={{
+                    marginBottom: '1.5rem',
+                    textAlign: 'center'
+                  }}>
+                    <h4 style={{
+                      fontSize: '0.95rem',
+                      fontWeight: '600',
+                      color: '#1a202c',
+                      marginBottom: '1rem'
+                    }}>
+                      Key Topics:
+                    </h4>
+                    <ul style={{
+                      margin: 0,
+                      padding: 0,
+                      listStyle: 'none',
+                      lineHeight: '2',
+                      color: '#c53030',
+                      fontSize: '0.9rem'
+                    }}>
+                      {conferenceEvent.keyTopics.slice(0, 5).map((topic, index) => (
+                        <li key={index}>• {topic}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Date & Venue */}
+                  <p style={{
+                    fontSize: '0.9rem',
+                    color: '#4a5568',
+                    marginBottom: '1.75rem',
+                    fontWeight: '500',
+                    lineHeight: '1.6'
+                  }}>
+                    {conferenceEvent.date}<br />{conferenceEvent.venue}
+                  </p>
+
+                  {/* View Full Details Button */}
+                  <button
+                    onClick={handleViewDetails}
+                    style={{
+                      width: '100%',
+                      padding: '1rem 2rem',
+                      background: '#eb0c17',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '50px',
+                      fontSize: '0.95rem',
+                      fontWeight: '700',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      boxShadow: '0 4px 15px rgba(235, 12, 23, 0.3)',
+                      letterSpacing: '0.3px'
+                    }}
+                    onMouseOver={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-2px)';
+                      e.currentTarget.style.boxShadow = '0 8px 25px rgba(235, 12, 23, 0.45)';
+                      e.currentTarget.style.background = '#d10b15';
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = '0 4px 15px rgba(235, 12, 23, 0.3)';
+                      e.currentTarget.style.background = '#eb0c17';
+                    }}
+                  >
+                    View Full Details
+                  </button>
+                </div>
+              </ScrollAnimate>
             </div>
-          </div>
-        </section>
+          </section>
+        </ScrollAnimate>
       </div>
     </div>
   );

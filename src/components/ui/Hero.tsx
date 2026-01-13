@@ -15,7 +15,6 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick, onLearnMoreClick }) => {
     seconds: 0
   });
 
-  // Placeholder images for sliding - you can replace these with actual conference images
   const slideImages = [
     '/startright.jpg',
     '/start.jpg'
@@ -25,12 +24,12 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick, onLearnMoreClick }) => {
   useEffect(() => {
     const slideInterval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slideImages.length);
-    }, 4000);
+    }, 6000);
 
     return () => clearInterval(slideInterval);
   }, [slideImages.length]);
 
-  // Countdown timer - placeholder date (you'll provide the actual date later)
+  // Countdown timer
   useEffect(() => {
     const targetDate = new Date('2026-01-15T09:00:00').getTime();
 
@@ -64,58 +63,101 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick, onLearnMoreClick }) => {
         ))}
       </div>
 
-      {/* Overlay */}
+      {/* Gradient Overlay */}
       <div className="hero-overlay" />
 
+      {/* Floating Particles */}
+      <div className="hero-particles">
+        <div className="particle particle-1"></div>
+        <div className="particle particle-2"></div>
+        <div className="particle particle-3"></div>
+      </div>
+
+      {/* Main Content */}
       <div className="hero-container">
         <div className="hero-content-wrapper">
-          {/* Left side - Text content */}
           <div className="hero-text-content">
+
+            {/* Conference Badge */}
+            <div className="conference-badge">
+              <span className="badge-icon">🎓</span>
+              <span className="badge-text">ANNUAL CONFERENCE</span>
+            </div>
+
+            {/* Main Title */}
             <h1 className="hero-main-title">
-              Start Right Conference <span className="year-highlight">2026</span>
+              <span className="title-line-1">START</span>
+              <span className="title-line-2">RIGHT</span>
+              <span className="title-line-3">Conference <span className="year-highlight">'26</span></span>
             </h1>
 
-            {/* Countdown Timer */}
-            <div className="countdown-container">
-              <div className="countdown-item">
-                <span className="countdown-number">{timeLeft.days}</span>
-                <span className="countdown-label">Days</span>
-              </div>
-              <div className="countdown-item">
-                <span className="countdown-number">{timeLeft.hours}</span>
-                <span className="countdown-label">Hours</span>
-              </div>
-              <div className="countdown-item">
-                <span className="countdown-number">{timeLeft.minutes}</span>
-                <span className="countdown-label">Minutes</span>
-              </div>
-              <div className="countdown-item">
-                <span className="countdown-number">{timeLeft.seconds}</span>
-                <span className="countdown-label">Seconds</span>
-              </div>
-            </div>
-
-            <p className="hero-subtitle">
-              Experience life-changing sessions led by top lecturers, valedictorians, student leaders, industry experts, innovators, and professionals, equipping you with the mindset, tools, and confidence to thrive in academics, career, and life.
+            {/* Tagline */}
+            <p className="hero-tagline">
+              Begin Your Journey With Purpose
             </p>
 
-            {/* Why You Should Attend Section */}
-            <div className="why-attend-section">
-              <h3 className="why-attend-title">Why You Should Attend</h3>
-              <p className="why-attend-intro">Learn from:</p>
-              <ul className="why-attend-list">
-                <li>LinkedIn & Personal Branding experts</li>
-                <li>AI & Education panelists</li>
-                <li>Growth and opportunity coaches</li>
-                <li>Student life & academic excellence mentors</li>
-                <li>Study abroad consultants and scholarship advisors</li>
-              </ul>
+            {/* Countdown Timer */}
+            <div className="countdown-wrapper">
+              <span className="countdown-label-main">Event Starts In</span>
+              <div className="countdown-container">
+                <div className="countdown-item">
+                  <span className="countdown-number">{String(timeLeft.days).padStart(2, '0')}</span>
+                  <span className="countdown-label">Days</span>
+                </div>
+                <div className="countdown-separator">:</div>
+                <div className="countdown-item">
+                  <span className="countdown-number">{String(timeLeft.hours).padStart(2, '0')}</span>
+                  <span className="countdown-label">Hours</span>
+                </div>
+                <div className="countdown-separator">:</div>
+                <div className="countdown-item">
+                  <span className="countdown-number">{String(timeLeft.minutes).padStart(2, '0')}</span>
+                  <span className="countdown-label">Mins</span>
+                </div>
+                <div className="countdown-separator">:</div>
+                <div className="countdown-item">
+                  <span className="countdown-number">{String(timeLeft.seconds).padStart(2, '0')}</span>
+                  <span className="countdown-label">Secs</span>
+                </div>
+              </div>
             </div>
 
-            <div className="hero-actions">
-              <button className="hero-btn primary" onClick={onRegisterClick}>Register Now</button>
-              <button className="hero-btn secondary" onClick={onLearnMoreClick}>Learn More</button>
+            {/* Feature Highlights */}
+            <div className="hero-features">
+              <div className="feature-item">
+                <span className="feature-icon">👥</span>
+                <span className="feature-text">500+ Attendees</span>
+              </div>
+              <div className="feature-divider"></div>
+              <div className="feature-item">
+                <span className="feature-icon">🎤</span>
+                <span className="feature-text">5+ Speakers</span>
+              </div>
+              <div className="feature-divider"></div>
+              <div className="feature-item">
+                <span className="feature-icon">📍</span>
+                <span className="feature-text">UCC Campus</span>
+              </div>
             </div>
+
+            {/* CTA Buttons */}
+            <div className="hero-actions">
+              <button className="hero-btn primary" onClick={onRegisterClick}>
+                <span className="btn-icon">🎟️</span>
+                Register Now
+              </button>
+              <button className="hero-btn secondary" onClick={onLearnMoreClick}>
+                Learn More
+                <span className="btn-arrow">→</span>
+              </button>
+            </div>
+
+            {/* Trust Badge */}
+            <div className="trust-badge">
+              <span className="trust-text">Powered by</span>
+              <span className="trust-brand">MerbsConnect</span>
+            </div>
+
           </div>
         </div>
       </div>

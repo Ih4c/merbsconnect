@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { ScrollAnimate } from '../../utils/useScrollAnimation';
 import '../../styles/AllYouNeedSection.css';
 
 const AllYouNeedSection: React.FC = () => {
@@ -81,50 +82,52 @@ const AllYouNeedSection: React.FC = () => {
         </div>
 
         <div className="services-grid">
-          {services.map((service) => (
-            <div key={service.id} className="service-card">
-              <div className="card-image">
-                {service.isSlideshow ? (
-                  <div className="slideshow-container">
-                    <div className="slideshow-images">
-                      {service.slideshowImages.map((img, index) => (
-                        <img
-                          key={index}
-                          src={img}
-                          alt={`${service.title} ${index + 1}`}
-                          className={`slideshow-image ${index === currentImageIndex ? 'active' : ''}`}
-                        />
-                      ))}
+          {services.map((service, index) => (
+            <ScrollAnimate key={service.id} animation="fadeUp" delay={index * 150}>
+              <div className="service-card">
+                <div className="card-image">
+                  {service.isSlideshow ? (
+                    <div className="slideshow-container">
+                      <div className="slideshow-images">
+                        {service.slideshowImages.map((img, index) => (
+                          <img
+                            key={index}
+                            src={img}
+                            alt={`${service.title} ${index + 1}`}
+                            className={`slideshow-image ${index === currentImageIndex ? 'active' : ''}`}
+                          />
+                        ))}
+                      </div>
+                      <div className="slideshow-dots">
+                        {service.slideshowImages.map((_, index) => (
+                          <span
+                            key={index}
+                            className={`dot ${index === currentImageIndex ? 'active' : ''}`}
+                          />
+                        ))}
+                      </div>
                     </div>
-                    <div className="slideshow-dots">
-                      {service.slideshowImages.map((_, index) => (
-                        <span
-                          key={index}
-                          className={`dot ${index === currentImageIndex ? 'active' : ''}`}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  <img src={service.image} alt={service.title} />
-                )}
-              </div>
-              
-              <div className="card-content">
-                <div className="card-header">
-                  <h3 className="card-title">{service.title}</h3>
+                  ) : (
+                    <img src={service.image} alt={service.title} />
+                  )}
                 </div>
-                
-                <p className="card-description">{service.description}</p>
-                
-                <button 
-                  className="card-button"
-                  onClick={service.onClick}
-                >
-                  {service.buttonText}
-                </button>
+
+                <div className="card-content">
+                  <div className="card-header">
+                    <h3 className="card-title">{service.title}</h3>
+                  </div>
+
+                  <p className="card-description">{service.description}</p>
+
+                  <button
+                    className="card-button"
+                    onClick={service.onClick}
+                  >
+                    {service.buttonText}
+                  </button>
+                </div>
               </div>
-            </div>
+            </ScrollAnimate>
           ))}
         </div>
       </div>

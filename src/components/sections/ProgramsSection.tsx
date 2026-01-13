@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ScrollAnimate } from '../../utils/useScrollAnimation';
 import '../../styles/ProgramsSection.css';
 
 const ProgramsSection: React.FC = () => {
@@ -26,7 +27,7 @@ const ProgramsSection: React.FC = () => {
       image: '/studyabroad.jpg',
       isActive: false,
       buttonText: 'Explore Platform',
-      onButtonClick: () => {}
+      onButtonClick: () => { }
     },
     // Commented out coming soon programs - only showing Study Abroad
     /*
@@ -77,33 +78,35 @@ const ProgramsSection: React.FC = () => {
         </div>
 
         <div className="programs-grid">
-          {programs.map((program) => (
-            <div key={program.id} className={`program-card ${!program.isActive ? 'inactive' : ''}`}>
-              <div className="card-image">
-                <img src={program.image} alt={program.title} />
-                {!program.isActive && (
-                  <div className="coming-soon-overlay">
-                    <span className="coming-soon-badge">Coming Soon</span>
-                  </div>
-                )}
-              </div>
-              
-              <div className="card-content">
-                <div className="card-header">
-                  <h3 className="card-title">{program.title}</h3>
+          {programs.map((program, index) => (
+            <ScrollAnimate key={program.id} animation="scaleUp" delay={index * 150}>
+              <div className={`program-card ${!program.isActive ? 'inactive' : ''}`}>
+                <div className="card-image">
+                  <img src={program.image} alt={program.title} />
+                  {!program.isActive && (
+                    <div className="coming-soon-overlay">
+                      <span className="coming-soon-badge">Coming Soon</span>
+                    </div>
+                  )}
                 </div>
-                
-                <p className="card-description">{program.description}</p>
-                
-                <button 
-                  className={`card-button ${!program.isActive ? 'disabled' : ''}`}
-                  onClick={program.onButtonClick}
-                  disabled={!program.isActive}
-                >
-                  {program.buttonText}
-                </button>
+
+                <div className="card-content">
+                  <div className="card-header">
+                    <h3 className="card-title">{program.title}</h3>
+                  </div>
+
+                  <p className="card-description">{program.description}</p>
+
+                  <button
+                    className={`card-button ${!program.isActive ? 'disabled' : ''}`}
+                    onClick={program.onButtonClick}
+                    disabled={!program.isActive}
+                  >
+                    {program.buttonText}
+                  </button>
+                </div>
               </div>
-            </div>
+            </ScrollAnimate>
           ))}
         </div>
       </div>
